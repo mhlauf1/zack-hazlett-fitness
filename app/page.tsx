@@ -17,7 +17,8 @@ import {
 export const runtime = 'edge';
 
 export const metadata = {
-  description: 'High-performance ecommerce store built with Next.js, Vercel, and Shopify.',
+  description:
+    'High-performance ecommerce store by Zack Hazlett. Fitness and Nutrition programs available for purchase.',
   openGraph: {
     type: 'website'
   }
