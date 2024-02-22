@@ -16,7 +16,7 @@ const StepItem = ({
         <h4 className="text-2xl">{title}</h4>
       </div>
       <div className="mt-4 flex flex-1 lg:mt-0">
-        <p className="text-xl leading-relaxed">{description}</p>
+        <p className="text-lg leading-relaxed lg:text-xl">{description}</p>
       </div>
     </div>
   );
@@ -33,7 +33,7 @@ export default function HowItWorks() {
         <SectionLabel text="How It Works" />
         <p>HAZLETT</p>
       </div>
-      <h3 className="sm:w-11/13 w-full text-xl leading-relaxed md:w-10/12 lg:w-1/2 lg:text-2xl">
+      <h3 className="sm:w-11/13 w-full text-lg leading-relaxed md:w-10/12 md:text-xl lg:w-1/2 lg:text-2xl">
         Building strength is key to a healthy, active life. Zack's programs are personalized to fit
         your body and lifestyle, helping you get stronger in the way that's best for you.{' '}
         <strong>Here's how to start:</strong>

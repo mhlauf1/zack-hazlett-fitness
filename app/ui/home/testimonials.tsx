@@ -11,7 +11,7 @@ const Testimonial = ({
   program: string;
 }) => {
   return (
-    <div className="mx-16 flex flex-col">
+    <div className="flex flex-col">
       <div className="mb-2 flex gap-1">
         <MdStarRate />
         <MdStarRate />
@@ -30,12 +30,12 @@ const Testimonial = ({
 
 export default function Testimonials() {
   return (
-    <section className="flex h-auto flex-col px-4 pt-48 sm:px-8 md:px-12 lg:px-16 lg:pt-72">
+    <section className="flex h-auto flex-col bg-neutral-500 px-4 py-24 sm:px-8 md:px-12 lg:px-16 lg:py-32">
       <div className="mb-8 flex">
         <SectionLabel text="Testimonials" />
       </div>
       <h3 className="w-5/12 text-2xl leading-relaxed">Hear what my clients have to say</h3>
-      <div className="mt-12 flex gap-16">
+      <div className="mt-12 flex flex-col gap-24 lg:flex-row">
         <Testimonial
           name="John Doe"
           program="Fitness"

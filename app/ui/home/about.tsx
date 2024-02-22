@@ -5,7 +5,7 @@ export default function About() {
     <section className="flex h-auto flex-col px-4 pt-48 sm:px-8 md:px-12  lg:flex-row lg:px-16 lg:pt-72">
       <div className="flex w-full flex-col justify-between gap-2 lg:w-4/12 lg:gap-0">
         <SectionLabel text="About" />
-        <h3 className="w-2/3 leading-none lg:text-3xl">
+        <h3 className="w-2/3  text-xl md:text-2xl lg:text-3xl">
           5+ Years of Professional Fitness Experience
         </h3>
       </div>

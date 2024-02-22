@@ -23,11 +23,11 @@ export default function Hero() {
       <div className="relative mt-0 flex lg:mt-24">
         <Image
           src="/hazlett-hero-2.png"
-          width={850}
+          width={825}
           height={500}
           objectFit="cover"
           alt="Hero image for Zack Hazlett Fitiness website"
-          className="mb-16 rounded-md lg:block"
+          className="mb-16 rounded-md"
         />
       </div>
     </section>
