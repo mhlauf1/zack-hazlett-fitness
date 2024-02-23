@@ -1,6 +1,6 @@
 import Navbar from 'components/layout/navbar';
 import { ensureStartsWith } from 'lib/utils';
-import { Raleway } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import { ReactNode, Suspense } from 'react';
 import './globals.css';
 
@@ -31,16 +31,16 @@ export const metadata = {
     })
 };
 
-const raleway = Raleway({
+const font = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-poppins',
-  weight: ['100', '300', '400', '500', '600', '700', '800', '900']
+  weight: ['300', '400', '500', '600', '700']
 });
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${raleway.className}`}>
+    <html lang="en" className={`${font.className}`}>
       <body className=" bg-neutral-100 text-black selection:bg-teal-300 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
         <Navbar />
         <Suspense>

@@ -2,8 +2,11 @@
   transition: transform 0.3s; /* Apply transition to transform only */
   color: white;
   will-change: transform; /* Optimize for animations */
+  color: rgb(59 130 246);
 }
 
 .buttonContainer:hover .arrowIcon {
   transform: rotate(45deg);
+  transition-timing-function: ease-in-out;
+  color: white;
 }

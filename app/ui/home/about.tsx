@@ -9,7 +9,7 @@ export default function About() {
           5+ Years of Professional Fitness Experience
         </h3>
       </div>
-      <div className="ml-0 mt-8 flex w-full flex-col gap-16 lg:ml-48 lg:mt-0 lg:w-7/12">
+      <div className="ml-0 mt-8 flex w-full flex-col gap-8 lg:ml-48 lg:mt-0 lg:w-7/12 lg:gap-16">
         <p className="text-lg leading-relaxed text-neutral-600 md:text-xl lg:text-2xl">
           Unlock your fitness potential with Zack's expertly designed courses, available for
           immediate download. Each program is crafted from his wealth of knowledge as a seasoned
