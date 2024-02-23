@@ -29,10 +29,10 @@ export default async function HomePage() {
       <ThreeItemGrid />
       <Suspense>
         <Hero />
-        <About />
         <Suspense>
           <FeaturedPrograms />
         </Suspense>
+        <About />
         <HowItWorks />
         <OurTrainer />
         <CtaBanner />

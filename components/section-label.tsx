@@ -1,8 +1,19 @@
-export default function SectionLabel({ text }: { text: string }) {
+type SectionLabelProps = {
+  text: string;
+  light?: boolean;
+};
+
+const SectionLabel: React.FC<SectionLabelProps> = ({ text, light }) => {
   return (
     <div className="flex items-center gap-3">
       <div className="h-2 w-2 rounded-full bg-[#008FED]" />
-      <span className="text-lg">{text}</span>
+      <span
+        className={light ? 'text-xl text-white lg:text-2xl' : 'text-xl text-[#232323] lg:text-2xl'}
+      >
+        {text}
+      </span>
     </div>
   );
-}
+};
+
+export default SectionLabel;

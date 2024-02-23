@@ -1,0 +1,9 @@
+.arrowIcon {
+  transition: transform 0.3s; /* Apply transition to transform only */
+  color: white;
+  will-change: transform; /* Optimize for animations */
+}
+
+.buttonContainer:hover .arrowIcon {
+  transform: rotate(45deg);
+}

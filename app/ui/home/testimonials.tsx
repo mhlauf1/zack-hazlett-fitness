@@ -30,11 +30,13 @@ const Testimonial = ({
 
 export default function Testimonials() {
   return (
-    <section className="flex h-auto flex-col bg-neutral-500 px-4 py-24 sm:px-8 md:px-12 lg:px-16 lg:py-32">
+    <section className="flex h-auto flex-col bg-[#232323] px-4 py-24 sm:px-8 md:px-12 lg:px-16 lg:py-32">
       <div className="mb-8 flex">
-        <SectionLabel text="Testimonials" />
+        <SectionLabel text="Testimonials" light />
       </div>
-      <h3 className="w-5/12 text-2xl leading-relaxed">Hear what my clients have to say</h3>
+      <h3 className="w-full text-lg leading-relaxed md:w-1/2 md:text-xl lg:w-5/12 lg:text-2xl">
+        Hear what my clients have to say
+      </h3>
       <div className="mt-12 flex flex-col gap-24 lg:flex-row">
         <Testimonial
           name="John Doe"

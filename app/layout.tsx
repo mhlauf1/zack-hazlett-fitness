@@ -41,7 +41,7 @@ const raleway = Raleway({
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${raleway.className}`}>
-      <body className=" bg-neutral-700 text-black selection:bg-teal-300 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
+      <body className=" bg-neutral-100 text-black selection:bg-teal-300 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
         <Navbar />
         <Suspense>
           <main>{children}</main>
