@@ -52,7 +52,7 @@ export function GridTileImage({
           position={label.position}
         />
       ) : null} */}
-      {tags && tags.map((tag) => <Tags tag={tag} />)}
+      {tags && tags.map((tag: string) => <Tags tag={tag} />)}
     </div>
   );
 }
