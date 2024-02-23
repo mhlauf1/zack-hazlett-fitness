@@ -30,7 +30,7 @@ export default function AnimateWrapper({ children }: { children: ReactNode }) {
     },
     hidden: {
       opacity: 0,
-      y: 50,
+      y: 15,
       transition: {
         type: 'tween',
         ease: 'easeInOut',
