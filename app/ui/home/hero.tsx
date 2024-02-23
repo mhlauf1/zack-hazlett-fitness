@@ -7,10 +7,15 @@ import Image from 'next/image';
 export default function Hero() {
   return (
     <motion.section
-      initial={{ opacity: 0, y: 15 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 15 }}
-      transition={{ delay: 0.25 }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 25 }}
+      exit={{ opacity: 0, y: 50 }}
+      transition={{
+        type: 'tween',
+        ease: 'easeInOut',
+        duration: 0.6, // Duration can be adjusted
+        delay: 0.3 // Delay can be adjusted
+      }}
       className="mx-4 mb-4 mt-20 flex h-auto flex-col justify-between rounded-md bg-neutral-200 px-6 pb-8 sm:mx-8 sm:my-8 md:mx-12 md:my-12 lg:mx-6 lg:my-24 lg:mt-20 lg:h-auto lg:flex-row lg:px-12"
     >
       <div className="flex flex-col justify-between pt-16 md:pt-32 lg:pt-48">
@@ -35,7 +40,6 @@ export default function Hero() {
           src="/hazlett-hero-2.png"
           width={925}
           height={500}
-          // objectFit="cover"
           alt="Hero image for Zack Hazlett Fitiness website"
           className="rounded-md"
         />
