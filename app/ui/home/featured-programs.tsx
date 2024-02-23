@@ -21,11 +21,9 @@ export default async function FeaturedPrograms() {
           </div>
         </AnimateWrapper>
         {featuredPrograms.length === 0 ? null : (
-          <AnimateWrapper>
-            <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-              <ProductGridItems products={featuredPrograms} />
-            </Grid>
-          </AnimateWrapper>
+          <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <ProductGridItems products={featuredPrograms} />
+          </Grid>
         )}
         <AnimateWrapper>
           <div className="mt-10 block lg:hidden">
