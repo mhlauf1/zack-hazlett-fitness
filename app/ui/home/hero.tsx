@@ -10,7 +10,7 @@ export default function Hero() {
           <h1 className="mb-6 w-full text-center text-3xl tracking-tighter  text-neutral-800 sm:text-4xl md:text-5xl lg:w-5/6 lg:text-start lg:text-7xl xl:text-8xl">
             High Performance Fitness and Nutrition Programs.
           </h1>
-          <h4 className="mb-8 w-full  text-center text-xl text-neutral-600 lg:w-2/3 lg:text-start lg:text-2xl">
+          <h4 className="mb-8 w-full text-center text-lg text-neutral-600 md:text-xl lg:w-2/3 lg:text-start lg:text-2xl">
             Downloadable fitness & nutrition programs from Zack Hazlett
           </h4>
           <Button href="/programs">Find A Program For You</Button>
