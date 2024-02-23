@@ -1,15 +1,22 @@
 import clsx from 'clsx';
 import Image from 'next/image';
-import Label from '../label';
+
+const Tags = ({ tag }: { tag: string }) => (
+  <div className="absolute right-0 top-0 z-20 px-4 py-4">
+    <h1 className="text-white">{tag}</h1>
+  </div>
+);
 
 export function GridTileImage({
   isInteractive = true,
   active,
   label,
+  tags,
   ...props
 }: {
   isInteractive?: boolean;
   active?: boolean;
+  tags: any;
   label?: {
     title: string;
     amount: string;
@@ -37,14 +44,15 @@ export function GridTileImage({
           {...props}
         />
       ) : null}
-      {label ? (
+      {/* {label ? (
         <Label
           title={label.title}
           amount={label.amount}
           currencyCode={label.currencyCode}
           position={label.position}
         />
-      ) : null}
+      ) : null} */}
+      {tags && tags.map((tag) => <Tags tag={tag} />)}
     </div>
   );
 }
