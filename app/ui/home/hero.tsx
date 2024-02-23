@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Hero() {
   return (
     <section className="mx-4 my-4 flex h-auto flex-col justify-between rounded-md bg-neutral-200 px-12 pb-16 sm:mx-8 sm:my-8 md:mx-12 md:my-12 lg:mx-6 lg:my-24 lg:h-auto lg:flex-row">
-      <div className="flex flex-col justify-between pt-48">
+      <div className="flex flex-col justify-between pt-32 lg:pt-48">
         <div className="flex flex-col items-start">
           <h1 className="mb-6 w-full text-center text-3xl font-medium text-neutral-800 sm:text-4xl md:text-5xl lg:w-5/6 lg:text-start lg:text-7xl">
             High Performance Fitness and Nutrition Programs.
