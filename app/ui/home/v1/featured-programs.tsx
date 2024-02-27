@@ -1,6 +1,6 @@
 import Divider from 'components/Divider';
 import AnimateWrapper from 'components/animated/animate-wrapper';
-import Button from 'components/button';
+import { Button } from 'components/buttons';
 import FeaturedProgramList from 'components/layout/featured/featured-program-list';
 import SectionLabel from 'components/section-label';
 import { FEATURED_PROGRAMS } from 'lib/constants';

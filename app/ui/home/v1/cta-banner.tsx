@@ -1,5 +1,5 @@
 import AnimateWrapper from 'components/animated/animate-wrapper';
-import Button from 'components/button';
+import { Button } from 'components/buttons';
 
 export default function CtaBanner() {
   return (

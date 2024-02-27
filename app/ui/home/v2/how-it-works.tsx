@@ -1,4 +1,4 @@
-import Button from 'components/button';
+import { Button } from 'components/buttons';
 
 const stepData = [
   {
@@ -36,25 +36,25 @@ type ProcessStepProps = {
 };
 
 const ProcessStep: React.FC<ProcessStepProps> = ({ number, title, description }) => (
-  <div className="flex flex-col">
-    <div className="flex items-center gap-6">
-      <span>{number}</span>
+  <div className="flex flex-col border-l border-neutral-300 p-8">
+    <div className="flex items-center gap-10">
+      <span className="text-brand">{number}</span>
       <h3>{title}</h3>
     </div>
     <Divider />
     <div>
-      <p>{description}</p>
+      <p className="text-body">{description}</p>
     </div>
   </div>
 );
 
 export default function HowItWorks() {
   return (
-    <section className="lg:mt-42 mx-4 mt-32 flex h-auto flex-col items-center rounded-md px-6 py-24 sm:px-8 md:px-12 lg:mx-6 lg:px-16 lg:py-32">
+    <section className="mx-4 mt-32 flex h-auto flex-col items-center rounded-md px-6 py-24 sm:px-8 md:px-12 lg:mx-6 lg:mt-52 lg:px-16 lg:py-32">
       <h2>How it works</h2>
       <div className="my-24 grid-cols-2">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-24 lg:grid-cols-2">
             {stepData.map((step) => (
               <div key={step.number}>
                 <ProcessStep

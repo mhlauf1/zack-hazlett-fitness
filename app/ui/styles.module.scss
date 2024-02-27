@@ -1,0 +1,93 @@
+.buttonPrimary {
+  display: flex;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 2px solid var(--grey);
+  border-radius: 50px;
+  padding: 12px 32px;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  transition: all 0.3s; /* Apply transition to transform only */
+  will-change: color;
+}
+
+.darkButton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 50px;
+  padding: 20px 52px;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  transition: all 0.3s; /* Apply transition to transform only */
+  will-change: color;
+  color: #e5e5e5;
+  background-color: var(--grey);
+}
+
+.arrowIcon {
+  transition: transform 0.3s; /* Apply transition to transform only */
+  color: white;
+  will-change: transform; /* Optimize for animations */
+  color: #232323;
+}
+
+.arrowIconLight {
+  transition: transform 0.3s; /* Apply transition to transform only */
+  color: white;
+  will-change: transform; /* Optimize for animations */
+  color: #e5e5e5;
+}
+
+.personalTrainingBg {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url('/zh-asset.webp');
+  background-repeat: no-repeat;
+  object-fit: cover;
+  filter: brightness(70%);
+  background-size: cover;
+  background-position-y: -250px;
+}
+
+.featuredProgramCardContainer:hover .arrowIcon {
+  transform: rotate(45deg);
+  transition-timing-function: ease-in-out;
+  color: white;
+}
+.featuredProgramCardContainer:hover button {
+  transition-timing-function: ease-in-out;
+  color: white;
+  background-color: var(--dark);
+  border-radius: 50px;
+}
+
+@media (max-width: 1024px) {
+  .personalTrainingBg {
+    background-position-y: 0px;
+  }
+  .buttonPrimary {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttonPrimary {
+    padding: 10px 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .buttonPrimary {
+    font-size: 0.9rem;
+    padding: 10px 24px;
+  }
+}

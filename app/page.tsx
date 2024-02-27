@@ -1,6 +1,14 @@
 import { ThreeItemGrid } from 'components/grid/three-items';
+import Footer from 'components/layout/footer';
 import { Suspense } from 'react';
-import { About, FeaturedPrograms, Hero, HowItWorks } from './ui/home/v2';
+import {
+  About,
+  FeaturedPrograms,
+  Hero,
+  HowItWorks,
+  PersonalTraining,
+  Testimonials
+} from './ui/home/v2';
 
 export const runtime = 'edge';
 
@@ -24,13 +32,11 @@ export default async function HomePage() {
           <FeaturedPrograms />
         </Suspense>
         <HowItWorks />
-        {/* <OurTrainer />
-        <CtaBanner />
-        <Testimonials />
         <PersonalTraining />
+        <Testimonials />
         <Suspense>
           <Footer />
-        </Suspense> */}
+        </Suspense>
       </Suspense>
     </>
   );

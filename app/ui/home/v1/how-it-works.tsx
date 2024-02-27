@@ -11,7 +11,7 @@ const StepItem = ({
   description: string;
 }) => {
   return (
-    <div className="flex flex-col lg:flex-row">
+    <div className="flex flex-col border lg:flex-row">
       <div className="flex flex-1 flex-col gap-2 lg:gap-0">
         <span className="text-lg text-neutral-100">{stepNumber}</span>
         <h4 className="text-2xl text-neutral-100">{title}</h4>
