@@ -6,13 +6,11 @@ import styles from '../app/ui/styles.module.scss';
 const Button = ({
   children,
   href,
-  light,
-  bg
+  light
 }: {
   children: ReactNode;
   href: string;
   light?: boolean;
-  bg?: string;
 }) => {
   return (
     <Link className={styles.buttonContainer} href={href}>
@@ -35,4 +33,23 @@ const DarkButton = ({ children, href }: { children: ReactNode; href: string }) =
   );
 };
 
-export { Button, DarkButton };
+const ProgramButton = ({
+  children,
+  href,
+  light
+}: {
+  children: ReactNode;
+  href: string;
+  light?: boolean;
+}) => {
+  return (
+    <Link className={styles.programButtonContainer} href={href}>
+      <button className={styles.buttonProgram}>
+        {children}
+        <MdArrowOutward className={styles.programArrowIcon} size={24} />
+      </button>
+    </Link>
+  );
+};
+
+export { Button, DarkButton, ProgramButton };

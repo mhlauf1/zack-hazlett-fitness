@@ -1,5 +1,5 @@
 'use client';
-import { Button } from 'components/buttons';
+import { ProgramButton } from 'components/buttons';
 import { Product } from 'lib/shopify/types';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -34,7 +34,7 @@ const FeaturedProgramCard: React.FC<FeaturedProgramCardProps> = ({ program, cont
             <p className="text-body lg:w-3/4">{program.description}</p>
           </div>
           <div className="mt-8">
-            <Button href="/">Shop Now</Button>
+            <ProgramButton href="/">Shop Now</ProgramButton>
           </div>
         </div>
       </div>

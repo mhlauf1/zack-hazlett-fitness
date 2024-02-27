@@ -1,4 +1,6 @@
+'use client';
 import { Button } from 'components/buttons';
+import ReactPlayer from 'react-player';
 
 export default function About() {
   return (
@@ -19,7 +21,7 @@ export default function About() {
           </div>
         </div>
         <div className="relative flex flex-1 items-center justify-center">
-          <iframe src="./hazlett-main-video.mp4" width={400} height={695} />
+          <ReactPlayer playing loop muted url="./hazlett-main-video.mp4" width={400} height={695} />
         </div>
       </div>
     </section>
