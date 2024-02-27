@@ -23,7 +23,7 @@ export default function ProductGridItems({ products }: { products: Product[] }) 
                 sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
               />
               <div className="flex items-center justify-between text-[#232323]">
-                <h1>{product.title}</h1>
+                <h2>{product.title}</h2>
                 <p>{product.priceRange.maxVariantPrice.amount}</p>
               </div>
             </Link>

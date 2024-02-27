@@ -1,12 +1,34 @@
+.buttonPrimary {
+  display: flex;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 2px solid var(--grey);
+  border-radius: 50px;
+  padding: 12px 32px;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  transition: all 0.3s; /* Apply transition to transform only */
+  will-change: color;
+}
+
 .arrowIcon {
   transition: transform 0.3s; /* Apply transition to transform only */
   color: white;
   will-change: transform; /* Optimize for animations */
-  color: rgb(59 130 246);
+  color: #232323;
 }
 
-.buttonContainer:hover .arrowIcon {
+.featuredProgramCardContainer:hover .arrowIcon {
   transform: rotate(45deg);
   transition-timing-function: ease-in-out;
   color: white;
+}
+.featuredProgramCardContainer:hover button {
+  transition-timing-function: ease-in-out;
+  color: white;
+  background-color: var(--dark);
+  border-radius: 50px;
 }

@@ -34,7 +34,7 @@ export default async function Navbar() {
                 <li key={item.title}>
                   <Link
                     href={item.path}
-                    className="text-[#232323] underline-offset-4 duration-300 ease-in-out hover:text-neutral-400"
+                    className="underline-offset-4 duration-300 ease-in-out hover:text-neutral-400"
                   >
                     {item.title}
                   </Link>

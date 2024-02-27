@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --dark: #232323;
+  --darkGrey: rgba(35, 35, 35, 0.7);
+  --grey: rgba(35, 35, 35, 0.5);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -19,4 +25,54 @@ a,
 input,
 button {
   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-50 dark:focus-visible:ring-neutral-600 dark:focus-visible:ring-offset-neutral-900;
+}
+
+body {
+  overflow-x: hidden;
+  scrollbar-width: 0px;
+}
+
+h1 {
+  font-family: var(--font-customGrotesque);
+  font-weight: 400;
+  color: var(--dark);
+  font-size: 5rem;
+  letter-spacing: -2px;
+  line-height: 90%;
+}
+
+h2 {
+  font-family: var(--font-customGrotesque);
+  font-weight: 400;
+  color: var(--dark);
+  font-size: 4rem;
+  letter-spacing: -1px;
+  line-height: 105%;
+}
+
+h3 {
+  font-family: var(--font-customGrotesque);
+  font-weight: 400;
+  color: var(--dark);
+  font-size: 2rem;
+  letter-spacing: -1px;
+  line-height: 105%;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 155%;
+  color: var(--darkGrey);
+  font-family: var(--font-inter);
+  letter-spacing: -0.5px;
+}
+
+li {
+  font-family: var(--font-inter);
+  color: var(--darkGrey);
+}
+
+span {
+  color: var(--grey);
+  font-size: 1rem;
 }

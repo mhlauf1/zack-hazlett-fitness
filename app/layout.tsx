@@ -1,6 +1,7 @@
 import Navbar from 'components/layout/navbar';
 import { ensureStartsWith } from 'lib/utils';
 import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import { ReactNode, Suspense } from 'react';
 import './globals.css';
 
@@ -30,17 +31,16 @@ export const metadata = {
       }
     })
 };
-
-const font = Inter({
+const inter = Inter({
   subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-poppins',
-  weight: ['300', '400', '500', '600', '700']
+  variable: '--font-inter'
 });
+
+const customGrotesque = localFont({ src: '../fonts/ClashDisplay-Variable.ttf' });
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${font.className}`}>
+    <html lang="en" className={`${customGrotesque.className} ${inter.variable}`}>
       <body className=" bg-neutral-100 text-black selection:bg-teal-300 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
         <Navbar />
         <Suspense>
