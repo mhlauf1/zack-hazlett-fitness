@@ -1,6 +1,8 @@
 import { DarkButton } from 'components/buttons';
 import { getMenu } from 'lib/shopify';
+import { Menu } from 'lib/shopify/types';
 import Image from 'next/image';
+import Link from 'next/link';
 const { COMPANY_NAME, SITE_NAME } = process.env;
 
 export default async function Footer() {
@@ -19,12 +21,16 @@ export default async function Footer() {
             <span className="text-brand">Hazlett</span>
           </div>
           <ul className="flex flex-col items-center gap-2 lg:items-start">
-            <li className="footer-large-link">Programs</li>
-            <li className="footer-large-link">Personal Training</li>
-            <li className="footer-large-link">About</li>
-            <li className="footer-large-link">Contact</li>
+            {menu.map((item: Menu) => (
+              <li key={item.title}>
+                <Link href={item.path} className="footer-large-link">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
+        {menu.length ? <ul className="hidden gap-6 text-sm md:flex md:items-center"></ul> : null}
         <div className="flex flex-col items-center gap-2 border-t border-neutral-200 px-12 py-4 lg:items-start lg:gap-12 lg:border-r lg:py-16">
           <span className="text-brand">Featured Programs</span>
           <ul className="flex flex-col items-center gap-1 lg:items-start">

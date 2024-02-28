@@ -76,6 +76,14 @@ h3 {
   letter-spacing: -1px;
 }
 
+.text-body-large {
+  font-size: 1.5rem;
+  line-height: 155%;
+  color: var(--darkGrey);
+  font-family: var(--font-inter);
+  letter-spacing: -0.5px;
+}
+
 .text-brand {
   color: var(--grey);
   font-size: 0.9rem;
@@ -105,6 +113,13 @@ h3 {
   font-size: 2.5rem;
   letter-spacing: -1px;
   line-height: 110%;
+}
+
+.light-grey-text {
+  font-size: 0.8rem;
+  line-height: 125%;
+  color: var(--lightGrey);
+  font-family: var(--font-inter);
 }
 
 @media (max-width: 1024px) {

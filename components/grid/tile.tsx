@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Tags = ({ tag }: { tag: string }) => (
   <div className="absolute right-0 top-0 z-20 px-4 py-4">
-    <h1 className="text-white">{tag}</h1>
+    <h2 className="text-white">{tag}</h2>
   </div>
 );
 
