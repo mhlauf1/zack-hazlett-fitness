@@ -53,7 +53,7 @@ export default function HowItWorks() {
     <section className="mx-4 mt-32 flex h-auto flex-col items-center rounded-md px-6 py-24 sm:px-8 md:px-12 lg:mx-6 lg:mt-52 lg:px-16 lg:py-32">
       <h2>How it works</h2>
       <div className="my-24 grid-cols-2">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto lg:px-4">
           <div className="grid grid-cols-1 gap-24 lg:grid-cols-2">
             {stepData.map((step) => (
               <div key={step.number}>

@@ -33,17 +33,17 @@ export default async function Footer() {
             <li>Endurance Imporvement</li>
           </ul>
         </div>
-        <div className="flex flex-col items-center gap-2 border-t  border-neutral-200 px-12 py-4 lg:gap-12 lg:border-r lg:py-16">
+        <div className="flex flex-col items-center gap-2 border-t border-neutral-200 px-12 py-4 lg:items-start lg:gap-12 lg:border-r lg:py-16">
           <span className="text-brand">Additional Information</span>
-          <ul className="flex flex-col items-center gap-2">
+          <ul className="flex flex-col items-center gap-2 lg:items-start">
             <li>Privacy Policy</li>
             <li>Terms and Conditions</li>
             <li>Legal</li>
           </ul>
         </div>
-        <div className="flex flex-col items-center gap-2 border-t border-neutral-200 px-12 py-4 lg:gap-12 lg:border-r lg:py-16">
+        <div className="flex flex-col items-center gap-2 border-t border-neutral-200 px-12 py-4 lg:items-start lg:gap-12 lg:border-r lg:py-16">
           <span className="text-brand">Contact</span>
-          <ul className="flex flex-col items-center gap-2">
+          <ul className="flex flex-col items-center gap-2 lg:items-start">
             <li>zackhazlett@gmail.com</li>
             <li>614-145-24322</li>
             <li>Columbus, OH</li>
@@ -63,12 +63,10 @@ export default async function Footer() {
             &copy; {copyrightDate} {copyrightName}
             {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All rights reserved.
           </p>
-          <hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
-          <p className="text-footer">Designed in Chicago</p>
-          <p className="md:ml-auto">
-            <a href="https://vercel.com" className="text-footer">
-              Crafted by Michael Laufersweiler
-            </a>
+          <p className="flex md:ml-auto">
+            <p className="text-footer">Powered by Lauf </p>
+            <hr className="mx-4 inline-block h-4 w-[1px] border-l border-neutral-300" />
+            <p className="text-footer">Designed in Chicago</p>
           </p>
         </div>
       </div>

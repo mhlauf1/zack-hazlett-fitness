@@ -12,7 +12,7 @@ type FeaturedProgramCardProps = {
 
 const FeaturedProgramCard: React.FC<FeaturedProgramCardProps> = ({ program, contentLeft }) => {
   return (
-    <Link className={styles.featuredProgramCardContainer} href={`/product/${program.handle}`}>
+    <Link className={styles.featuredProgramCardContainer} href={`/program/${program.handle}`}>
       <div
         className={`relative flex flex-col gap-12 lg:gap-24 ${
           contentLeft ? 'lg:flex-row-reverse' : 'lg:flex-row'
@@ -30,10 +30,10 @@ const FeaturedProgramCard: React.FC<FeaturedProgramCardProps> = ({ program, cont
         <div className="flex flex-col justify-between">
           <div className="mt-0 lg:mt-16">
             <span className="text-body uppercase">{program.tags}</span>
-            <h2 className="mb-4  mt-2 w-[9ch] lg:mt-6">{program.title}</h2>
+            <h2 className="mb-2  mt-2 w-[9ch] lg:mt-6">{program.title}</h2>
             <p className="text-body lg:w-3/4">{program.description}</p>
           </div>
-          <div className="mt-8">
+          <div className="mt-6 lg:mt-8">
             <ProgramButton href="/">Shop Now</ProgramButton>
           </div>
         </div>

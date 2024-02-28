@@ -8,9 +8,7 @@ export default function PersonalTraining() {
       <div className="z-5 absolute left-5">
         <h2 className="z-5 mb-8 w-2/3 text-white">Interested in One on One Personal Training?</h2>
         <div className="w-auto">
-          <Button light href="/about">
-            Let's work together
-          </Button>
+          <Button href="/about">Let's work together</Button>
         </div>
       </div>
     </section>

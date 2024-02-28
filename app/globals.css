@@ -139,7 +139,7 @@ h3 {
 
 @media (max-width: 640px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   h2 {
     font-size: 1.5rem;
@@ -148,21 +148,3 @@ h3 {
     font-size: 1.25rem;
   }
 }
-
-/* p {
-  font-size: 1.25rem;
-  line-height: 155%;
-  color: var(--darkGrey);
-  font-family: var(--font-inter);
-  letter-spacing: -0.5px;
-}
-
-li {
-  font-family: var(--font-inter);
-  color: var(--darkGrey);
-} */
-/* 
-span {
-  color: var(--grey);
-  font-size: 1rem;
-} */
