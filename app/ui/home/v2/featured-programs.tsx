@@ -1,5 +1,5 @@
 import Divider from 'components/Divider';
-import { Button } from 'components/buttons';
+import { BlueButton } from 'components/buttons';
 import FeaturedProgramList from 'components/layout/featured/featured-program-list';
 import { FEATURED_PROGRAMS } from 'lib/constants';
 import { getCollectionProducts } from 'lib/shopify';
@@ -13,7 +13,9 @@ export default async function FeaturedPrograms() {
       <div className="relative mb-8">
         <div className="sticky top-[8vh] z-10 mb-8 flex flex-wrap items-center justify-between gap-2 bg-neutral-100 py-4 md:gap-4 lg:mb-24 lg:flex-row lg:gap-0">
           <h3>Featured Programs</h3>
-          <Button href="/programs">All Programs</Button>
+          <div className="mt-2 w-full sm:w-1/2 md:mt-0 lg:w-1/4">
+            <BlueButton href="/programs">All Programs</BlueButton>
+          </div>
         </div>
         {featuredPrograms.length === 0 ? null : <FeaturedProgramList programs={featuredPrograms} />}
       </div>

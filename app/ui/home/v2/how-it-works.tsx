@@ -1,4 +1,4 @@
-import { Button } from 'components/buttons';
+import { BlueButton } from 'components/buttons';
 
 const stepData = [
   {
@@ -67,7 +67,9 @@ export default function HowItWorks() {
           </div>
         </div>
       </div>
-      <Button href="/">Browse Programs</Button>
+      <div className="w-full sm:w-1/2 lg:w-1/4">
+        <BlueButton href="/programs">Browse Programs</BlueButton>
+      </div>
     </section>
   );
 }

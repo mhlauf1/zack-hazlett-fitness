@@ -6,7 +6,6 @@ import { MdStarRate } from 'react-icons/md';
 import { VariantSelector } from './variant-selector';
 
 export function ProductDescription({ product }: { product: Product }) {
-  console.log(product, 'product');
   return (
     <div className="flex h-full flex-col justify-between">
       <div>

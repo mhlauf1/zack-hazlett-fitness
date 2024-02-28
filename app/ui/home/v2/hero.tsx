@@ -1,5 +1,5 @@
 'use client';
-import { Button } from 'components/buttons';
+import { BlueButton } from 'components/buttons';
 import Image from 'next/image';
 
 export default function Hero() {
@@ -12,7 +12,9 @@ export default function Hero() {
         <p className="sub-hero-text mb-12 w-full text-center">
           Plan for tomorrow - download courses today
         </p>
-        <Button href="/programs">Find Your Program</Button>
+        <div className="w-full lg:w-1/4">
+          <BlueButton href="/programs">Find Your Program</BlueButton>
+        </div>
       </div>
       <div className="mx-2 grid grid-cols-1 justify-items-center gap-4 lg:grid-cols-3 lg:justify-items-stretch lg:gap-1">
         <div className="relative h-[60vh] w-full lg:h-[70vh] lg:w-auto">

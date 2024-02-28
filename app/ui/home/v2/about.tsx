@@ -1,5 +1,5 @@
 'use client';
-import { Button } from 'components/buttons';
+import { BlueButton } from 'components/buttons';
 import ReactPlayer from 'react-player';
 
 export default function About() {
@@ -17,7 +17,11 @@ export default function About() {
               immediate download. Each program is crafted from his wealth of knowledge as a seasoned
               personal trainer.
             </p>
-            <Button href="/">About Zack</Button>
+            <div className="w-full md:w-1/2">
+              <BlueButton noIcon href="/about">
+                About Zack
+              </BlueButton>
+            </div>
           </div>
         </div>
         <div className="relative flex flex-1 items-center justify-center">

@@ -100,18 +100,6 @@
   color: var(--dark);
 }
 
-.featuredProgramCardContainer:hover .programButtonContainer .programArrowIcon {
-  transform: rotate(45deg);
-  transition-timing-function: ease-in-out;
-  color: white !important;
-}
-.featuredProgramCardContainer:hover button {
-  transition-timing-function: ease-in-out;
-  color: white;
-  background-color: var(--dark);
-  border-radius: 50px;
-}
-
 @media (max-width: 1024px) {
   .personalTrainingBg {
     background-position-y: 0px;

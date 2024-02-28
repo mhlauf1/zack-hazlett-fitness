@@ -1,7 +1,42 @@
+import { PlusIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 import { MdArrowOutward } from 'react-icons/md';
 import styles from '../app/ui/styles.module.scss';
+
+const buttonClasses =
+  'relative flex w-full items-center justify-center rounded-full bg-blue-600 duration-300 ease-in-out hover:bg-blue-500 p-4 tracking-wide text-white';
+
+const blue = 'bg-blue-600';
+const darkBlue = 'bg-blue-800';
+
+export const BlueButton = ({
+  children,
+  href,
+  noIcon,
+  dark
+}: {
+  children: ReactNode;
+  href: string;
+  noIcon?: boolean;
+  dark?: boolean;
+}) => (
+  <Link href={href}>
+    <button
+      aria-label="Please select an option"
+      aria-disabled
+      className={`${buttonClasses} ${dark && darkBlue}`}
+    >
+      {!noIcon ? (
+        <div className="absolute left-0 ml-4">
+          <PlusIcon className="h-5" />
+        </div>
+      ) : null}
+
+      {children}
+    </button>
+  </Link>
+);
 
 const Button = ({
   children,
