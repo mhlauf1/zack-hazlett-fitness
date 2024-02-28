@@ -11,7 +11,7 @@ type FeaturedProgramCardProps = {
 const FeaturedProgramCard: React.FC<FeaturedProgramCardProps> = ({ program, contentLeft }) => {
   return (
     <div
-      className={`relative flex flex-col gap-12 lg:gap-24 ${
+      className={`relative flex flex-col gap-6 md:gap-12 lg:gap-24 ${
         contentLeft ? 'lg:flex-row-reverse' : 'lg:flex-row'
       }`}
     >

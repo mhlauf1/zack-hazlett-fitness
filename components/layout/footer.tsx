@@ -60,13 +60,13 @@ export default async function Footer() {
         <Image style={{ objectFit: 'cover' }} src="/running-1.png" fill alt="Footer" />
       </div>
       <div className="border-t border-neutral-200 py-6 text-sm dark:border-neutral-700">
-        <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-2 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">
           <p className="text-footer">
             &copy; {copyrightDate} {copyrightName}
             {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All rights reserved.
           </p>
           <p className="flex md:ml-auto">
-            <p className="text-footer">Powered by Lauf </p>
+            <p className="text-footer">Powered by MLP</p>
             <hr className="mx-4 inline-block h-4 w-[1px] border-l border-neutral-300" />
             <p className="text-footer">Designed in Chicago</p>
           </p>
