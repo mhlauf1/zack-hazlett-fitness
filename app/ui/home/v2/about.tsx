@@ -32,7 +32,7 @@ export default function About() {
             width={500}
             height="80vh"
           /> */}
-          <video width="400" height="240" controls={false} loop playsInline autoPlay={true}>
+          <video width="400" height="240" muted controls={false} loop playsInline autoPlay={true}>
             <source src="./hazlett-main-video.mp4" type="video/mp4" />
           </video>
         </div>
