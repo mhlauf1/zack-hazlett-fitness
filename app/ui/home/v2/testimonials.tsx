@@ -34,7 +34,7 @@ const Testimonial = ({
 
 export default function Testimonials() {
   return (
-    <section className="lg:mt-42 mx-4 mt-32 flex h-auto flex-col rounded-md px-6 py-24 sm:px-8 md:px-12 lg:mx-6 lg:px-16 lg:py-32">
+    <section className="lg:mt-42 mx-4 mb-12 mt-32 flex h-auto flex-col rounded-md bg-white px-6 py-24 sm:px-8 md:px-12 lg:mx-6 lg:px-16 lg:py-32">
       <div className="flex flex-row items-end justify-between">
         <h2 className="w-[16ch] lg:w-[12ch]">Hear What Clients Have To Say</h2>
         <ProfileImages />

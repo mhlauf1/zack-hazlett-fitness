@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 
 export default function About() {
   return (
-    <section className="lg:px-42 flex h-auto px-4 pt-32 text-[#232323] sm:px-8 md:px-12 md:pt-48 lg:pt-64">
+    <section className="lg:px-42 lg:py-42 flex h-auto bg-white px-4 py-32 text-[#232323] sm:px-8 md:px-12 md:py-32">
       <div className="flex w-full flex-col gap-12 lg:flex-row">
         <div className="flex flex-col justify-center gap-4 lg:flex-1 lg:gap-8">
           <h2 className="w-5/6">
