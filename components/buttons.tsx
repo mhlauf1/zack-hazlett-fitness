@@ -5,7 +5,7 @@ import { MdArrowOutward } from 'react-icons/md';
 import styles from '../app/ui/styles.module.scss';
 
 const buttonClasses =
-  'relative flex w-full items-center justify-center rounded-full bg-blue-600 duration-500 ease-in-out hover:bg-blue-500 p-3 lg:p-4 tracking-wide text-white';
+  'relative flex w-full items-center justify-center rounded-full bg-blue-600 duration-500 ease-in-out hover:bg-blue-500 active:bg-blue-500 focus:bg-blue-500 p-3 lg:p-4 tracking-wide text-white';
 
 const blue = 'bg-blue-600';
 const darkBlue = 'bg-blue-800';
