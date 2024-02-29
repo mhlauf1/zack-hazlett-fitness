@@ -1,6 +1,5 @@
 'use client';
 import { BlueButton } from 'components/buttons';
-import ReactPlayer from 'react-player';
 
 export default function About() {
   return (
@@ -25,20 +24,24 @@ export default function About() {
           </div>
         </div>
         <div className="relative flex flex-1 items-center justify-center">
-          <ReactPlayer
+          {/* <ReactPlayer
             playing
             loop
             muted
             url="./hazlett-main-video.mp4"
             width={500}
             height="80vh"
-          />
+          /> */}
+          <video width="400" height="240" controls={false} loop playsInline autoPlay={true}>
+            <source src="./hazlett-main-video.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
     </section>
   );
 }
-
+{
+  /* 
 // 'use client';
 // import { Button } from 'components/buttons';
 // import ReactPlayer from 'react-player';
@@ -67,4 +70,5 @@ export default function About() {
 //       </div>
 //     </section>
 //   );
-// }
+// } */
+}
