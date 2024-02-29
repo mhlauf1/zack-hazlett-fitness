@@ -32,10 +32,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^5.0.1",
     "react-intersection-observer": "^9.8.1",
-    "react-player": "^2.14.1",
-    "react-toastify": "^10.0.4",
-    "sass": "^1.71.1",
-    "video-react": "^0.16.0"
+    "sass": "^1.71.1"
   },
   "devDependencies": {
     "@tailwindcss/container-queries": "^0.1.1",
