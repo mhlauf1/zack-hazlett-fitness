@@ -13,7 +13,7 @@ type ProgramCardProps = {
 const FeaturedProgramCard: React.FC<ProgramCardProps> = ({ program, img, icon, small }) => {
   return (
     <Link
-      className="relative flex flex-1 flex-col items-center rounded-lg border-2 border-neutral-200 bg-neutral-50 px-8 py-6 duration-500 ease-in-out hover:border-blue-500 hover:bg-white focus:border-blue-500 focus:bg-white active:border-2 active:border-blue-500 active:bg-white"
+      className="relative flex flex-1 flex-col items-center rounded-lg border-2 border-neutral-200 bg-white px-8 py-6 duration-500 ease-in-out hover:border-blue-500 focus:border-blue-500 focus:bg-white active:border-2 active:border-blue-500 active:bg-white"
       href={`/program/${program.handle}`}
     >
       <div className="mb-4 flex w-full items-center justify-between">

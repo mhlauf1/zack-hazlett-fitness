@@ -1,8 +1,6 @@
-import Grid from 'components/grid';
-import ProductGridItems from 'components/layout/product-grid-items';
+import { SearchList } from 'app/ui/search/search-list';
 import { defaultSort, sorting } from 'lib/constants';
 import { getProducts } from 'lib/shopify';
-
 export const runtime = 'edge';
 
 export const metadata = {
@@ -31,11 +29,7 @@ export default async function SearchPage({
           <span className="font-bold">&quot;{searchValue}&quot;</span>
         </p>
       ) : null}
-      {products.length > 0 ? (
-        <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          <ProductGridItems products={products} />
-        </Grid>
-      ) : null}
+      {products.length > 0 ? <SearchList programs={products} /> : null}
     </>
   );
 }

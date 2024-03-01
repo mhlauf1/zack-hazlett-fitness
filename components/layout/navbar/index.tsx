@@ -6,7 +6,6 @@ import { Menu } from 'lib/shopify/types';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import MobileMenu from './mobile-menu';
-import Search from './search';
 const { SITE_NAME } = process.env;
 
 export default async function Navbar() {
@@ -34,7 +33,7 @@ export default async function Navbar() {
                 <li key={item.title}>
                   <Link
                     href={item.path}
-                    className="nav-link underline-offset-4 duration-300 ease-in-out hover:text-neutral-400"
+                    className="nav-link underline-offset-4 duration-300 ease-in-out hover:text-neutral-800"
                   >
                     {item.title}
                   </Link>
@@ -44,9 +43,6 @@ export default async function Navbar() {
           ) : null}
         </div>
         <div className="flex">
-          <div className="hidden w-[300px] md:flex ">
-            <Search />
-          </div>
           <div className="flex justify-end md:w-1/3">
             <Suspense fallback={<OpenCart />}>
               <Cart />

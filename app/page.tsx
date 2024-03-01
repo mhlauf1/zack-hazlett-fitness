@@ -1,5 +1,4 @@
 import { ThreeItemGrid } from 'components/grid/three-items';
-import Footer from 'components/layout/footer';
 import { Suspense } from 'react';
 import {
   About,
@@ -33,9 +32,6 @@ export default async function HomePage() {
         <HowItWorks />
         <PersonalTraining />
         <Testimonials />
-        <Suspense>
-          <Footer />
-        </Suspense>
       </Suspense>
     </>
   );
