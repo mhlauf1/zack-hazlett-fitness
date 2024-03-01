@@ -1,4 +1,5 @@
 import { RelatedProducts } from 'app/ui/programs/related-products';
+import Footer from 'components/layout/footer';
 import { Gallery } from 'components/product/gallery';
 import { ProductDescription } from 'components/product/product-description';
 import { HIDDEN_PRODUCT_TAG } from 'lib/constants';
@@ -96,36 +97,7 @@ export default async function ProductPage({ params }: { params: { handle: string
           <RelatedProducts id={product.id} />
         </Suspense>
       </div>
+      <Footer />
     </>
   );
 }
-
-// async function RelatedProducts({ id }: { id: string }) {
-//   const relatedProducts = await getProductRecommendations(id);
-
-//   if (!relatedProducts.length) return null;
-
-//   return (
-//     <div className="py-16">
-//       <h2 className="mb-4 text-2xl text-neutral-800 ">Related Products</h2>
-//       <ul className="flex h-auto w-full flex-col gap-16 pt-1 lg:flex-col">
-//         {relatedProducts.map((product) => (
-//           <li
-//             key={product.handle}
-//             className="aspect-square w-full flex-none min-[475px]:w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5"
-//           >
-//             <Link className="relative h-full w-full" href={`/product/${product.handle}`}>
-//               <GridTileImage
-//                 alt={product.title}
-//                 src={product.featuredImage?.url}
-//                 fill
-//                 sizes="(min-width: 1024px) 20vw, (min-width: 768px) 25vw, (min-width: 640px) 33vw, (min-width: 475px) 50vw, 100vw"
-//               />
-//             </Link>
-//             <h3 className="mt-2">{product.title}</h3>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }

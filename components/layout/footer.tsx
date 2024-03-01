@@ -7,12 +7,12 @@ const { COMPANY_NAME, SITE_NAME } = process.env;
 export default async function Footer() {
   const currentYear = new Date().getFullYear();
   const copyrightDate = `${currentYear}`;
-  const skeleton = 'w-full h-6 animate-pulse rounded bg-neutral-200 dark:bg-neutral-700';
+  const skeleton = 'w-full h-6 animate-pulse rounded bg-neutral-200';
   const menu = await getMenu('next-js-frontend-footer-menu');
   const copyrightName = COMPANY_NAME || SITE_NAME || '';
 
   return (
-    <footer className="text-sm text-neutral-500 dark:text-neutral-400">
+    <footer className="text-sm text-neutral-500 ">
       <div className="flex flex-col border-t border-neutral-200 lg:flex-row">
         <div className="flex flex-1 flex-col gap-4 border-r border-neutral-200 px-12 py-4 lg:gap-12 lg:py-16">
           <div className="hidden items-end justify-between lg:flex">
@@ -33,14 +33,14 @@ export default async function Footer() {
         <div className="flex flex-col items-center gap-2 border-t border-neutral-200 px-12 py-4 lg:items-start lg:gap-12 lg:border-r lg:py-16">
           <span className="text-brand">Featured Programs</span>
           <ul className="flex flex-col items-center gap-1 lg:items-start">
-            <li>90 Day Body Blast</li>
-            <li>Personal Training</li>
-            <li>Endurance Imporvement</li>
+            <Link href="/program/90-day-fitness-blast">90 Day Body Blast</Link>
+            <Link href="/program/nutrition-nourishment">Nutrition Nourishment</Link>
+            <Link href="/program/endurance-improvement">Endurance Imporvement</Link>
           </ul>
         </div>
         <div className="flex flex-col items-center gap-2 border-t border-neutral-200 px-12 py-4 lg:items-start lg:gap-12 lg:border-r lg:py-16">
           <span className="text-brand">Additional Information</span>
-          <ul className="flex flex-col items-center gap-2 lg:items-start">
+          <ul className="flex flex-col items-center gap-1 lg:items-start">
             <li>Privacy Policy</li>
             <li>Terms and Conditions</li>
             <li>Legal</li>
@@ -48,7 +48,7 @@ export default async function Footer() {
         </div>
         <div className="flex flex-col items-center gap-2 border-t border-neutral-200 px-12 py-4 lg:items-start lg:gap-12 lg:border-r lg:py-16">
           <span className="text-brand">Contact</span>
-          <ul className="flex flex-col items-center gap-2 lg:items-start">
+          <ul className="flex flex-col items-center gap-1 lg:items-start">
             <li>zackhazlett@gmail.com</li>
             <li>614-145-24322</li>
             <li>Columbus, OH</li>
@@ -59,7 +59,7 @@ export default async function Footer() {
       <div className="relative h-[350px]">
         <Image style={{ objectFit: 'cover' }} src="/running-1.png" fill alt="Footer" />
       </div>
-      <div className="border-t border-neutral-200 py-6 text-sm dark:border-neutral-700">
+      <div className="border-t border-neutral-200 py-6 text-sm">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-2 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">
           <p className="text-footer">
             &copy; {copyrightDate} {copyrightName}

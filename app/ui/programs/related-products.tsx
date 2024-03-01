@@ -15,7 +15,7 @@ export async function RelatedProducts({ id }: { id: string }) {
         {relatedProducts.map((product) => (
           <li key={product.handle}>
             <Link href={`/program/${product.handle}`}>
-              <div className="relative h-auto w-full duration-300 ease-in-out hover:opacity-80 lg:h-[50vh] lg:w-[25vw]">
+              <div className="hover:opacity-80lg:h-[50vh] relative  h-[400px] w-full duration-300 ease-in-out lg:w-[25vw]">
                 <Image
                   alt={product.title}
                   src={product.featuredImage?.url}
