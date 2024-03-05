@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="mb-4 mt-20 flex h-auto w-full flex-col justify-between rounded-md pb-8  sm:my-8  md:my-12 lg:my-24 lg:mt-20 lg:h-auto">
+    <section className="mb-4 mt-20 flex h-auto w-full flex-col justify-between rounded-md pb-8  sm:my-8  md:my-12 lg:my-24 lg:mt-20">
       <div className="mb-24 mt-32 flex h-auto flex-col items-center justify-center px-4 lg:px-0">
         <h1 className="mb-8 w-full text-center">
           High Performance{' '}
@@ -27,12 +27,17 @@ export default function Hero() {
           />
         </div>
         <div className="relative h-[70vh] w-full lg:h-[90vh] lg:w-auto">
-          <Image
-            src="/hazlett-hero-2.png"
-            fill
-            objectFit="cover"
-            alt="Hero image for Zack Hazlett Fitiness website"
-          />
+          <video
+            className="flex-1"
+            height="240"
+            muted
+            controls={false}
+            loop
+            playsInline
+            autoPlay={true}
+          >
+            <source src="./hazlett-main-video.mp4" type="video/mp4" />
+          </video>
         </div>
         <div className="relative hidden h-[50vh] w-full lg:block lg:h-[70vh] lg:w-auto">
           <Image

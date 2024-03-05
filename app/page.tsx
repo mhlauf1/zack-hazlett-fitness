@@ -1,14 +1,5 @@
-import { ThreeItemGrid } from 'components/grid/three-items';
 import Footer from 'components/layout/footer';
-import { Suspense } from 'react';
-import {
-  About,
-  FeaturedPrograms,
-  Hero,
-  HowItWorks,
-  PersonalTraining,
-  Testimonials
-} from './ui/home/v2';
+import { About2, FeaturedPrograms2, Hero2, PersonalTraining, Testimonials } from './ui/home/v2';
 
 export const runtime = 'edge';
 
@@ -23,13 +14,9 @@ export const metadata = {
 export default async function HomePage() {
   return (
     <>
-      <ThreeItemGrid />
-      <Hero />
-      <Suspense>
-        <FeaturedPrograms />
-      </Suspense>
-      <About />
-      <HowItWorks />
+      <Hero2 />
+      <About2 />
+      <FeaturedPrograms2 />
       <PersonalTraining />
       <Testimonials />
       <Footer />

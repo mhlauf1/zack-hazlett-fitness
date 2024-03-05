@@ -1,5 +1,3 @@
-import { BlueButton } from 'components/buttons';
-
 const stepData = [
   {
     title: 'Browse Programs',
@@ -26,7 +24,7 @@ const stepData = [
   }
 ];
 const Divider = () => {
-  return <div className="my-6 h-[1px] w-full bg-neutral-300" />;
+  return <div className="my-4 h-[1px] w-full bg-neutral-300" />;
 };
 
 type ProcessStepProps = {
@@ -36,10 +34,10 @@ type ProcessStepProps = {
 };
 
 const ProcessStep: React.FC<ProcessStepProps> = ({ number, title, description }) => (
-  <div className="flex flex-col border-l border-neutral-300 p-8">
-    <div className="flex items-center gap-10">
+  <div className="flex flex-col">
+    <div className="flex items-center gap-4">
       <span className="text-brand">{number}</span>
-      <h3>{title}</h3>
+      <h3 className="text-2xl">{title}</h3>
     </div>
     <Divider />
     <div>
@@ -50,25 +48,16 @@ const ProcessStep: React.FC<ProcessStepProps> = ({ number, title, description })
 
 export default function HowItWorks() {
   return (
-    <section className="mx-4 flex h-auto flex-col items-center rounded-md px-6 py-24 sm:px-8 md:px-12 lg:mx-6 lg:px-16 lg:py-48">
-      <h2>How it works</h2>
-      <div className="my-24 grid-cols-2">
-        <div className="container mx-auto lg:px-4">
-          <div className="grid grid-cols-1 gap-24 lg:grid-cols-2">
-            {stepData.map((step) => (
-              <div key={step.number}>
-                <ProcessStep
-                  number={step.number}
-                  title={step.title}
-                  description={step.description}
-                />
-              </div>
-            ))}
-          </div>
+    <section className="flex h-auto flex-col items-center">
+      {/* <h3>How it works</h3> */}
+      <div className="grid-cols-2">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2  lg:gap-6">
+          {stepData.map((step) => (
+            <div key={step.number}>
+              <ProcessStep number={step.number} title={step.title} description={step.description} />
+            </div>
+          ))}
         </div>
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <BlueButton href="/programs">Browse Programs</BlueButton>
       </div>
     </section>
   );

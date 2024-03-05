@@ -1,6 +1,7 @@
 import { PlusIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { ReactNode } from 'react';
+import { GoPlus } from 'react-icons/go';
 import { MdArrowOutward } from 'react-icons/md';
 import styles from '../app/ui/styles.module.scss';
 
@@ -36,6 +37,12 @@ export const BlueButton = ({
       {children}
     </button>
   </Link>
+);
+
+export const AddToCartButton = () => (
+  <button className="flex items-center gap-2 rounded-full border border-neutral-500 px-8 py-4">
+    <span className="text-body-small-dark uppercase">Add To Cart</span> <GoPlus />
+  </button>
 );
 
 const Button = ({

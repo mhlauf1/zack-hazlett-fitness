@@ -41,7 +41,7 @@ const customGrotesque = localFont({ src: '../fonts/ClashDisplay-Variable.ttf' })
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${customGrotesque.className} ${inter.variable}`}>
-      <body className=" bg-neutral-100 text-black ">
+      <body className="bg-white text-black ">
         <Navbar />
         <Suspense>
           <main>{children}</main>
