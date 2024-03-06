@@ -40,18 +40,16 @@ const ProcessStep: React.FC<ProcessStepProps> = ({ number, title, description })
       <h3 className="text-2xl">{title}</h3>
     </div>
     <Divider />
-    <div>
-      <p className="text-body">{description}</p>
-    </div>
+    <div>{/* <p className="text-body">{description}</p> */}</div>
   </div>
 );
 
 export default function HowItWorks() {
   return (
-    <section className="flex h-auto flex-col items-center">
+    <section className="flex h-auto flex-col">
       {/* <h3>How it works</h3> */}
       <div className="grid-cols-2">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2  lg:gap-6">
+        <div className="grid grid-cols-1 gap-12  lg:gap-6">
           {stepData.map((step) => (
             <div key={step.number}>
               <ProcessStep number={step.number} title={step.title} description={step.description} />

@@ -13,7 +13,7 @@ export default async function PersonalTrainingPage() {
   return (
     <>
       <div className="mx-auto pt-[8vh]">
-        <div className="bg-white px-8 py-8 md:px-20">
+        <div className="bg-white px-8 py-8">
           <SubPageHeader text="Personal Training" />
         </div>
         <div className="flex justify-between">

@@ -20,7 +20,7 @@ export default function About2() {
             <BlueButton href="/programs">Browse Programs</BlueButton>
           </div>
         </div>
-        <div className="relative flex flex-1 items-center justify-center lg:justify-end">
+        <div className="relative mx-2 flex flex-1 items-center justify-center lg:mx-0 lg:justify-end">
           <Image
             src="/hazlett-hero-2.png"
             width={700}

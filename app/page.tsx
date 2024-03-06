@@ -1,5 +1,5 @@
 import Footer from 'components/layout/footer';
-import { About2, FeaturedPrograms2, Hero2, PersonalTraining, Testimonials } from './ui/home/v2';
+import { About2, FeaturedPrograms2, Hero, PersonalTraining, Testimonials } from './ui/home/v2';
 
 export const runtime = 'edge';
 
@@ -14,7 +14,7 @@ export const metadata = {
 export default async function HomePage() {
   return (
     <>
-      <Hero2 />
+      <Hero />
       <About2 />
       <FeaturedPrograms2 />
       <PersonalTraining />

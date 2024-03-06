@@ -1,30 +1,38 @@
+import { AddToCartButton } from 'components/buttons';
 import { getProducts } from 'lib/shopify';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export async function AllProductsList() {
   const programs = await getProducts({});
-  console.log(programs, 'rpogram');
   return (
     <>
       {programs &&
         programs.map((program) => (
           <Link
-            className="relative flex flex-1 flex-col items-center rounded-lg border-2 border-neutral-200 bg-white px-8 py-6 duration-500 ease-in-out hover:border-blue-500 hover:bg-white focus:border-blue-500 focus:bg-white active:border-2 active:border-blue-500 active:bg-white"
+            className="0 hover:border-grey-100 focus:border-grey-200 active:border-grey-200 relative flex h-auto flex-1 flex-col items-center rounded-xl border-2 bg-white duration-500 ease-in-out hover:bg-white focus:bg-white active:border-2 active:bg-white"
             href={`/program/${program.handle}`}
           >
-            <Image
-              src={program.featuredImage?.url}
-              alt={program.title}
-              height={340}
-              width={360}
-              className="rounded-md"
-            />
-            <div className="mb-4 mt-6  flex  w-full items-center justify-between">
-              <h3 className="text-2xl">{program.title}</h3>
-              <span className="text-body">$29</span>
+            <div className="relative flex h-[250px] w-full">
+              <Image
+                src={program.featuredImage?.url}
+                alt={program.title}
+                height={200}
+                width={500}
+                objectFit="cover"
+                className="w-full rounded-t-xl object-cover"
+              />
             </div>
-            <p className="text-body">{program.description}</p>
+            <div className="mb-4 mt-6 flex h-full w-full flex-col justify-between px-4">
+              <div>
+                <h3 className="mb-4 text-2xl">{program.title}</h3>
+                <p className="text-body mb-8">{program.description}</p>
+              </div>
+              <div className="flex items-end justify-between">
+                <span className="text-body">$29</span>
+                <AddToCartButton />
+              </div>
+            </div>
           </Link>
         ))}
     </>

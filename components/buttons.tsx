@@ -40,8 +40,8 @@ export const BlueButton = ({
 );
 
 export const AddToCartButton = () => (
-  <button className="flex items-center gap-2 rounded-full border border-neutral-500 px-8 py-4">
-    <span className="text-body-small-dark uppercase">Add To Cart</span> <GoPlus />
+  <button className="text-body-small-dark flex items-center gap-2  rounded-full border border-neutral-500 px-8 py-4 duration-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white">
+    <span className="uppercase">Add To Cart</span> <GoPlus />
   </button>
 );
 

@@ -2,19 +2,29 @@
 import { Product } from 'lib/shopify/types';
 import Image from 'next/image';
 import Link from 'next/link';
+import { IoMdArrowForward } from 'react-icons/io';
 import { AddToCartButton } from './buttons';
 
 type FeaturedProgramProps = {
   program: any;
 };
 
+const benefits = [
+  'Weekly Workout Schedules',
+  'Customized Meal Plans',
+  '24/7 Support',
+  'Flexibility Improvement',
+  'Increased Energy Levels',
+  'Progress Tracking'
+];
+
 const FeaturedProgram: React.FC<FeaturedProgramProps> = ({ program }) => {
   return (
     <>
       <div className="flex w-full flex-col flex-wrap justify-between gap-16 px-4 pb-12 lg:flex-row lg:px-12">
-        <div className="flex flex-1 flex-col justify-between gap-8 lg:gap-16">
+        <div className="flex flex-1 flex-col justify-between gap-6 lg:gap-16">
           <div className="flex flex-col items-start">
-            <div className="mb-6 flex w-full items-center justify-between">
+            <div className="mb-2 flex w-full items-center justify-between lg:mb-6">
               <h2>{program.title}</h2>
               <Link
                 className="text-body-small mb-8 uppercase underline lg:mb-0"
@@ -28,12 +38,12 @@ const FeaturedProgram: React.FC<FeaturedProgramProps> = ({ program }) => {
           <div>
             <h3 className="mb-6">What's Included:</h3>
             <ul className="grid grid-cols-2 gap-4">
-              <li className="text-body">Weekly Workout Schedules</li>
-              <li className="text-body">Customized Meal Plans</li>
-              <li className="text-body">24/7 Support</li>
-              <li className="text-body">Flexibility Improvement</li>
-              <li className="text-body">Increased Energy Levels</li>
-              <li className="text-body">Progress Tracking</li>
+              {benefits.map((benefit) => (
+                <li key={benefit} className="text-body flex items-center gap-2">
+                  <IoMdArrowForward />
+                  <span>{benefit}</span>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="flex flex-col gap-4">
