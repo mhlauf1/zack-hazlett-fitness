@@ -21,13 +21,13 @@ const benefits = [
 const FeaturedProgram: React.FC<FeaturedProgramProps> = ({ program }) => {
   return (
     <>
-      <div className="flex w-full flex-col flex-wrap justify-between gap-16 px-4 pb-12 lg:flex-row lg:px-12">
-        <div className="flex flex-1 flex-col justify-between gap-6 lg:gap-16">
+      <div className="flex w-full flex-col flex-wrap justify-between border-y border-neutral-200 lg:flex-row">
+        <div className="flex flex-1 flex-col justify-between gap-6 px-20 py-12 lg:gap-16">
           <div className="flex flex-col items-start">
-            <div className="mb-2 flex w-full items-center justify-between lg:mb-6">
+            <div className="flex w-full flex-col justify-between gap-6 lg:mb-8">
               <h2>{program.title}</h2>
               <Link
-                className="text-body-small mb-8 uppercase underline lg:mb-0"
+                className="text-body-small uppercase underline"
                 href={`/program/${program.handle}`}
               >
                 View all Details
@@ -55,7 +55,7 @@ const FeaturedProgram: React.FC<FeaturedProgramProps> = ({ program }) => {
             </div>
           </div>
         </div>
-        <div className="relative flex h-[50vh] w-[85vw] justify-center lg:h-auto lg:w-[40vw] lg:justify-end">
+        <div className="relative flex h-auto w-full flex-1 justify-center lg:w-[50vw] lg:justify-end">
           <Image
             className=""
             src={program.featuredImage?.url}
@@ -65,15 +65,13 @@ const FeaturedProgram: React.FC<FeaturedProgramProps> = ({ program }) => {
           />
         </div>
       </div>
-      <div className="mb-24 h-[1px] w-full bg-neutral-300" />
     </>
   );
 };
 
 export default function FeaturedPrograms({ programs }: { programs: Product[] }) {
   return (
-    <div className="flex flex-col gap-12">
-      <div className="mb-4 h-[1px] w-full bg-neutral-300 lg:mb-12" />
+    <div className="flex flex-col gap-16">
       <FeaturedProgram program={programs[2]} />
       <FeaturedProgram program={programs[1]} />
     </div>

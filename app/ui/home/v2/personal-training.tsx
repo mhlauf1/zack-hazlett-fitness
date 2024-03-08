@@ -5,7 +5,7 @@ export default function PersonalTraining() {
   return (
     <section className="relative flex h-[90vh] items-center bg-[#232323]">
       <div className={styles.personalTrainingBg} />
-      <div className="z-5 absolute left-5">
+      <div className="z-5 absolute left-12">
         <h2 className="z-5 mb-8 w-2/3 text-white">Interested in One on One Personal Training?</h2>
         <div className="w-5/6 md:w-1/2">
           <BlueButton dark href="/personal-training">

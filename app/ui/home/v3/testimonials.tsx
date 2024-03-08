@@ -1,4 +1,3 @@
-import ProfileImages from 'components/profile-images';
 import { MdStarRate } from 'react-icons/md';
 
 const Divider = () => {
@@ -17,16 +16,16 @@ const Testimonial = ({
   return (
     <div className="flex flex-col">
       <div className="mb-2 flex gap-1">
-        <MdStarRate className="text-blue-600" />
-        <MdStarRate className="text-blue-600" />
-        <MdStarRate className="text-blue-600" />
-        <MdStarRate className="text-blue-600" />
-        <MdStarRate className="text-blue-600" />
+        <MdStarRate className="text-blue-400" />
+        <MdStarRate className="text-blue-400" />
+        <MdStarRate className="text-blue-400" />
+        <MdStarRate className="text-blue-400" />
+        <MdStarRate className="text-blue-400" />
       </div>
-      <p className="text-body mb-4 leading-relaxed">{quote}</p>
+      <p className="mb-4 leading-relaxed text-gray-200">{quote}</p>
       <div>
-        <h4 className="text-lg text-[#232323]">{name}</h4>
-        <span className="text-lg text-gray-700">{program}</span>
+        <h4 className="text-lg text-white">{name}</h4>
+        <span className="text-lg text-gray-200">{program}</span>
       </div>
     </div>
   );
@@ -34,10 +33,9 @@ const Testimonial = ({
 
 export default function Testimonials() {
   return (
-    <section className="lg:mt-42 mx-4 mb-12 mt-32 flex h-auto flex-col rounded-md bg-neutral-100 px-6 py-24 sm:px-8 md:px-12 lg:mx-20 lg:px-16 lg:py-32">
+    <section className="mx-2 mb-12 mt-12 flex h-auto flex-col rounded-xl bg-gradient-to-b from-neutral-500  to-neutral-600 px-8 py-24 md:mx-4 lg:mx-6 lg:mt-16  lg:py-16">
       <div className="flex flex-row items-end justify-between">
-        <h2 className="w-[16ch] lg:w-[12ch]">Hear What Clients Have To Say</h2>
-        <ProfileImages />
+        <h2 className="w-[16ch] text-white">Hear What Clients Have To Say</h2>
       </div>
       <Divider />
       <div className="my-8 grid-cols-2">

@@ -12,7 +12,7 @@ export default async function Navbar() {
   const menu = await getMenu('next-js-frontend-header-menu');
 
   return (
-    <nav className="fixed top-0 z-20 flex h-[8vh] w-full items-center justify-between bg-white p-4 lg:px-6">
+    <nav className="fixed top-0 z-20 flex h-[7vh] w-full items-center justify-between bg-white p-4 lg:px-6">
       <div className="block flex-none md:hidden">
         <MobileMenu menu={menu} />
       </div>
@@ -43,7 +43,7 @@ export default async function Navbar() {
           ) : null}
         </div>
         <div className="flex">
-          <div className="flex justify-end md:w-1/3">
+          <div className="flex justify-end">
             <Suspense fallback={<OpenCart />}>
               <Cart />
             </Suspense>

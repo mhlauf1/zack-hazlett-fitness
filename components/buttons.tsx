@@ -6,7 +6,7 @@ import { MdArrowOutward } from 'react-icons/md';
 import styles from '../app/ui/styles.module.scss';
 
 const buttonClasses =
-  'relative flex w-full items-center justify-center rounded-full bg-blue-600 duration-500 ease-in-out hover:bg-blue-500 active:bg-blue-500 focus:bg-blue-500 p-3 lg:p-4 tracking-wide text-white';
+  'relative flex w-full min-w-[350px] items-center justify-center rounded-full bg-blue-600 duration-500 ease-in-out hover:bg-blue-500 active:bg-blue-500 focus:bg-blue-500 p-3 lg:p-4 tracking-wide text-white';
 
 const blue = 'bg-blue-600';
 const darkBlue = 'bg-blue-800';
@@ -38,6 +38,40 @@ export const BlueButton = ({
     </button>
   </Link>
 );
+
+export const ButtonBento = ({
+  children,
+  dark,
+  full
+}: {
+  children: ReactNode;
+  dark?: boolean;
+  full?: boolean;
+}) => {
+  let baseStyle = 'text rounded-full border bg-gradient-to-b  lg:px-12 lg:py-4 px-8 py-2';
+  if (full) {
+    baseStyle += ' w-full';
+  }
+  if (dark) {
+    return (
+      <button
+        className={`${baseStyle} border-[#232323]  from-[#4e4e4e] to-[#232323] text-neutral-200`}
+      >
+        {children}
+      </button>
+    );
+  }
+  return (
+    <button
+      style={{ whiteSpace: 'nowrap', textAlign: 'center' }}
+      className={`${baseStyle} ${
+        full && 'w-full'
+      } border-neutral-400 from-[#FFFFFF] to-[#eaeaea]  text-[#232323]`}
+    >
+      {children}
+    </button>
+  );
+};
 
 export const AddToCartButton = () => (
   <button className="text-body-small-dark flex items-center gap-2  rounded-full border border-neutral-500 px-8 py-4 duration-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white">

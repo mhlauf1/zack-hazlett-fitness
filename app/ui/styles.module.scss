@@ -66,21 +66,6 @@
   color: #e5e5e5;
 }
 
-.personalTrainingBg {
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-image: url('/zh-asset.webp');
-  background-repeat: no-repeat;
-  object-fit: cover;
-  filter: brightness(80%);
-  background-size: cover;
-  background-position-y: -250px;
-}
-
 .buttonContainer:hover .arrowIcon {
   transform: rotate(45deg);
   transition-timing-function: ease-in-out;

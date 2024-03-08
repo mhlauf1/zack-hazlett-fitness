@@ -36,8 +36,15 @@ body {
 h1 {
   font-family: var(--font-customGrotesque);
   font-weight: 400;
-  color: var(--dark);
-  font-size: 5.5rem;
+  color: #000000;
+  /* Create a radial gradient background */
+  background: radial-gradient(circle at center, #000000 0%, #7b7b7b 100%);
+  /* Ensure the text is transparent so we can see the gradient underneath */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Will override the color property on webkit browsers */
+  display: inline-block; /* This can help ensure the gradient flows with the text */
+  font-size: 4rem;
   letter-spacing: -2px;
   line-height: 100%;
 }
@@ -48,16 +55,20 @@ h2 {
   color: var(--dark);
   font-size: 2.5rem;
   letter-spacing: -1px;
-  line-height: 110%;
+  line-height: 120%;
 }
 
 h3 {
-  font-family: var(--font-customGrotesque);
+  font-family: var(--font-inter);
   font-weight: 400;
   color: var(--dark);
   font-size: 2rem;
   letter-spacing: -0.5px;
   line-height: 105%;
+}
+
+p {
+  font-family: var(--font-inter);
 }
 
 .text-body {
@@ -67,6 +78,9 @@ h3 {
   font-family: var(--font-inter);
   letter-spacing: -0.5px;
 }
+button {
+  font-family: var(--font-inter);
+}
 
 .sub-hero-text {
   font-size: 1rem;
@@ -74,6 +88,15 @@ h3 {
   color: var(--darkGrey);
   font-family: var(--font-inter);
   letter-spacing: 3px;
+}
+
+.header-inter {
+  font-family: var(--font-inter);
+  font-weight: 300;
+  color: var(--darkGrey);
+  font-size: 2.5rem;
+  letter-spacing: -1px;
+  line-height: 120%;
 }
 
 .text-body-large {
@@ -134,6 +157,25 @@ h3 {
   line-height: 125%;
   color: var(--dark);
   font-family: var(--font-inter);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee {
+  display: flex;
+  gap: 8rem; /* Adjust the space between items as needed */
+  animation: marquee 300s linear infinite;
+}
+
+.marquee-item {
+  white-space: nowrap;
 }
 
 @media (max-width: 1024px) {

@@ -3,7 +3,7 @@ import { BlueButton } from 'components/buttons';
 
 export default function Hero2() {
   return (
-    <section className="my-24 flex h-auto w-full flex-col justify-between px-8 md:px-16 lg:flex-row">
+    <section className="my-24 flex h-auto w-full flex-col justify-between md:px-16 lg:flex-row">
       <div className="mt-16 flex flex-1 flex-col lg:mt-32">
         <p className="sub-hero-text mb-6 w-full text-center  lg:mb-12 lg:text-start">
           Transform Your Body - Elevate Your Health

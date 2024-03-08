@@ -1,6 +1,6 @@
 import Navbar from 'components/layout/navbar';
 import { ensureStartsWith } from 'lib/utils';
-import { Inter } from 'next/font/google';
+import { DM_Sans, Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 import { ReactNode, Suspense } from 'react';
 import './globals.css';
@@ -36,11 +36,18 @@ const inter = Inter({
   variable: '--font-inter'
 });
 
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-dmSans'
+});
 const customGrotesque = localFont({ src: '../fonts/ClashDisplay-Variable.ttf' });
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${customGrotesque.className} ${inter.variable}`}>
+    <html
+      lang="en"
+      className={`${customGrotesque.className} ${dmSans.className}  ${inter.variable}`}
+    >
       <body className="bg-white text-black ">
         <Navbar />
         <Suspense>

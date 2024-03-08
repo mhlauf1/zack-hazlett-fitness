@@ -1,6 +1,5 @@
 import { getMenu } from 'lib/shopify';
 import { Menu } from 'lib/shopify/types';
-import Image from 'next/image';
 import Link from 'next/link';
 const { COMPANY_NAME, SITE_NAME } = process.env;
 
@@ -12,9 +11,9 @@ export default async function Footer() {
   const copyrightName = COMPANY_NAME || SITE_NAME || '';
 
   return (
-    <footer className="text-sm text-neutral-500 ">
-      <div className="flex flex-col border-t border-neutral-200 lg:flex-row">
-        <div className="flex flex-1 flex-col gap-4 border-r border-neutral-200 px-12 py-4 lg:gap-12 lg:py-16">
+    <footer className="mx-6 mb-2 rounded-xl border text-sm text-neutral-500 ">
+      <div className="flex flex-col  lg:flex-row">
+        <div className="flex flex-1 flex-col gap-4  px-12 py-4 lg:gap-12 lg:py-16">
           <div className="hidden items-end justify-between lg:flex">
             <span className="text-brand">Menu</span>
             <span className="text-brand">Hazlett</span>
@@ -30,7 +29,7 @@ export default async function Footer() {
           </ul>
         </div>
         {menu.length ? <ul className="hidden gap-6 text-sm md:flex md:items-center"></ul> : null}
-        <div className="flex flex-col items-center gap-2 border-t border-neutral-200 px-12 py-4 lg:items-start lg:gap-12 lg:border-r lg:py-16">
+        <div className="flex flex-col items-center gap-2  px-12 py-4 lg:items-start lg:gap-12  lg:py-16">
           <span className="text-brand">Featured Programs</span>
           <ul className="flex flex-col items-center gap-1 lg:items-start">
             <Link href="/program/90-day-fitness-blast">90 Day Body Blast</Link>
@@ -38,7 +37,7 @@ export default async function Footer() {
             <Link href="/program/endurance-improvement">Endurance Imporvement</Link>
           </ul>
         </div>
-        <div className="flex flex-col items-center gap-2 border-t border-neutral-200 px-12 py-4 lg:items-start lg:gap-12 lg:border-r lg:py-16">
+        <div className="flex flex-col items-center gap-2  px-12 py-4 lg:items-start lg:gap-12  lg:py-16">
           <span className="text-brand">Additional Information</span>
           <ul className="flex flex-col items-center gap-1 lg:items-start">
             <li>Privacy Policy</li>
@@ -46,7 +45,7 @@ export default async function Footer() {
             <li>Legal</li>
           </ul>
         </div>
-        <div className="flex flex-col items-center gap-2 border-t border-neutral-200 px-12 py-4 lg:items-start lg:gap-12 lg:border-r lg:py-16">
+        <div className="flex flex-col items-center gap-2  px-12 py-4 lg:items-start lg:gap-12  lg:py-16">
           <span className="text-brand">Contact</span>
           <ul className="flex flex-col items-center gap-1 lg:items-start">
             <li>zackhazlett@gmail.com</li>
@@ -55,11 +54,7 @@ export default async function Footer() {
           </ul>
         </div>
       </div>
-
-      <div className="relative h-[350px]">
-        <Image style={{ objectFit: 'cover' }} src="/running-1.png" fill alt="Footer" />
-      </div>
-      <div className="border-t border-neutral-200 py-6 text-sm">
+      <div className=" py-6 text-sm">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-2 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">
           <p className="text-footer">
             &copy; {copyrightDate} {copyrightName}
