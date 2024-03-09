@@ -25,7 +25,7 @@ export default function Hero() {
         </div>
         <ProfileImages />
       </div>
-      <div className="flex w-full  items-start lg:w-auto">
+      <div className="hidden w-full items-start  md:flex lg:w-auto">
         <video
           className="flex h-[85vh] flex-1 rounded-xl object-cover"
           muted

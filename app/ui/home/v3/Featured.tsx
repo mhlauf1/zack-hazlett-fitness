@@ -41,7 +41,7 @@ const FeaturedProgram: React.FC<FeaturedProgramProps> = ({ program, reverse }) =
         </div>
         <div>
           <p className="mb-4">What&#39;s Included:</p>
-          <ul className="mb-6 grid grid-cols-2 gap-4 gap-x-8">
+          <ul className="mb-6 grid grid-cols-1 gap-4 gap-x-8 md:grid-cols-2">
             {benefits.map((benefit) => (
               <li className="flex items-center gap-2" key={benefit}>
                 <div className="h-1 w-1 rounded-full bg-neutral-300" />
