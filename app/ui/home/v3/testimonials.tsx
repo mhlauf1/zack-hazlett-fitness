@@ -10,7 +10,7 @@ const Testimonial = ({
   program: string;
 }) => {
   return (
-    <div className="flex h-[500px] flex-col rounded-xl border border-neutral-300 bg-[#F3F1ED] px-4 py-4">
+    <div className="flex h-auto flex-col rounded-xl border border-neutral-300 bg-[#F3F1ED] px-4 py-4 md:h-[500px]">
       <div className="h-10 w-10 rounded-full bg-gray-200 md:h-14 md:w-14" />
       <div className="mb-2 mt-16 flex gap-1">
         <MdStarRate className="text-yellow-400" />
@@ -30,10 +30,8 @@ const Testimonial = ({
 
 export default function Testimonials() {
   return (
-    <section className="mx-2 mb-12 mt-8 flex h-auto flex-col items-center px-8 py-24 md:mx-4 lg:mx-6 lg:mt-24  lg:py-16">
-      <h2 className="w-[16ch] text-center">
-        Real People, <br /> Real Results
-      </h2>
+    <section className="mx-6 mb-12 mt-8 flex h-auto flex-col items-center py-24 md:mx-4 lg:mx-6 lg:mt-24 lg:px-0  lg:py-16">
+      <h2 className="w-full text-center md:w-[8ch]">Real People, Real Results</h2>
       <div className="my-8 grid grid-cols-1 gap-4  md:grid-cols-2 lg:grid-cols-4">
         <Testimonial
           name="John Doe"

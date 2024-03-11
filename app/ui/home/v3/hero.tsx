@@ -1,5 +1,6 @@
 import { ButtonBento } from 'components/buttons';
 import ProfileImages from 'components/profile-images';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -14,8 +15,12 @@ export default function Hero() {
           ready for download— your new healthy lifestyle starts now.
         </p>
         <div className="mb-8 hidden gap-4 md:flex">
-          <ButtonBento dark>Find Your Program</ButtonBento>
-          <ButtonBento>Personal Training</ButtonBento>
+          <Link href="/programs">
+            <ButtonBento dark>Find Your Program</ButtonBento>
+          </Link>
+          <Link href="/personal-training">
+            <ButtonBento>Personal Training</ButtonBento>
+          </Link>
         </div>
         <div className="mb-8 flex w-full flex-col gap-4 md:hidden md:w-auto md:flex-row lg:w-auto lg:flex-row">
           <ButtonBento full dark>
@@ -25,13 +30,12 @@ export default function Hero() {
         </div>
         <ProfileImages />
       </div>
-      <div className="hidden w-full items-start  md:flex lg:w-auto">
+      <div className="hidden w-full items-start  md:flex lg:w-2/6">
         <video
           className="flex h-[85vh] flex-1 rounded-xl object-cover"
           muted
           controls={false}
           loop
-          playsInline
           autoPlay={true}
         >
           <source src="./hazlett-main-video.mp4" type="video/mp4" />

@@ -1,4 +1,5 @@
 import Footer from 'components/layout/footer';
+import { Suspense } from 'react';
 import {
   About,
   Banner,
@@ -8,7 +9,12 @@ import {
   PersonalTraining,
   Testimonials
 } from './ui/home/v3';
+
 export const runtime = 'edge';
+
+function Loading() {
+  return <p>Loading Data...</p>;
+}
 
 export const metadata = {
   description:
@@ -21,7 +27,9 @@ export const metadata = {
 export default async function HomePage() {
   return (
     <>
-      <Hero />
+      <Suspense fallback={<Loading />}>
+        <Hero />
+      </Suspense>
       <Banner />
       <About />
       <FeaturedPrograms />

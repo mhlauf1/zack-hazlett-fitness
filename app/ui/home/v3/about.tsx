@@ -1,5 +1,6 @@
 import { ButtonBento } from 'components/buttons';
 import Image from 'next/image';
+import Link from 'next/link';
 import { IoMdArrowForward } from 'react-icons/io';
 import SectionHeader from './section-header';
 
@@ -40,7 +41,9 @@ export default function About() {
             </div>
           ))}
         </div>
-        <ButtonBento>About Zack</ButtonBento>
+        <Link href="/about">
+          <ButtonBento>About Zack</ButtonBento>
+        </Link>
       </div>
       <div className="relative hidden rounded-xl border border-neutral-200 lg:flex lg:w-2/5 lg:flex-1">
         <Image

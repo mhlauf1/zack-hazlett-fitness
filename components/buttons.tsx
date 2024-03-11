@@ -47,14 +47,15 @@ export const ButtonBento = ({
   dark?: boolean;
   full?: boolean;
 }) => {
-  let baseStyle = 'text rounded-full border bg-gradient-to-b  lg:px-12 lg:py-4 px-8 py-2';
+  let baseStyle =
+    'text rounded-full border bg-gradient-to-b hover:opacity-90 lg:px-12 lg:py-4 px-8 py-2';
   if (full) {
     baseStyle += ' w-full';
   }
   if (dark) {
     return (
       <button
-        className={`${baseStyle} border-[#232323]  from-[#4e4e4e] to-[#232323] text-neutral-200`}
+        className={`${baseStyle} border-[#232323]  from-[#4e4e4e] to-[#232323]  text-neutral-200 focus:border-neutral-700 active:border-neutral-700`}
       >
         {children}
       </button>
@@ -65,7 +66,7 @@ export const ButtonBento = ({
       style={{ whiteSpace: 'nowrap', textAlign: 'center' }}
       className={`${baseStyle} ${
         full && 'w-full'
-      } border-neutral-400 from-[#FFFFFF] to-[#eaeaea]  text-[#232323]`}
+      } border-neutral-400 from-[#FFFFFF] to-[#eaeaea] text-[#232323] hover:bg-neutral-300 hover:opacity-70 focus:border-neutral-500 focus:opacity-50 active:border-neutral-500 active:opacity-50`}
     >
       {children}
     </button>

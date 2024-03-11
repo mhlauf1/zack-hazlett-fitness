@@ -1,6 +1,8 @@
 import { ButtonBento } from 'components/buttons';
 import Image from 'next/image';
+import Link from 'next/link';
 import SectionHeader from './section-header';
+
 const stepData = [
   {
     title: 'Browse Programs',
@@ -43,7 +45,7 @@ const Card = ({ step }: { step: any }) => {
 
 export default function HowItWorks() {
   return (
-    <section className="mx-2 mb-8 flex flex-col gap-2   text-[#232323] md:mx-4 lg:mx-6 lg:mb-20 lg:flex-row">
+    <section className="mx-2 mb-8 flex flex-col gap-8 text-[#232323] md:mx-4 md:mt-0 lg:mx-6 lg:mb-20 lg:flex-row lg:gap-2">
       <div className="flex w-full rounded-xl border border-neutral-200 lg:w-2/6">
         <div className="relative hidden h-auto w-[100vw] flex-1 justify-center lg:flex lg:w-[50vw] lg:justify-end">
           <Image
@@ -75,7 +77,9 @@ export default function HowItWorks() {
             <Card step={step} />
           ))}
         </div>
-        <ButtonBento>About Zack</ButtonBento>
+        <Link href="/programs">
+          <ButtonBento>Browse Programs Now</ButtonBento>
+        </Link>
       </div>
     </section>
   );
