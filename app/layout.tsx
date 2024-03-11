@@ -41,12 +41,13 @@ const dmSans = DM_Sans({
   variable: '--font-dmSans'
 });
 const customGrotesque = localFont({ src: '../fonts/ClashDisplay-Variable.ttf' });
+const nohemi = localFont({ src: '../fonts/Nohemi-VF.ttf' });
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${customGrotesque.className} ${dmSans.className}  ${inter.variable}`}
+      className={`${customGrotesque.className} ${nohemi.className} ${dmSans.className}  ${inter.variable}`}
     >
       <body className="bg-white text-black ">
         <Navbar />

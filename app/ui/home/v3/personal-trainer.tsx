@@ -15,7 +15,7 @@ export default function PersonalTraining() {
         />
       </div>
       <div className="z-5 absolute left-6 lg:left-12">
-        <h2 className="z-5 mb-8 w-2/3 text-white">Interested in One on One Personal Training?</h2>
+        <h2 className="z-5 mb-8 w-2/3 text-white">Interested in Personal Training?</h2>
         <div className="w-5/6 md:w-1/2">
           <Link href="/personal-training">
             <ButtonBento>Let's work together</ButtonBento>

@@ -1,4 +1,5 @@
 'use client';
+import { AddToCart } from 'components/cart/add-to-cart';
 import { Product } from 'lib/shopify/types';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -20,7 +21,7 @@ const benefits = [
 
 const FeaturedProgram: React.FC<FeaturedProgramProps> = ({ program, reverse }) => {
   return (
-    <div className="flex flex-1 flex-col flex-wrap justify-between gap-2 rounded-xl border border-neutral-400 bg-neutral-100 px-6 pb-4 pt-12 duration-300 hover:bg-white focus:bg-white active:hover:bg-white lg:px-6 lg:pt-16">
+    <div className="flex flex-1 flex-col flex-wrap justify-between gap-2 rounded-xl border border-neutral-400 bg-white px-6 pb-4 pt-12 duration-300 hover:opacity-90 lg:px-6 lg:pt-16">
       <div className="flex flex-1 flex-col  items-start lg:py-4">
         <div className="flex w-full flex-col items-center gap-6">
           <Image
@@ -32,9 +33,9 @@ const FeaturedProgram: React.FC<FeaturedProgramProps> = ({ program, reverse }) =
             className="flex h-[150px] w-[150px] rounded-xl md:h-[200px] md:w-[200px]"
           />
         </div>
-        <div className="mb-4 mt-16 flex w-full items-start justify-between lg:mb-6">
+        <div className="mb-2 mt-16 flex w-full items-start justify-between lg:mb-4">
           <div className="flex w-full flex-col justify-between gap-2">
-            <span className="text-body-small uppercase">{program.tags}</span>
+            <span className="text-body-small font-nohemi font-light uppercase">{program.tags}</span>
             <h3 className="text-2xl">{program.title}</h3>
           </div>
           <p className="mb-4 text-lg lg:text-2xl">$89</p>
@@ -52,7 +53,7 @@ const FeaturedProgram: React.FC<FeaturedProgramProps> = ({ program, reverse }) =
         </div>
         <div className="mt-6 w-full lg:mt-12">
           <div className="flex w-full flex-col gap-4">
-            <ButtonBento full>Add To Cart</ButtonBento>
+            <AddToCart variants={program.variants} availableForSale={program.availableForSale} />
             <Link href={`/program/${program.handle}`}>
               <ButtonBento full dark>
                 View all Details

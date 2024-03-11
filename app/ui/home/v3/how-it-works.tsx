@@ -28,9 +28,9 @@ const stepData = [
 ];
 const Card = ({ step }: { step: any }) => {
   return (
-    <div className="flex  flex-col items-start gap-2 rounded-xl border border-neutral-400 bg-[#f3f1ed] px-8 py-8 lg:px-16">
+    <div className="flex  flex-col items-start gap-2 rounded-xl border border-neutral-400 bg-white px-8 py-6 lg:px-12">
       <div className="flex items-end gap-4">
-        <span className="rounded-full from-neutral-50 to-neutral-100 text-[#2323238b]">
+        <span className="font-nohemi rounded-full from-neutral-50 to-neutral-100 font-light text-[#2323238b]">
           {step.number}
         </span>
       </div>
@@ -67,10 +67,10 @@ export default function HowItWorks() {
       </div>
       <div className="flex  w-full flex-col items-start justify-end rounded-xl border border-neutral-200  bg-neutral-100 px-6 py-12 lg:px-16 lg:py-12">
         <SectionHeader text="How It Works" />
-        <h2 className="mb-12 mt-8 w-5/6 text-[#232323] lg:w-[24ch]">
+        <h2 className="mb-12 mt-8 w-5/6 text-[#232323] lg:mt-16 lg:w-[24ch]">
           4 Easy Steps To Start Your Health and Fitness Journey
         </h2>
-        <div className="mb-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <div className="mb-16 grid grid-cols-1 gap-4 lg:grid-cols-2">
           {stepData.map((step) => (
             <Card step={step} />
           ))}

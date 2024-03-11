@@ -9,8 +9,8 @@ export default async function FeaturedPrograms() {
   const featuredPrograms = await getCollectionProducts({ collection: FEATURED_PROGRAMS });
 
   return (
-    <section className="mx-0 mb-8 mt-16 flex h-auto  flex-col  items-center rounded-xl  bg-[#f3f1ed] px-4 pb-8 pt-20 md:mt-0 md:pb-8 md:pt-24  lg:mb-20 lg:px-8 lg:pb-12 lg:pt-32">
-      <SectionHeader text="Featured" />
+    <section className="mx-0 mb-16 mt-16 flex h-auto  flex-col  items-center rounded-xl  bg-[#f3f1ed] px-4 pb-8 pt-20 md:mt-0 md:pb-8 md:pt-24  lg:mb-20 lg:px-8 lg:pb-12 lg:pt-32">
+      <SectionHeader text="Featured Programs" />
       <h2 className="mt-8 text-center  lg:mt-12">
         Precision-Crafted Programs: <br />{' '}
         <span className="text-xl text-neutral-500 lg:text-4xl">Your Blueprint for Health</span>{' '}
@@ -22,7 +22,7 @@ export default async function FeaturedPrograms() {
           View all programs here.
         </Link>
       </p>
-      <div className="mb-12 w-full">
+      <div className="mb-16 w-full">
         {featuredPrograms.length === 0 ? null : <Featured programs={featuredPrograms} />}
       </div>
       <Link href="/programs">

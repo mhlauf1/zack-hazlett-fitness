@@ -13,7 +13,7 @@ export default async function Footer() {
   return (
     <footer className="mx-6 mb-2 rounded-xl border text-sm text-neutral-500 ">
       <div className="flex flex-col  lg:flex-row">
-        <div className="flex flex-1 flex-col gap-4  px-12 py-4 lg:gap-12 lg:py-16">
+        <div className="flex flex-1 flex-col gap-4  px-12 py-8 lg:gap-12 lg:py-16">
           <div className="hidden items-end justify-between lg:flex">
             <span className="text-brand">Menu</span>
             <span className="text-brand">Hazlett</span>
@@ -55,7 +55,7 @@ export default async function Footer() {
         </div>
       </div>
       <div className=" py-6 text-sm">
-        <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-2 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">
+        <div className="mx-auto flex w-full flex-col items-center gap-2 px-4 md:flex-row md:gap-0 md:px-12 ">
           <p className="text-footer">
             &copy; {copyrightDate} {copyrightName}
             {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All rights reserved.

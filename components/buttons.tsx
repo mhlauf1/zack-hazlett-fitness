@@ -1,7 +1,6 @@
 import { PlusIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { ReactNode } from 'react';
-import { GoPlus } from 'react-icons/go';
 import { MdArrowOutward } from 'react-icons/md';
 import styles from '../app/ui/styles.module.scss';
 
@@ -72,12 +71,6 @@ export const ButtonBento = ({
     </button>
   );
 };
-
-export const AddToCartButton = () => (
-  <button className="text-body-small-dark flex items-center gap-2  rounded-full border border-neutral-500 px-8 py-4 duration-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white">
-    <span className="uppercase">Add To Cart</span> <GoPlus />
-  </button>
-);
 
 const Button = ({
   children,

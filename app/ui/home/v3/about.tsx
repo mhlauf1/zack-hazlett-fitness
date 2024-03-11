@@ -22,7 +22,7 @@ export default function About() {
     <section className="mx-2 mb-8 flex flex-col gap-2 bg-white text-[#232323] md:mx-4 lg:mx-6 lg:mb-20 lg:flex-row">
       <div className="flex w-full flex-col items-start rounded-xl border border-neutral-300 bg-neutral-100 px-8 py-16 duration-500  lg:w-3/5">
         <SectionHeader text="Our Trainer" />
-        <h2 className="mb-6 mt-8 w-full md:w-3/4 lg:mb-12 lg:w-[27ch]">
+        <h2 className="mb-6 mt-8 w-full md:w-3/4 lg:mb-12 lg:mt-12 lg:w-[27ch]">
           Experience the Difference: <br />
           <span className="text-xl text-neutral-600 md:text-3xl lg:text-4xl">
             Tailored Guidance from Zack Hazlett, Your Fitness & Nutrition Expert
@@ -33,7 +33,7 @@ export default function About() {
           immediate download. Each program is crafted from his wealth of knowledge as a seasoned
           personal trainer.
         </p>
-        <div className="mb-16 mt-8 grid grid-cols-1 gap-4 md:mb-0 md:mt-0 md:grid-cols-2 lg:my-12 lg:grid-cols-2 lg:gap-6">
+        <div className="mb-16 mt-8 grid grid-cols-1 gap-4 md:mt-0 md:grid-cols-2 lg:my-12 lg:grid-cols-2 lg:gap-6">
           {bullets.map((item) => (
             <div>
               <BulletItem text={item} />
