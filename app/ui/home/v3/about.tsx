@@ -28,7 +28,7 @@ export default function About() {
             Tailored Guidance from Zack Hazlett, Your Fitness & Nutrition Expert
           </span>
         </h2>
-        <p style={{ lineHeight: '165%' }} className="text-body w-5/6">
+        <p style={{ lineHeight: '165%' }} className="text-body w-full md:w-5/6">
           Unlock your fitness potential with Zack's expertly designed courses, available for
           immediate download. Each program is crafted from his wealth of knowledge as a seasoned
           personal trainer.
