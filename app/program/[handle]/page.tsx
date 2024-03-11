@@ -50,24 +50,24 @@ export async function generateMetadata({
 }
 
 export default async function ProductPage({ params }: { params: { handle: string } }) {
-  const product = await getProduct(params.handle);
+  const program = await getProduct(params.handle);
 
-  if (!product) return notFound();
+  if (!program) return notFound();
 
-  const productJsonLd = {
+  const programJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: product.title,
-    description: product.description,
-    image: product.featuredImage.url,
+    '@type': 'Program',
+    name: program.title,
+    description: program.description,
+    image: program.featuredImage.url,
     offers: {
       '@type': 'AggregateOffer',
-      availability: product.availableForSale
+      availability: program.availableForSale
         ? 'https://schema.org/InStock'
         : 'https://schema.org/OutOfStock',
-      priceCurrency: product.priceRange.minVariantPrice.currencyCode,
-      highPrice: product.priceRange.maxVariantPrice.amount,
-      lowPrice: product.priceRange.minVariantPrice.amount
+      priceCurrency: program.priceRange.minVariantPrice.currencyCode,
+      highPrice: program.priceRange.maxVariantPrice.amount,
+      lowPrice: program.priceRange.minVariantPrice.amount
     }
   };
 
@@ -76,25 +76,25 @@ export default async function ProductPage({ params }: { params: { handle: string
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(productJsonLd)
+          __html: JSON.stringify(programJsonLd)
         }}
       />
       <div className="mx-auto px-4 pt-20 lg:pt-28">
         <div className="mb-8 flex flex-col p-4 md:p-12 lg:mb-0 lg:flex-row lg:gap-8 lg:p-8 ">
           <div className="flex h-full flex-1 rounded-xl bg-neutral-100  px-8 py-8 lg:px-0">
             <Gallery
-              images={product.images.map((image: Image) => ({
+              images={program.images.map((image: Image) => ({
                 src: image.url,
                 altText: image.altText
               }))}
             />
           </div>
           <div className="flex flex-1">
-            <ProductDescription product={product} />
+            <ProductDescription program={program} />
           </div>
         </div>
         <Suspense>
-          <RelatedProducts id={product.id} />
+          <RelatedProducts id={program.id} />
         </Suspense>
       </div>
       <Footer />

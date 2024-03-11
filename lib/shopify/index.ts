@@ -30,7 +30,7 @@ import {
   Image,
   Menu,
   Page,
-  Product,
+  Program,
   ShopifyAddToCartOperation,
   ShopifyCart,
   ShopifyCartOperation,
@@ -176,12 +176,30 @@ const reshapeProduct = (product: ShopifyProduct, filterHiddenProducts: boolean =
     return undefined;
   }
 
-  const { images, variants, ...rest } = product;
+  const { images, variants, metafields, ...rest } = product;
 
+  // Reshape the images and variants as before
+  const reshapedImages = reshapeImages(images, product.title);
+  const reshapedVariants = removeEdgesAndNodes(variants);
+
+  // Now, reshape the metafields if they exist
+  let reshapedMetafields;
+  if (product.metafields) {
+    reshapedMetafields = product.metafields.map((metafield) => ({
+      namespace: metafield.namespace,
+      key: metafield.key,
+      value: metafield.value,
+      type: metafield.type,
+      id: metafield.id
+    }));
+  }
+
+  // Include reshaped metafields in the return object if they exist
   return {
     ...rest,
-    images: reshapeImages(images, product.title),
-    variants: removeEdgesAndNodes(variants)
+    images: reshapedImages,
+    variants: reshapedVariants,
+    metafields: reshapedMetafields || [] // use an empty array if metafields are undefined
   };
 };
 
@@ -290,7 +308,7 @@ export async function getCollectionProducts({
   collection: string;
   reverse?: boolean;
   sortKey?: string;
-}): Promise<Product[]> {
+}): Promise<Program[]> {
   const res = await shopifyFetch<ShopifyCollectionProductsOperation>({
     query: getCollectionProductsQuery,
     tags: [TAGS.collections, TAGS.products],
@@ -371,7 +389,7 @@ export async function getPages(): Promise<Page[]> {
   return removeEdgesAndNodes(res.body.data.pages);
 }
 
-export async function getProduct(handle: string): Promise<Product | undefined> {
+export async function getProduct(handle: string): Promise<Program | undefined> {
   const res = await shopifyFetch<ShopifyProductOperation>({
     query: getProductQuery,
     tags: [TAGS.products],
@@ -383,7 +401,7 @@ export async function getProduct(handle: string): Promise<Product | undefined> {
   return reshapeProduct(res.body.data.product, false);
 }
 
-export async function getProductRecommendations(productId: string): Promise<Product[]> {
+export async function getProductRecommendations(productId: string): Promise<Program[]> {
   const res = await shopifyFetch<ShopifyProductRecommendationsOperation>({
     query: getProductRecommendationsQuery,
     tags: [TAGS.products],
@@ -403,7 +421,7 @@ export async function getProducts({
   query?: string;
   reverse?: boolean;
   sortKey?: string;
-}): Promise<Product[]> {
+}): Promise<Program[]> {
   const res = await shopifyFetch<ShopifyProductsOperation>({
     query: getProductsQuery,
     tags: [TAGS.products],

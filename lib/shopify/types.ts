@@ -25,7 +25,7 @@ export type CartItem = {
       name: string;
       value: string;
     }[];
-    product: Product;
+    product: Program;
   };
 };
 
@@ -61,7 +61,7 @@ export type Page = {
   updatedAt: string;
 };
 
-export type Product = Omit<ShopifyProduct, 'variants' | 'images'> & {
+export type Program = Omit<ShopifyProduct, 'variants' | 'images'> & {
   variants: ProductVariant[];
   images: Image[];
 };
@@ -81,6 +81,7 @@ export type ProductVariant = {
     value: string;
   }[];
   price: Money;
+  metafields: Metafield[]; // Use Metafield type from your Shopify types
 };
 
 export type SEO = {
@@ -108,6 +109,14 @@ export type ShopifyCollection = {
   updatedAt: string;
 };
 
+export type Metafield = {
+  namespace: string;
+  key: string;
+  value: string;
+  type: string;
+  id: string;
+};
+
 export type ShopifyProduct = {
   id: string;
   handle: string;
@@ -126,6 +135,7 @@ export type ShopifyProduct = {
   seo: SEO;
   tags: string[];
   updatedAt: string;
+  metafields?: Metafield[];
 };
 
 export type ShopifyCartOperation = {
@@ -262,4 +272,21 @@ export type ShopifyProductsOperation = {
     reverse?: boolean;
     sortKey?: string;
   };
+};
+export type ProgramType = {
+  featuredImage: {
+    url: string;
+  };
+  title: string;
+  priceRange: {
+    maxVariantPrice: {
+      amount: string;
+      currencyCode: string;
+    };
+  };
+  tags: string[];
+  handle: string;
+  variants: any[]; // You should specify the correct type instead of any
+  availableForSale: boolean;
+  metafields: Metafield[]; // Use Metafield type from your Shopify types
 };

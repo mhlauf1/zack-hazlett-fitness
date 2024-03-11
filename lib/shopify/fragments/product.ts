@@ -56,6 +56,13 @@ const productFragment = /* GraphQL */ `
     }
     tags
     updatedAt
+    metafields(identifiers: [{ namespace: "custom", key: "information" }]) {
+      namespace
+      key
+      value
+      type
+      id
+    }
   }
   ${imageFragment}
   ${seoFragment}
