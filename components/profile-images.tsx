@@ -1,12 +1,31 @@
+import Image from 'next/image';
 import { MdStarRate } from 'react-icons/md';
 
 export default function ProfileImages() {
   return (
     <div className="flex flex-col-reverse items-start  gap-6 lg:flex-row lg:items-end">
       <div className="flex">
-        <div className="h-10 w-10 rounded-full bg-gray-800 md:h-14 md:w-14" />
-        <div className="ml-[-24px] h-10 w-10 rounded-full bg-gray-400 md:h-14 md:w-14" />
-        <div className="ml-[-24px] h-10 w-10 rounded-full bg-gray-600 md:h-14 md:w-14" />
+        <Image
+          src="/client-1.png"
+          width={64}
+          height={64}
+          alt="Client Photo"
+          className="rounded-full"
+        />
+        <Image
+          src="/client-3.png"
+          width={64}
+          height={64}
+          alt="Client Photo"
+          className="ml-[-24px] rounded-full"
+        />
+        <Image
+          src="/client-4.png"
+          width={64}
+          height={64}
+          alt="Client Photo"
+          className="ml-[-24px] rounded-full"
+        />
       </div>
       <div>
         <div className="mb-2 flex gap-1">

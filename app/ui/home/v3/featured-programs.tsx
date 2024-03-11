@@ -13,9 +13,9 @@ export default async function FeaturedPrograms() {
       <SectionHeader text="Featured Programs" />
       <h2 className="mt-8 text-center  lg:mt-12">
         Precision-Crafted Programs: <br />{' '}
-        <span className="text-xl text-neutral-500 lg:text-4xl">Your Blueprint for Health</span>{' '}
+        <span className="text-2xl text-neutral-500 lg:text-4xl">Your Blueprint for Health</span>{' '}
       </h2>
-      <p className="text-body mb-16 mt-4 w-11/12 text-center md:w-3/4 lg:mt-8 lg:w-5/12">
+      <p className="text-body mb-16 mt-8 w-11/12 text-center md:w-3/4 lg:w-5/12">
         Browse our programs: From dynamic workouts to calming mindfulness, experience well-rounded
         health at its best.{' '}
         <Link href="/programs" className="font-bold text-[#232323]">

@@ -1,17 +1,20 @@
+import Image from 'next/image';
 import { MdStarRate } from 'react-icons/md';
 
 const Testimonial = ({
   quote,
   name,
-  program
+  program,
+  photoSrc
 }: {
   quote: string;
   name: string;
   program: string;
+  photoSrc: string;
 }) => {
   return (
     <div className="flex h-auto flex-col rounded-xl border border-neutral-300 bg-[#F3F1ED] px-4 py-4 md:h-[500px]">
-      <div className="h-10 w-10 rounded-full bg-gray-200 md:h-14 md:w-14" />
+      <Image src={photoSrc} width={64} height={64} alt="Client Photo" className="rounded-full" />
       <div className="mb-2 mt-16 flex gap-1">
         <MdStarRate className="text-yellow-400" />
         <MdStarRate className="text-yellow-400" />
@@ -36,17 +39,20 @@ export default function Testimonials() {
         <Testimonial
           name="John Doe"
           program="Fitness"
+          photoSrc="/client-1.png"
           quote="'I have been using the premade downloadable fitness plans from this website for a few months now and I am extremely satisfied with the results. The workouts are challenging but effective, and the nutrition plans have helped me improve my eating habits.'"
         />
         <div className="md:pt-12">
           <Testimonial
             name="John Doe"
+            photoSrc="/client-3.png"
             program="Fitness"
             quote="'I have been using the premade downloadable fitness plans from this website for a few months now and I am extremely satisfied with the results. The workouts are challenging but effective, and the nutrition plans have helped me improve my eating habits.'"
           />
         </div>
         <Testimonial
           name="John Doe"
+          photoSrc="/client-4.png"
           program="Fitness"
           quote="'I have been using the premade downloadable fitness plans from this website for a few months now and I am extremely satisfied with the results. The workouts are challenging but effective, and the nutrition plans have helped me improve my eating habits.'"
         />
@@ -54,6 +60,7 @@ export default function Testimonials() {
           <Testimonial
             name="John Doe"
             program="Fitness"
+            photoSrc="/client-1.png"
             quote="'I have been using the premade downloadable fitness plans from this website for a few months now and I am extremely satisfied with the results. The workouts are challenging but effective, and the nutrition plans have helped me improve my eating habits.'"
           />
         </div>
