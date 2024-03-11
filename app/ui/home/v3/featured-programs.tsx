@@ -31,7 +31,7 @@ export default async function FeaturedPrograms() {
             : featuredPrograms.map((program) => (
                 <div className="flex flex-1 flex-col flex-wrap justify-between gap-2 rounded-xl border border-neutral-400 bg-white px-6 pb-4 pt-12 duration-300 hover:opacity-90 lg:px-6 lg:pt-16">
                   <div className="flex flex-1 flex-col items-start justify-between lg:py-4">
-                    <div>
+                    <div className="w-full">
                       <div className="flex w-full flex-col items-center gap-6">
                         <Image
                           src={program.featuredImage?.url}
