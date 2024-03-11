@@ -34,7 +34,7 @@ const Card = ({ step }: { step: any }) => {
           {step.number}
         </span>
       </div>
-      <h3 className="text-2xl text-[#232323]">{step.title}</h3>
+      <h3 className="text-xl text-[#232323] md:text-2xl">{step.title}</h3>
 
       <p className="text-body-white text-[#2323238b]">{step.description}</p>
     </div>
