@@ -1,6 +1,6 @@
 'use client';
 import { BlueButton } from 'components/buttons';
-import { Product } from 'lib/shopify/types';
+import { Program } from 'lib/shopify/types';
 import Image from 'next/image';
 
 type FeaturedProgramCardProps = {
@@ -38,7 +38,7 @@ const FeaturedProgramCard: React.FC<FeaturedProgramCardProps> = ({ program, cont
   );
 };
 
-export default function FeaturedProgramList({ programs }: { programs: Product[] }) {
+export default function FeaturedProgramList({ programs }: { programs: Program[] }) {
   return (
     <div className="flex flex-col gap-32 lg:gap-72">
       <FeaturedProgramCard program={programs[2]} />

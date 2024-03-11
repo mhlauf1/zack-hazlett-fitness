@@ -1,5 +1,5 @@
 'use client';
-import { Product } from 'lib/shopify/types';
+import { Program } from 'lib/shopify/types';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -30,7 +30,7 @@ const FeaturedProgramCard: React.FC<ProgramCardProps> = ({ program, img, icon, s
   );
 };
 
-export default function ProgramCardList({ programs }: { programs: Product[] }) {
+export default function ProgramCardList({ programs }: { programs: Program[] }) {
   return (
     <div className="flex flex-col gap-4 lg:flex-row">
       <FeaturedProgramCard program={programs[2]} img="/90day-plan.png" icon="/icon-3.svg" />

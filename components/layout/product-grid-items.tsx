@@ -2,10 +2,10 @@
 import AnimateWrapper from 'components/animated/animate-wrapper';
 import Grid from 'components/grid';
 import { GridTileImage } from 'components/grid/tile';
-import { Product } from 'lib/shopify/types';
+import { Program } from 'lib/shopify/types';
 import Link from 'next/link';
 
-export default function ProductGridItems({ products }: { products: Product[] }) {
+export default function ProductGridItems({ products }: { products: Program[] }) {
   return (
     <>
       {products.map((product) => (
