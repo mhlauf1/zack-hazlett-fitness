@@ -5,11 +5,23 @@ import { Product } from 'lib/shopify/types';
 import { MdStarRate } from 'react-icons/md';
 import { VariantSelector } from './variant-selector';
 
+const benefits = [
+  'Weekly Workout Schedules',
+  'Customized Meal Plans',
+  'Flexibility Improvement',
+  '24/7 Support',
+  'Increased Energy Levels',
+  'Progress Tracking'
+];
+
 export function ProductDescription({ product }: { product: Product }) {
   return (
     <div className="flex h-full flex-col justify-between">
       <div>
         <div className="my-6 flex flex-col border-b pb-6">
+          <div className="mb-8 block lg:hidden">
+            <AddToCart variants={product.variants} availableForSale={product.availableForSale} />
+          </div>
           <h2 className="mb-2 text-3xl lg:text-4xl">{product.title}</h2>
           <div>
             <div className="mb-2 flex gap-1">
@@ -33,8 +45,21 @@ export function ProductDescription({ product }: { product: Product }) {
         {product.descriptionHtml ? (
           <Prose className="text-body mb-6 text-sm leading-tight" html={product.descriptionHtml} />
         ) : null}
+        <div>
+          <p className="mb-4 text-lg">What&#39;s Included:</p>
+          <ul className="mb-6 grid grid-cols-1 gap-4 gap-x-8 md:grid-cols-2">
+            {benefits.map((benefit) => (
+              <li className="flex items-center gap-2" key={benefit}>
+                <div className="h-1 w-1 rounded-full bg-neutral-300" />
+                <span className="text-body text-center">{benefit}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-      <AddToCart variants={product.variants} availableForSale={product.availableForSale} />
+      <div className="hidden lg:block">
+        <AddToCart variants={product.variants} availableForSale={product.availableForSale} />
+      </div>
     </div>
   );
 }
