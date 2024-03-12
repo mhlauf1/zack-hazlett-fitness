@@ -1,18 +1,18 @@
-export type SortFilterItem = {
+export type SortFilterItemType = {
   title: string;
   slug: string | null;
   sortKey: 'RELEVANCE' | 'BEST_SELLING' | 'CREATED_AT' | 'PRICE';
   reverse: boolean;
 };
 
-export const defaultSort: SortFilterItem = {
+export const defaultSort: SortFilterItemType = {
   title: 'Relevance',
   slug: null,
   sortKey: 'RELEVANCE',
   reverse: false
 };
 
-export const sorting: SortFilterItem[] = [
+export const sorting: SortFilterItemType[] = [
   defaultSort,
   { title: 'Trending', slug: 'trending-desc', sortKey: 'BEST_SELLING', reverse: false }, // asc
   { title: 'Latest arrivals', slug: 'latest-desc', sortKey: 'CREATED_AT', reverse: true },

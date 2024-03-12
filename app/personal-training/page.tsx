@@ -12,9 +12,10 @@ export const metadata = {
 export default async function PersonalTrainingPage() {
   return (
     <>
-      <div className="mx-auto pt-[8vh]">
-        <div className="bg-white px-8 py-8">
+      <div className="mx-auto pt-[7vh]">
+        <div className="bg-white px-8 pb-8 pt-4">
           <SubPageHeader text="Personal Training" />
+          <h2>Personal Training</h2>
         </div>
         <div className="flex justify-between">
           <CalendlyEmbed url="https://calendly.com/mhlauf1" />

@@ -11,7 +11,7 @@ export async function AllProductsList({ programs }: { programs: any }) {
         programs.map((program: any) => (
           <div className="flex h-auto w-full flex-1 flex-col items-start  justify-between rounded-xl border  bg-white  pb-4 pt-0 duration-300 hover:opacity-90 ">
             <div className="w-full">
-              <div className="relative flex h-[200px] w-full flex-col items-center gap-6 lg:h-[250px] ">
+              <div className="relative flex h-[200px] w-full flex-col items-center lg:h-[250px] ">
                 <Image
                   src={program.featuredImage?.url}
                   objectFit="cover"
@@ -20,8 +20,8 @@ export async function AllProductsList({ programs }: { programs: any }) {
                   className="flex flex-1 rounded-t-xl"
                 />
               </div>
-              <div className="px-6  lg:px-6">
-                <div className="mb-2 mt-12 flex w-full items-start justify-between lg:mb-8">
+              <div className="px-6 lg:px-6">
+                <div className="mb-2 mt-6 flex w-full items-start justify-between lg:mb-4">
                   <div className="flex w-full flex-col justify-between gap-2">
                     <span className="text-body-small font-nohemi font-light uppercase">
                       {program.tags}
