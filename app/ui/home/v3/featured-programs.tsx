@@ -66,7 +66,9 @@ export default async function FeaturedPrograms() {
                                   style={{ marginTop: 6 }}
                                   className="h-1 w-1 rounded-full bg-neutral-300"
                                 />
-                                <p className="text-body-small">{item}</p>
+                                <p style={{ fontSize: '1rem' }} className="text-body">
+                                  {item}
+                                </p>
                               </li>
                             ));
                           })}

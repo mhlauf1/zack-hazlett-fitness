@@ -79,8 +79,8 @@ export default async function ProductPage({ params }: { params: { handle: string
           __html: JSON.stringify(programJsonLd)
         }}
       />
-      <div className="mx-auto px-4 pt-20 lg:pt-28">
-        <div className="mb-8 flex flex-col p-4 md:p-12 lg:mb-0 lg:flex-row lg:gap-8 lg:p-8 ">
+      <div className="mx-auto px-2 pt-20 lg:px-4 lg:pt-28">
+        <div className="mb-8 flex flex-col lg:mb-0 lg:flex-row lg:gap-8">
           <div className="flex h-full flex-1 rounded-xl bg-neutral-100  px-8 py-8 lg:px-0">
             <Gallery
               images={program.images.map((image: Image) => ({

@@ -5,10 +5,10 @@ import { IoMdArrowForward } from 'react-icons/io';
 import SectionHeader from './section-header';
 
 const bullets = [
-  'Explore, Engage, Excel',
-  'Holistic Health and Nutrition',
-  'Sustainable Lifestyle Changes',
-  'Expert Guidance and Support'
+  'Personalized Programs, Real Results',
+  'Custom Coaching, Exceptional Outcomes',
+  'Fitness Tailored to You',
+  'Nutrition Made Simple'
 ];
 
 const BulletItem = ({ text }: { text: string }) => (

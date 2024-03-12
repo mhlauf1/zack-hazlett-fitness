@@ -3,13 +3,12 @@ import Price from 'components/price';
 import Prose from 'components/prose';
 import { Program } from 'lib/shopify/types';
 import { MdStarRate } from 'react-icons/md';
-import { VariantSelector } from './variant-selector';
 
 export function ProductDescription({ program }: { program: Program }) {
   return (
     <div className="flex h-full flex-col justify-between">
       <div>
-        <div className="my-6 flex flex-col border-b pb-6">
+        <div className="mb-4 mt-6 flex flex-col border-b pb-4">
           <div className="mb-8 block lg:hidden">
             <AddToCart variants={program.variants} availableForSale={program.availableForSale} />
           </div>
@@ -31,14 +30,12 @@ export function ProductDescription({ program }: { program: Program }) {
             />
           </div>
         </div>
-        <VariantSelector options={program.options} variants={program.variants} />
-
         {program.descriptionHtml ? (
           <Prose className="text-body mb-6 text-sm leading-tight" html={program.descriptionHtml} />
         ) : null}
         <div>
           <p className="mb-4 text-lg">What&#39;s Included:</p>
-          <ul className="mb-6 grid grid-cols-1 gap-4 gap-x-8 md:grid-cols-2">
+          <ul className="mb-6 grid grid-cols-1 gap-2 gap-x-8 md:grid-cols-2">
             {program.metafields?.map((metafield: { value: any }) => {
               const includedItems = JSON.parse(metafield.value).included;
               return includedItems.map((item: string) => (
