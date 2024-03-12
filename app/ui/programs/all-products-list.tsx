@@ -12,20 +12,19 @@ export async function AllProductsList() {
     <>
       {programs &&
         programs.map((program) => (
-          <div className="flex flex-1 flex-col flex-wrap justify-between gap-2 rounded-xl border border-neutral-400 bg-white px-6 pb-4 pt-12 duration-300 hover:opacity-90 lg:px-6 lg:pt-16">
-            <div className="flex flex-1 flex-col items-start justify-between lg:py-4">
-              <div className="w-full">
-                <div className="flex w-full flex-col items-center gap-6">
-                  <Image
-                    src={program.featuredImage?.url}
-                    objectFit="cover"
-                    alt={program.title}
-                    height={175}
-                    width={175}
-                    className="flex h-[150px] w-[150px] rounded-xl md:h-[200px] md:w-[200px]"
-                  />
-                </div>
-                <div className="mb-2 mt-16 flex w-full items-start justify-between lg:mb-8">
+          <div className="flex h-auto w-full flex-1 flex-col items-start  justify-between rounded-xl border  bg-white  pb-4 pt-0 duration-300 hover:opacity-90 ">
+            <div className="w-full">
+              <div className="relative flex h-[200px] w-full flex-col items-center gap-6 lg:h-[250px] ">
+                <Image
+                  src={program.featuredImage?.url}
+                  objectFit="cover"
+                  alt={program.title}
+                  fill
+                  className="flex flex-1 rounded-t-xl"
+                />
+              </div>
+              <div className="px-6  lg:px-6">
+                <div className="mb-2 mt-12 flex w-full items-start justify-between lg:mb-8">
                   <div className="flex w-full flex-col justify-between gap-2">
                     <span className="text-body-small font-nohemi font-light uppercase">
                       {program.tags}
@@ -40,34 +39,33 @@ export async function AllProductsList() {
                 </div>
                 <div>
                   <p className="mb-4">What&#39;s Included:</p>
-                  <ul className="mb-6 grid grid-cols-1 gap-4 gap-x-8 md:grid-cols-2">
+                  <ul className="mb-6 grid grid-cols-1 gap-4 gap-x-8">
                     {program.metafields?.map((metafield: { value: any }) => {
                       const includedItems = JSON.parse(metafield.value).included;
                       return includedItems.map((item: string) => (
-                        <li key={item} className="flex items-start gap-2">
-                          <div
-                            style={{ marginTop: 6 }}
-                            className="h-1 w-1 rounded-full bg-neutral-300"
-                          />
-                          <p className="text-body-small">{item}</p>
+                        <li key={item} className="flex items-center gap-2">
+                          <div className="h-1 w-1 rounded-full bg-neutral-300" />
+                          <p style={{ fontSize: '1rem' }} className="text-body">
+                            {item}
+                          </p>
                         </li>
                       ));
                     })}
                   </ul>
                 </div>
               </div>
-              <div className="mt-6 w-full lg:mt-10">
-                <div className="flex w-full flex-col gap-4">
-                  <AddToCart
-                    variants={program.variants}
-                    availableForSale={program.availableForSale}
-                  />
-                  <Link href={`/program/${program.handle}`}>
-                    <ButtonBento full dark>
-                      View all Details
-                    </ButtonBento>
-                  </Link>
-                </div>
+            </div>
+            <div className=" mt-8 w-full px-6">
+              <div className="flex w-full flex-col gap-4">
+                <AddToCart
+                  variants={program.variants}
+                  availableForSale={program.availableForSale}
+                />
+                <Link href={`/program/${program.handle}`}>
+                  <ButtonBento full dark>
+                    View all Details
+                  </ButtonBento>
+                </Link>
               </div>
             </div>
           </div>

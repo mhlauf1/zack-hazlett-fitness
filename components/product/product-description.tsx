@@ -35,7 +35,7 @@ export function ProductDescription({ program }: { program: Program }) {
         ) : null}
         <div>
           <p className="mb-4 text-lg">What&#39;s Included:</p>
-          <ul className="mb-6 grid grid-cols-1 gap-2 gap-x-8 md:grid-cols-2">
+          <ul className="mb-6 grid grid-cols-1 gap-2">
             {program.metafields?.map((metafield: { value: any }) => {
               const includedItems = JSON.parse(metafield.value).included;
               return includedItems.map((item: string) => (

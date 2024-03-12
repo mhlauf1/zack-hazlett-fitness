@@ -1,6 +1,7 @@
 import { PersonalTraining } from 'app/ui/home/v3';
 import { AllProductsList } from 'app/ui/programs/all-products-list';
 import Footer from 'components/layout/footer';
+import Collections from 'components/layout/search/collections';
 import { SubPageHeader } from 'components/subpage-header';
 export const runtime = 'edge';
 
@@ -18,9 +19,10 @@ export default async function ProgramsPage() {
           <h2>Explore Programs</h2>
         </div>
         <div className="flex flex-col gap-2 px-8">
-          <h3 className="text-body">All Programs</h3>
+          {/* <h3 className="text-body">All Programs</h3> */}
+          <Collections />
         </div>
-        <div className="mb-16 mt-4 grid grid-cols-1 gap-4 px-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mb-16 mt-4 grid grid-cols-1 gap-4 gap-y-8 px-8 md:grid-cols-2 lg:grid-cols-3">
           <AllProductsList />
         </div>
         <PersonalTraining />
