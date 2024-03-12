@@ -22,7 +22,7 @@ export default async function ProgramsPage({
   return (
     <div className="flex flex-col justify-center pb-4 md:flex-row lg:justify-start">
       {programs.length > 0 ? (
-        <div className="mb-16 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-y-8 lg:px-8">
+        <div className="mb-16 grid w-full grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-y-8 lg:px-8">
           <AllProductsList programs={programs} />
         </div>
       ) : null}

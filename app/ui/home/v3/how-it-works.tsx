@@ -11,7 +11,7 @@ const stepData = [
       "Whether you're looking to shed pounds, build muscle, or enhance endurance, you'll find a program that aligns with your personal health ambitions."
   },
   {
-    title: 'Mark Your Purchase',
+    title: 'Make Your Purchase',
     number: '02',
     description:
       "Once you've found your ideal program, secure your copy with our secure purchasing process."

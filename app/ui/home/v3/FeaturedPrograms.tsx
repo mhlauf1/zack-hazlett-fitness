@@ -56,18 +56,18 @@ export default async function FeaturedPrograms() {
                       <div>
                         <p className="mb-4">What&#39;s Included:</p>
                         <ul className="mb-6 grid grid-cols-1 gap-4 gap-x-8">
-                          {/* {program.metafields?.map((metafield: { value: any }) => {
-                            const cardDescription = JSON.parse(metafield.value).card_description;
+                          {program.metafields?.map((metafield: { value: any }) => {
+                            const cardDescription = metafield.value;
                             console.log(cardDescription, 'cardDescription');
-                            // return includedItems.map((item: string) => (
-                            //   <li key={item} className="flex items-center gap-2">
-                            //     <div className="h-1 w-1 rounded-full bg-neutral-300" />
-                            //     <p style={{ fontSize: '1rem' }} className="text-body">
-                            //       {item}
-                            //     </p>
-                            //   </li>
-                            // ));
-                          })} */}
+                            return (
+                              <li key={cardDescription} className="flex items-center gap-2">
+                                <div className="h-1 w-1 rounded-full bg-neutral-300" />
+                                <p style={{ fontSize: '1rem' }} className="text-body">
+                                  {cardDescription}
+                                </p>
+                              </li>
+                            );
+                          })}
                         </ul>
                       </div>
                     </div>

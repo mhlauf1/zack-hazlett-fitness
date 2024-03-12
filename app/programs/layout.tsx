@@ -10,11 +10,11 @@ export default function SearchLayout({ children }: { children: React.ReactNode }
   return (
     <Suspense>
       <div className="mx-auto pt-[7vh]">
-        <div className="bg-white px-8 pb-8 pt-4">
+        <div className="bg-white px-4 pb-8 pt-4 lg:px-6">
           <SubPageHeader text="Programs" />
           <h2>Explore Programs</h2>
         </div>
-        <div className="relative mx-6 flex  flex-col gap-4 px-4 pb-4 text-black md:flex-row">
+        <div className="relative mx-2 flex flex-col  gap-4 pb-4 text-black md:flex-row lg:mx-6">
           <div className=" order-first w-full flex-none md:max-w-[130px]">
             <Collections />
           </div>

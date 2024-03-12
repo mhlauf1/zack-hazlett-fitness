@@ -52,7 +52,7 @@ h1 {
   -webkit-text-fill-color: transparent; /* Will override the color property on webkit browsers */
   display: inline-block; /* This can help ensure the gradient flows with the text */
   font-size: 4rem;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
   line-height: 100%;
 }
 
@@ -61,7 +61,6 @@ h2 {
   font-weight: 200;
   color: var(--dark);
   font-size: 2.5rem;
-  letter-spacing: -0.5px;
   line-height: 120%;
 }
 
@@ -70,7 +69,6 @@ h3 {
   font-weight: 200;
   color: var(--dark);
   font-size: 2rem;
-  letter-spacing: -0.5px;
   line-height: 105%;
 }
 

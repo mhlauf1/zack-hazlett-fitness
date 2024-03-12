@@ -17,7 +17,7 @@ function SubmitButton({
 }) {
   const { pending } = useFormStatus();
   const buttonClasses =
-    'relative flex w-full items-center justify-center rounded-full  border bg-gradient-to-b  p-4 tracking-wide  border-neutral-400 from-[#FFFFFF] to-[#eaeaea]  text-[#232323]';
+    'relative flex w-full items-center justify-center rounded-full  border bg-gradient-to-b  py-2 tracking-wide  border-neutral-400 from-[#FFFFFF] to-[#eaeaea]  text-[#232323]';
   const disabledClasses = 'cursor-not-allowed opacity-60 hover:opacity-60';
 
   if (!availableForSale) {

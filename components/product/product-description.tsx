@@ -36,7 +36,7 @@ export function ProductDescription({ program }: { program: Program }) {
         <div>
           <p className="mb-4 text-lg">What&#39;s Included:</p>
           <ul className="mb-6 grid grid-cols-1 gap-2">
-            {program.metafields?.map((metafield: { value: any }) => {
+            {/* {program.metafields?.map((metafield: { value: any }) => {
               const includedItems = JSON.parse(metafield.value).included;
               return includedItems.map((item: string) => (
                 <li key={item} className="flex items-center gap-2">
@@ -44,7 +44,7 @@ export function ProductDescription({ program }: { program: Program }) {
                   <p className="text-body">{item}</p>
                 </li>
               ));
-            })}
+            })} */}
           </ul>
         </div>
       </div>

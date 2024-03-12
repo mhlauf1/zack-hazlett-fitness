@@ -47,8 +47,7 @@ export const ButtonBento = ({
   dark?: boolean;
   full?: boolean;
 }) => {
-  let baseStyle =
-    'text rounded-full border bg-gradient-to-b hover:opacity-90 lg:px-12 lg:py-4 px-10 py-4';
+  let baseStyle = 'text rounded-full border bg-gradient-to-b hover:opacity-90 lg:px-12 px-10 py-2';
   if (full) {
     baseStyle += ' w-full';
   }
