@@ -9,7 +9,6 @@ import SectionHeader from './section-header';
 
 export default async function FeaturedPrograms() {
   const featuredPrograms = await getCollectionProducts({ collection: FEATURED_PROGRAMS });
-  console.log(featuredPrograms, 'v');
   return (
     <section className="mx-0 mb-16 mt-16 flex h-auto  flex-col  items-center rounded-xl  bg-[#f3f1ed] px-4 pb-8 pt-20 md:mt-0 md:pb-8 md:pt-24  lg:mb-20 lg:px-8 lg:pb-12 lg:pt-32">
       <SectionHeader text="Featured Programs" />
@@ -59,7 +58,8 @@ export default async function FeaturedPrograms() {
                         <ul className="mb-6 grid grid-cols-1 gap-4 gap-x-8">
                           {program.metafields?.map((metafield: { value: any }) => {
                             const includedItems = JSON.parse(metafield.value).included;
-                            return includedItems.map((item: string) => (
+                            const firstThreeItems = includedItems.slice(0, 3);
+                            return firstThreeItems.map((item: string) => (
                               <li key={item} className="flex items-center gap-2">
                                 <div className="h-1 w-1 rounded-full bg-neutral-300" />
                                 <p style={{ fontSize: '1rem' }} className="text-body">

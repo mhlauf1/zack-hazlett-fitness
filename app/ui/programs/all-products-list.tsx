@@ -1,17 +1,14 @@
 import { ButtonBento } from 'components/buttons';
 import { AddToCart } from 'components/cart/add-to-cart';
 import Price from 'components/price';
-import { getProducts } from 'lib/shopify';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export async function AllProductsList() {
-  const programs = await getProducts({});
-
+export async function AllProductsList({ programs }: { programs: any }) {
   return (
     <>
       {programs &&
-        programs.map((program) => (
+        programs.map((program: any) => (
           <div className="flex h-auto w-full flex-1 flex-col items-start  justify-between rounded-xl border  bg-white  pb-4 pt-0 duration-300 hover:opacity-90 ">
             <div className="w-full">
               <div className="relative flex h-[200px] w-full flex-col items-center gap-6 lg:h-[250px] ">
