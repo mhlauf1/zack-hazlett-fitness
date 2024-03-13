@@ -78,9 +78,9 @@ export default async function ProductPage({ params }: { params: { handle: string
           __html: JSON.stringify(programJsonLd)
         }}
       />
-      <div className="mx-auto px-2 pt-20 lg:px-4 lg:pt-28">
+      <div className="mx-auto px-2 pt-20 lg:px-6 lg:pt-28">
         <div className="mb-8 flex flex-col lg:mb-0 lg:flex-row lg:gap-8">
-          <div className="flex h-full flex-1 rounded-xl bg-neutral-100 p-8">
+          <div className="flex h-full flex-1 rounded-xl">
             <div className="relative flex h-[250px] w-full flex-col items-center lg:h-[600px]">
               <Image
                 src={program.featuredImage?.url}

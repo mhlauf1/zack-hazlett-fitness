@@ -42,28 +42,24 @@ export default function Testimonials() {
           photoSrc="/client-1.png"
           quote="'I have been using the premade downloadable fitness plans from this website for a few months now and I am extremely satisfied with the results. The workouts are challenging but effective, and the nutrition plans have helped me improve my eating habits.'"
         />
-        <div className="">
-          <Testimonial
-            name="John Doe"
-            photoSrc="/client-3.png"
-            program="Fitness"
-            quote="'I have been using the premade downloadable fitness plans from this website for a few months now and I am extremely satisfied with the results. The workouts are challenging but effective, and the nutrition plans have helped me improve my eating habits.'"
-          />
-        </div>
+        <Testimonial
+          name="John Doe"
+          photoSrc="/client-3.png"
+          program="Fitness"
+          quote="'I have been using the premade downloadable fitness plans from this website for a few months now and I am extremely satisfied with the results. The workouts are challenging but effective, and the nutrition plans have helped me improve my eating habits.'"
+        />
         <Testimonial
           name="John Doe"
           photoSrc="/client-4.png"
           program="Fitness"
           quote="'I have been using the premade downloadable fitness plans from this website for a few months now and I am extremely satisfied with the results. The workouts are challenging but effective, and the nutrition plans have helped me improve my eating habits.'"
         />
-        <div className="">
-          <Testimonial
-            name="John Doe"
-            program="Fitness"
-            photoSrc="/client-1.png"
-            quote="'I have been using the premade downloadable fitness plans from this website for a few months now and I am extremely satisfied with the results. The workouts are challenging but effective, and the nutrition plans have helped me improve my eating habits.'"
-          />
-        </div>
+        <Testimonial
+          name="John Doe"
+          program="Fitness"
+          photoSrc="/client-1.png"
+          quote="'I have been using the premade downloadable fitness plans from this website for a few months now and I am extremely satisfied with the results. The workouts are challenging but effective, and the nutrition plans have helped me improve my eating habits.'"
+        />
       </div>
     </section>
   );
