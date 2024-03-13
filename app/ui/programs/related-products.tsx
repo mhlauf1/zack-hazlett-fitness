@@ -14,7 +14,7 @@ export async function RelatedProducts({ id }: { id: string }) {
       <h2 className="mb-4 text-2xl text-neutral-800 ">Related Products</h2>
       <ul className="flex flex-col gap-8 lg:flex-row">
         {relatedPrograms.map((program) => (
-          <div className="w-[25vw]">
+          <div className="w-full lg:w-[25vw]">
             <li className="flex h-auto w-full flex-1 flex-col items-start justify-between rounded-xl border  bg-white pb-4 drop-shadow-md duration-300 hover:opacity-90 hover:drop-shadow-xl ">
               <Link href={`/program/${program.handle}`} className="w-full">
                 <div className="relative flex h-[250px] w-full flex-col items-center lg:h-[300px] ">

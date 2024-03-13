@@ -33,9 +33,9 @@ const Testimonial = ({
 
 export default function Testimonials() {
   return (
-    <section className="mx-6 mb-24 mt-8 flex h-auto flex-col items-center py-24 md:mx-4 lg:mx-6 lg:mt-24 lg:px-0  lg:py-16">
+    <section className="mx-6 mt-8 flex h-auto flex-col items-center pb-12 pt-24 md:mx-4 lg:mx-6 lg:mb-12 lg:mt-24 lg:px-0  lg:py-16">
       <h2 className="mb-8 w-full text-center md:w-[8ch]">Real People, Real Results</h2>
-      <div className="my-8 grid grid-cols-1 gap-4  md:grid-cols-2 lg:grid-cols-4">
+      <div className="mb-4 mt-8 grid grid-cols-1 gap-4 md:grid-cols-2  lg:mb-8 lg:grid-cols-4">
         <Testimonial
           name="John Doe"
           program="Fitness"
