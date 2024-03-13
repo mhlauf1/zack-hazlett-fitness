@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import {
   About,
   Banner,
@@ -26,9 +25,7 @@ export const metadata = {
 export default async function HomePage() {
   return (
     <>
-      <Suspense fallback={<Loading />}>
-        <Hero />
-      </Suspense>
+      <Hero />
       <Banner />
       <About />
       <FeaturedPrograms />

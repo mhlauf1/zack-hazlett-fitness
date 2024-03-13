@@ -1,15 +1,15 @@
 import { PersonalTraining } from 'app/ui/home/v3';
-import Footer from 'components/layout/footer';
 import Collections from 'components/layout/search/collections';
 import FilterList from 'components/layout/search/filter';
 import { SubPageHeader } from 'components/subpage-header';
 import { sorting } from 'lib/constants';
 import { Suspense } from 'react';
+import Loading from './loading';
 
 export default function SearchLayout({ children }: { children: React.ReactNode }) {
   return (
-    <Suspense>
-      <div className="mx-auto pt-[7vh]">
+    <Suspense fallback={<Loading />}>
+      <div className="mx-auto mb-8 pt-[7vh]">
         <div className="bg-white px-4 pb-8 pt-4 lg:px-6">
           <SubPageHeader text="Programs" />
           <h2>Explore Programs</h2>
@@ -26,7 +26,6 @@ export default function SearchLayout({ children }: { children: React.ReactNode }
           <div className="order-last min-h-screen w-full md:order-none">{children}</div>
         </div>
         <PersonalTraining />
-        <Footer />
       </div>
     </Suspense>
   );
