@@ -9,7 +9,7 @@ import Loading from './loading';
 export default function SearchLayout({ children }: { children: React.ReactNode }) {
   return (
     <Suspense fallback={<Loading />}>
-      <div className="mx-auto mb-8 pt-[7vh]">
+      <div className="mx-auto mb-8 pt-[8vh]">
         <div className="bg-white px-4 pb-8 pt-4 lg:px-6">
           <SubPageHeader text="Programs" />
           <h2>Explore Programs</h2>

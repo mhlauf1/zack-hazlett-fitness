@@ -13,7 +13,7 @@ const Loading = () => <p>Loading....</p>;
 export default async function PersonalTrainingPage() {
   return (
     <>
-      <div className="mx-auto pt-[7vh]">
+      <div className="mx-auto pt-[8vh]">
         <div className="bg-white px-8 pb-8 pt-4">
           <SubPageHeader text="Personal Training" />
           <h2>One on One Coaching</h2>
