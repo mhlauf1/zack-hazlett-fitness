@@ -10,14 +10,19 @@ import { useFormState, useFormStatus } from 'react-dom';
 
 function SubmitButton({
   availableForSale,
-  selectedVariantId
+  selectedVariantId,
+  large
 }: {
   availableForSale: boolean;
   selectedVariantId: string | undefined;
+  large?: boolean;
 }) {
   const { pending } = useFormStatus();
-  const buttonClasses =
-    'relative flex w-full items-center justify-center rounded-full  border bg-gradient-to-b  py-2 tracking-wide  border-neutral-400 from-[#FFFFFF] to-[#eaeaea]  text-[#232323]';
+  let buttonClasses =
+    'relative flex w-full items-center justify-center rounded-full  border bg-gradient-to-b   border-blue-400 bg-blue-500 text-white py-3';
+  if (large) {
+    buttonClasses = buttonClasses + ' py-4';
+  }
   const disabledClasses = 'cursor-not-allowed opacity-60 hover:opacity-60';
 
   if (!availableForSale) {
@@ -65,10 +70,12 @@ function SubmitButton({
 
 export function AddToCart({
   variants,
-  availableForSale
+  availableForSale,
+  large
 }: {
   variants: ProductVariant[];
   availableForSale: boolean;
+  large?: boolean;
 }) {
   const [message, formAction] = useFormState(addItem, null);
   const searchParams = useSearchParams();
@@ -82,7 +89,11 @@ export function AddToCart({
   const actionWithVariant = formAction.bind(null, selectedVariantId);
   return (
     <form action={actionWithVariant}>
-      <SubmitButton availableForSale={availableForSale} selectedVariantId={selectedVariantId} />
+      <SubmitButton
+        large={large}
+        availableForSale={availableForSale}
+        selectedVariantId={selectedVariantId}
+      />
       <p aria-live="polite" className="sr-only" role="status">
         {message}
       </p>

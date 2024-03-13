@@ -72,6 +72,7 @@ export default async function FeaturedPrograms() {
                   <div className="w-full px-6">
                     <div className="z-20 flex w-full flex-col gap-4">
                       <AddToCart
+                        large
                         variants={program.variants}
                         availableForSale={program.availableForSale}
                       />

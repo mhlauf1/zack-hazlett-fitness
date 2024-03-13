@@ -6,12 +6,9 @@ import { MdStarRate } from 'react-icons/md';
 
 export function ProductDescription({ program }: { program: Program }) {
   return (
-    <div className="mx-2 flex h-full flex-col justify-between lg:mx-0">
+    <div className="realtive mx-2 mb-16 flex h-full flex-col justify-between md:mb-0 lg:mx-0">
       <div>
         <div className="mb-4 mt-6 flex flex-col border-b pb-4">
-          <div className="mb-6 block lg:mb-8 lg:hidden">
-            <AddToCart variants={program.variants} availableForSale={program.availableForSale} />
-          </div>
           <h2 className="font-inter mb-2 text-3xl font-medium lg:mb-4 lg:text-4xl">
             {program.title}
           </h2>
@@ -45,7 +42,10 @@ export function ProductDescription({ program }: { program: Program }) {
         ) : null}
       </div>
       <div className="hidden lg:block">
-        <AddToCart variants={program.variants} availableForSale={program.availableForSale} />
+        <AddToCart large variants={program.variants} availableForSale={program.availableForSale} />
+      </div>
+      <div className="bg-linear fixed bottom-0 left-0 right-0 z-20  block bg-neutral-50 p-6 lg:mb-8 lg:hidden">
+        <AddToCart large variants={program.variants} availableForSale={program.availableForSale} />
       </div>
     </div>
   );
