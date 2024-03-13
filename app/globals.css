@@ -43,9 +43,9 @@ body {
 h1 {
   font-family: var(--font-nohemi);
   font-weight: 300;
-  color: #000000;
+  color: #232323;
   /* Create a radial gradient background */
-  background: radial-gradient(circle at center, #000000 0%, #7b7b7b 100%);
+  background: radial-gradient(circle at center, #232323 0%, #7b7b7b 100%);
   /* Ensure the text is transparent so we can see the gradient underneath */
   -webkit-background-clip: text;
   background-clip: text;

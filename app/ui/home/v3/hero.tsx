@@ -25,10 +25,14 @@ export default function Hero() {
           </Link>
         </div>
         <div className="mb-8 flex w-full flex-col gap-4 md:hidden md:w-auto md:flex-row lg:w-auto lg:flex-row">
-          <ButtonBento full dark>
-            Find Your Program
-          </ButtonBento>
-          <ButtonBento full>Personal Training</ButtonBento>
+          <Link href="/programs">
+            <ButtonBento full dark>
+              Find Your Program
+            </ButtonBento>
+          </Link>
+          <Link href="/personal-training">
+            <ButtonBento full>Personal Training</ButtonBento>
+          </Link>
         </div>
         <ProfileImages />
       </div>
