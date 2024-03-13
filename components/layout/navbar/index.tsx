@@ -10,11 +10,12 @@ const { SITE_NAME } = process.env;
 
 export default async function Navbar() {
   const menu = await getMenu('next-js-frontend-header-menu');
+  const mobileMenu = await getMenu('next-js-frontend-header-mobile-menu');
 
   return (
     <nav className="fixed top-0 z-20 flex h-[7vh] w-full items-center justify-between bg-white p-4 lg:px-6">
       <div className="block flex-none md:hidden">
-        <MobileMenu menu={menu} />
+        <MobileMenu menu={mobileMenu} />
       </div>
       <div className="flex w-full items-center justify-between">
         <div className="flex w-full">

@@ -30,14 +30,11 @@ const stepData = [
 ];
 const Card = ({ step }: { step: any }) => {
   return (
-    <div className="flex  flex-col items-start gap-2 rounded-xl border border-neutral-400 bg-white px-8 py-6 lg:px-12">
-      <div className="flex items-end gap-4">
-        <span className="font-nohemi rounded-full from-neutral-50 to-neutral-100 font-light text-[#2323238b]">
-          {step.number}
-        </span>
-      </div>
-      <h3 className="text-xl text-[#232323] md:text-2xl">{step.title}</h3>
-
+    <div className="flex  flex-col items-start gap-1 rounded-xl border border-neutral-400 bg-white px-8 py-6 lg:px-12">
+      <span className="font-nohemi rounded-full from-neutral-50 to-neutral-100 font-light text-[#2323238b]">
+        {step.number}
+      </span>
+      <h3 className="font-inter text-lg font-medium text-[#232323] md:text-xl">{step.title}</h3>
       <p className="text-body-white text-[#2323238b]">{step.description}</p>
     </div>
   );

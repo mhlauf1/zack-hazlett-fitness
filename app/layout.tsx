@@ -1,3 +1,4 @@
+import Footer from 'components/layout/footer';
 import Navbar from 'components/layout/navbar';
 import { ensureStartsWith } from 'lib/utils';
 import { DM_Sans, Inter } from 'next/font/google';
@@ -49,11 +50,12 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       lang="en"
       className={`${customGrotesque.className} ${nohemi.className} ${dmSans.className}  ${inter.variable}`}
     >
-      <body className="bg-white text-black ">
+      <body className="flex min-h-[100vh] flex-col justify-between bg-white text-black">
         <Navbar />
         <Suspense>
           <main>{children}</main>
         </Suspense>
+        <Footer />
       </body>
     </html>
   );

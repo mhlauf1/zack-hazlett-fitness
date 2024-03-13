@@ -8,7 +8,7 @@ export async function AllProductsList({ programs }: { programs: any }) {
     <>
       {programs &&
         programs.map((program: any) => (
-          <div className="flex h-auto w-full  flex-1 flex-col items-start justify-between rounded-xl  border bg-white px-6  py-4   drop-shadow-md duration-300 hover:opacity-90 hover:drop-shadow-lg ">
+          <div className="flex h-auto w-full  flex-1 flex-col items-start justify-between rounded-xl  border bg-white px-6  py-4 drop-shadow-md duration-300 hover:opacity-90 hover:drop-shadow-xl ">
             <Link href={`/program/${program.handle}`} className="w-full">
               <div className="relative flex h-[250px] w-full flex-col items-center lg:h-[300px] ">
                 <Image

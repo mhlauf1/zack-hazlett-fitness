@@ -14,7 +14,7 @@ export default async function FeaturedPrograms() {
       <SectionHeader text="Featured Programs" />
       <h2 className="mt-8 text-center  lg:mt-12">
         Precision-Crafted Programs: <br />{' '}
-        <span className="text-2xl text-neutral-500 lg:text-4xl">Your Blueprint for Health</span>{' '}
+        <span className="text-2xl text-neutral-500 lg:text-4xl">Your Blueprint for Healt1h</span>{' '}
       </h2>
       <p className="text-body mb-16 mt-8 w-11/12 text-center md:w-3/4 lg:w-5/12">
         Browse our programs: From dynamic workouts to calming mindfulness, experience well-rounded
@@ -28,61 +28,53 @@ export default async function FeaturedPrograms() {
           {featuredPrograms.length === 0
             ? null
             : featuredPrograms.map((program) => (
-                <div className="flex h-auto w-full flex-1 flex-col items-start  justify-between rounded-xl   bg-white  pb-4 pt-0 duration-300 hover:opacity-90 ">
-                  <div className="w-full">
-                    <div className="relative flex h-[200px] w-full flex-col items-center gap-6 lg:h-[250px] ">
+                <div className="flex h-auto w-full  flex-1 flex-col items-start justify-between rounded-xl  border bg-white px-6  py-4   drop-shadow-md duration-300 hover:opacity-90 hover:drop-shadow-lg ">
+                  <Link href={`/program/${program.handle}`} className="w-full">
+                    <div className="relative flex h-[250px] w-full flex-col items-center lg:h-[300px] ">
                       <Image
                         src={program.featuredImage?.url}
                         objectFit="cover"
                         alt={program.title}
                         fill
-                        className="flex flex-1 rounded-t-xl"
+                        className="flex flex-1 rounded-xl"
                       />
                     </div>
-                    <div className="px-6  lg:px-6">
-                      <div className="mb-2 mt-12 flex w-full items-start justify-between lg:mb-8">
-                        <div className="flex w-full flex-col justify-between gap-2">
-                          <span className="text-body-small font-nohemi font-light uppercase">
-                            {program.tags}
-                          </span>
-                          <h3 className="text-2xl">{program.title}</h3>
-                        </div>
-                        <Price
-                          amount={program.priceRange.maxVariantPrice.amount}
-                          currencyCode={program.priceRange.maxVariantPrice.currencyCode}
-                          className="text-body"
-                        />
+                    <div className="mt-6 flex w-full items-start justify-between">
+                      <div className="flex w-full flex-col justify-between gap-1">
+                        <span className="text-body-small font-nohemi font-light uppercase">
+                          {program.tags}
+                        </span>
+                        <h3 className="font-inter text-xl font-medium">{program.title}</h3>
                       </div>
-                      <div>
-                        <p className="mb-4">What&#39;s Included:</p>
-                        <ul className="mb-6 grid grid-cols-1 gap-4 gap-x-8">
-                          {program.metafields?.map((metafield: { value: any }) => {
-                            const cardDescription = metafield.value;
-                            console.log(cardDescription, 'cardDescription');
-                            return (
-                              <li key={cardDescription} className="flex items-center gap-2">
-                                <div className="h-1 w-1 rounded-full bg-neutral-300" />
-                                <p style={{ fontSize: '1rem' }} className="text-body">
-                                  {cardDescription}
-                                </p>
-                              </li>
-                            );
-                          })}
-                        </ul>
-                      </div>
+                      <Price
+                        amount={program.priceRange.maxVariantPrice.amount}
+                        currencyCode={program.priceRange.maxVariantPrice.currencyCode}
+                        className="text-body-small"
+                      />
                     </div>
-                  </div>
-                  <div className=" mt-8 w-full px-6">
-                    <div className="flex w-full flex-col gap-4">
+                    <div className="mt-1">
+                      <ul className="mb-6 grid grid-cols-1 gap-2">
+                        {program.metafields?.map((metafield: { value: any }) => {
+                          const cardDescription = metafield.value;
+                          return (
+                            <li
+                              style={{ fontSize: '1rem' }}
+                              className="text-body"
+                              key={cardDescription}
+                            >
+                              {cardDescription}
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  </Link>
+                  <div className="w-full">
+                    <div className="z-20 flex w-full flex-col gap-4">
                       <AddToCart
                         variants={program.variants}
                         availableForSale={program.availableForSale}
                       />
-                      <Link href={`/program/${program.handle}`}>
-                        <ButtonBento full dark>
-                          View all Details
-                        </ButtonBento>
-                      </Link>
                     </div>
                   </div>
                 </div>

@@ -1,5 +1,3 @@
-import Footer from 'components/layout/footer';
-
 export const runtime = 'edge';
 
 export const metadata = {
@@ -20,7 +18,6 @@ export default async function AboutPage() {
         </div>
         <div className="my-16 grid grid-cols-1 gap-4 px-8 md:grid-cols-2 lg:grid-cols-3"></div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -1,4 +1,3 @@
-import Footer from 'components/layout/footer';
 import { Suspense } from 'react';
 import {
   About,
@@ -36,7 +35,6 @@ export default async function HomePage() {
       <HowItWorks />
       <PersonalTraining />
       <Testimonials />
-      <Footer />
     </>
   );
 }

@@ -6,14 +6,24 @@ import { MdStarRate } from 'react-icons/md';
 
 export function ProductDescription({ program }: { program: Program }) {
   return (
-    <div className="flex h-full flex-col justify-between">
+    <div className="mx-2 flex h-full flex-col justify-between lg:mx-0">
       <div>
         <div className="mb-4 mt-6 flex flex-col border-b pb-4">
-          <div className="mb-8 block lg:hidden">
+          <div className="mb-6 block lg:mb-8 lg:hidden">
             <AddToCart variants={program.variants} availableForSale={program.availableForSale} />
           </div>
-          <h2 className="mb-2 text-3xl lg:text-4xl">{program.title}</h2>
-          <div>
+          <h2 className="font-inter mb-2 text-3xl font-medium lg:mb-4 lg:text-4xl">
+            {program.title}
+          </h2>
+          {program.metafields?.map((metafield: { value: any }) => {
+            const cardDescription = metafield.value;
+            return (
+              <p style={{ fontSize: '1rem' }} className="text-body" key={cardDescription}>
+                {cardDescription}
+              </p>
+            );
+          })}
+          <div className="mt-4">
             <div className="mb-2 flex gap-1">
               <MdStarRate className="text-orange-400" />
               <MdStarRate className="text-orange-400" />
@@ -33,20 +43,6 @@ export function ProductDescription({ program }: { program: Program }) {
         {program.descriptionHtml ? (
           <Prose className="text-body mb-6 text-sm leading-tight" html={program.descriptionHtml} />
         ) : null}
-        <div>
-          <p className="mb-4 text-lg">What&#39;s Included:</p>
-          <ul className="mb-6 grid grid-cols-1 gap-2">
-            {/* {program.metafields?.map((metafield: { value: any }) => {
-              const includedItems = JSON.parse(metafield.value).included;
-              return includedItems.map((item: string) => (
-                <li key={item} className="flex items-center gap-2">
-                  <div className="h-1 w-1 rounded-full bg-neutral-300" />
-                  <p className="text-body">{item}</p>
-                </li>
-              ));
-            })} */}
-          </ul>
-        </div>
       </div>
       <div className="hidden lg:block">
         <AddToCart variants={program.variants} availableForSale={program.availableForSale} />

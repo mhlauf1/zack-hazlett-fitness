@@ -1,10 +1,9 @@
 import { RelatedProducts } from 'app/ui/programs/related-products';
-import Footer from 'components/layout/footer';
-import { Gallery } from 'components/product/gallery';
+import Image from 'next/image';
+
 import { ProductDescription } from 'components/product/product-description';
 import { HIDDEN_PRODUCT_TAG } from 'lib/constants';
 import { getProduct } from 'lib/shopify';
-import { Image } from 'lib/shopify/types';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
@@ -81,13 +80,16 @@ export default async function ProductPage({ params }: { params: { handle: string
       />
       <div className="mx-auto px-2 pt-20 lg:px-4 lg:pt-28">
         <div className="mb-8 flex flex-col lg:mb-0 lg:flex-row lg:gap-8">
-          <div className="flex h-full flex-1 rounded-xl bg-neutral-100  px-8 py-8 lg:px-0">
-            <Gallery
-              images={program.images.map((image: Image) => ({
-                src: image.url,
-                altText: image.altText
-              }))}
-            />
+          <div className="flex h-full flex-1 rounded-xl bg-neutral-100 p-8">
+            <div className="relative flex h-[250px] w-full flex-col items-center lg:h-[600px]">
+              <Image
+                src={program.featuredImage?.url}
+                objectFit="cover"
+                alt={program.title}
+                fill
+                className="flex flex-1 rounded-xl"
+              />
+            </div>
           </div>
           <div className="flex flex-1">
             <ProductDescription program={program} />
@@ -97,7 +99,6 @@ export default async function ProductPage({ params }: { params: { handle: string
           <RelatedProducts id={program.id} />
         </Suspense>
       </div>
-      <Footer />
     </>
   );
 }
