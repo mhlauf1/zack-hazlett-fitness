@@ -1,4 +1,4 @@
-import ProfileImages from 'components/profile-images';
+import ProfileImages from 'components/hero-testimonials';
 import { MdStarRate } from 'react-icons/md';
 
 const Divider = () => {

@@ -17,7 +17,7 @@ export default async function FeaturedPrograms() {
         <span className="text-2xl text-neutral-500 lg:text-4xl">Your Blueprint for Healt1h</span>{' '}
       </h2>
       <p className="text-body mb-16 mt-8 w-11/12 text-center md:w-3/4 lg:w-5/12">
-        Browse our programs: From dynamic workouts to calming mindfulness, experience well-rounded
+        Browse esour programs: From dynamic workouts to calming mindfulness, experience well-rounded
         health at its best.{' '}
         <Link href="/programs" className="font-bold text-[#232323]">
           View all programs here.

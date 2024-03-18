@@ -45,11 +45,7 @@ h1 {
   font-weight: 300;
   color: #232323;
   /* Create a radial gradient background */
-  background: radial-gradient(circle at center, #232323 0%, #7b7b7b 100%);
   /* Ensure the text is transparent so we can see the gradient underneath */
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent; /* Will override the color property on webkit browsers */
   display: inline-block; /* This can help ensure the gradient flows with the text */
   font-size: 4rem;
   letter-spacing: -1px;
@@ -74,6 +70,15 @@ h3 {
 
 p {
   font-family: var(--font-inter);
+}
+
+.large-blue-text {
+  font-family: var(--font-nohemi);
+  font-weight: 600;
+  color: rgb(59 130 246) !important;
+  font-size: 4rem;
+  letter-spacing: -1px;
+  line-height: 100%;
 }
 
 .text-body {
