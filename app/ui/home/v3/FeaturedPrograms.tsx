@@ -5,13 +5,24 @@ import { FEATURED_PROGRAMS } from 'lib/constants';
 import { getCollectionProducts } from 'lib/shopify';
 import Image from 'next/image';
 import Link from 'next/link';
-import SectionHeader from './section-header';
 
 export default async function FeaturedPrograms() {
   const featuredPrograms = await getCollectionProducts({ collection: FEATURED_PROGRAMS });
+
+  function getCardDescription(program: any) {
+    const cardDescription = program.metafields?.find(
+      (metafield: any) => metafield.key === 'card_description'
+    )?.value;
+
+    return (
+      <p className="text-body" key={cardDescription}>
+        {cardDescription}
+      </p>
+    );
+  }
+
   return (
     <section className="mx-0 mb-16 mt-16 flex h-auto  flex-col  items-center rounded-xl  bg-[#f3f1ed] px-4 pb-8 pt-20 md:mt-0 md:pb-8 md:pt-24  lg:mb-20 lg:px-8 lg:pb-12 lg:pt-32">
-      <SectionHeader text="Featured Programs" />
       <h2 className="mt-8 text-center  lg:mt-12">
         Precision-Crafted Programs: <br />{' '}
         <span className="text-2xl text-neutral-500 lg:text-4xl">Your Blueprint for Healt1h</span>{' '}
@@ -30,7 +41,7 @@ export default async function FeaturedPrograms() {
             : featuredPrograms.map((program) => (
                 <div className="flex h-auto w-full flex-1 flex-col items-start justify-between rounded-xl border  bg-white pb-4 drop-shadow-md duration-300 hover:opacity-90 hover:drop-shadow-xl ">
                   <Link href={`/program/${program.handle}`} className="w-full">
-                    <div className="relative flex h-[250px] w-full flex-col items-center lg:h-[300px] ">
+                    <div className="relative flex h-[350px] w-full flex-col items-center lg:h-[400px] ">
                       <Image
                         src={program.featuredImage?.url}
                         objectFit="cover"
@@ -53,20 +64,7 @@ export default async function FeaturedPrograms() {
                       />
                     </div>
                     <div className="mt-1 px-6 ">
-                      <ul className="mb-6 grid grid-cols-1 gap-2">
-                        {program.metafields?.map((metafield: { value: any }) => {
-                          const cardDescription = metafield.value;
-                          return (
-                            <li
-                              style={{ fontSize: '1rem' }}
-                              className="text-body"
-                              key={cardDescription}
-                            >
-                              {cardDescription}
-                            </li>
-                          );
-                        })}
-                      </ul>
+                      <div className="my-4 w-full">{getCardDescription(program)}</div>
                     </div>
                   </Link>
                   <div className="w-full px-6">
@@ -80,6 +78,9 @@ export default async function FeaturedPrograms() {
                   </div>
                 </div>
               ))}
+          <div className="flex items-center justify-center rounded-xl border bg-white">
+            <h3 className="text-center text-xl">More Programs Coming Soon</h3>
+          </div>
         </div>
       </div>
       <Link href="/programs">

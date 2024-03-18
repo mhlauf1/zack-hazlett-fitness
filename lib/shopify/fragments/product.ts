@@ -56,7 +56,12 @@ const productFragment = /* GraphQL */ `
     }
     tags
     updatedAt
-    metafields(identifiers: [{ namespace: "custom", key: "card_description" }]) {
+    metafields(
+      identifiers: [
+        { namespace: "custom", key: "card_description" }
+        { namespace: "custom", key: "program_includes" }
+      ]
+    ) {
       namespace
       key
       value

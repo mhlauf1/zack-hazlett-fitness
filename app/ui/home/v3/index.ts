@@ -1,6 +1,6 @@
+import FeaturedPrograms from './FeaturedPrograms';
 import About from './about';
 import Banner from './banner';
-import FeaturedPrograms from './FeaturedPrograms';
 import Hero from './hero';
 import HowItWorks from './how-it-works';
 import PersonalTraining from './personal-trainer';

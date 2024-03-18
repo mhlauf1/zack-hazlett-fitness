@@ -27,9 +27,9 @@ export default async function HomePage() {
     <>
       <Hero />
       <Banner />
-      <About />
-      <FeaturedPrograms />
       <HowItWorks />
+      <FeaturedPrograms />
+      <About />
       <PersonalTraining />
       <Testimonials />
     </>

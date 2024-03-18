@@ -26,7 +26,7 @@ const Stars = () => (
 );
 
 const Testimonial = ({ text }: { text: string }) => (
-  <div className="flex flex-col items-center gap-6">
+  <div className="flex flex-col items-center gap-2 lg:gap-6">
     <Stars />
     <div>
       <p style={{ lineHeight: '130%' }} className="text-body w-[24ch] text-center font-semibold">
@@ -38,7 +38,7 @@ const Testimonial = ({ text }: { text: string }) => (
 
 export default function HeroTestimonials() {
   return (
-    <div className="flex w-2/3 items-center justify-between">
+    <div className="gird-cols-1 hidden w-full items-center justify-center gap-y-8 lg:grid lg:grid-cols-3 lg:justify-between lg:gap-0">
       {quotes.map((quote) => (
         <div key={quote.id}>
           <Testimonial text={quote.text} />
