@@ -33,8 +33,10 @@ const Testimonial = ({
 
 export default function Testimonials() {
   return (
-    <section className="mx-6 mt-8 flex h-auto flex-col items-center pb-12 pt-24 md:mx-4 lg:mx-6 lg:mb-12 lg:mt-24 lg:px-0  lg:py-16">
-      <h2 className="mb-8 w-full text-center md:w-[8ch]">Real People, Real Results</h2>
+    <section className="mx-6 mt-0 flex h-auto flex-col items-center pb-12 pt-24 md:mx-4 lg:mx-6 lg:mb-12 lg:mt-24 lg:px-0  lg:py-16">
+      <h2 className="mb-0 w-full text-center lg:mb-8">
+        Real People, <span className="text-neutral-500"> Real Results</span>
+      </h2>
       <div className="mb-4 mt-8 grid grid-cols-1 gap-4 md:grid-cols-2  lg:mb-8 lg:grid-cols-4">
         <Testimonial
           name="John Doe"

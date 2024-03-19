@@ -24,9 +24,9 @@ export default async function Featured() {
   }
 
   return program ? (
-    <div className="z-30 mx-2 mb-8 flex w-auto flex-col gap-8 rounded-xl border bg-neutral-50 px-4 pb-8 pt-4 text-[#232323] duration-300 hover:bg-white md:mx-4 lg:mx-6 lg:flex-row lg:px-8 lg:py-16">
+    <div className="z-30 mx-2 mb-8 flex w-auto flex-col gap-8 rounded-xl border bg-neutral-50 px-4 pb-8 pt-8 text-[#232323] duration-300 hover:bg-white md:mx-4 lg:mx-6 lg:flex-row lg:px-8 lg:py-16">
       <Link className="relative flex flex-col lg:w-1/2" href={`/program/${program.handle}`}>
-        <div className="flex lg:hidden">
+        <div className="mb-4 flex lg:hidden">
           <SectionHeader text="Featured Program" />
         </div>
         <div className="relative hidden flex-1 rounded-xl border border-neutral-200 lg:flex lg:w-full">

@@ -64,12 +64,12 @@ export default function HowItWorks() {
           />
         </div>
       </div>
-      <div className="flex  w-full flex-col items-start justify-end rounded-xl border border-neutral-200  bg-neutral-100 px-4 py-6 lg:px-16 lg:py-12">
+      <div className="flex  w-full flex-col items-start justify-end rounded-xl border border-neutral-200  bg-neutral-100 px-4 py-8 lg:px-16 lg:py-12">
         <SectionHeader text="How It Works" />
-        <h2 className="mb-12 mt-0 w-full text-[#232323] lg:mt-8 lg:w-[24ch]">
+        <h2 className="mb-6 mt-4 w-full text-[#232323] lg:mb-12 lg:mt-8 lg:w-[24ch]">
           4 Easy Steps To Start Your Health and Fitness Journey
         </h2>
-        <div className="mb-16 grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <div className="mb-8 grid grid-cols-1 gap-4 lg:mb-16 lg:grid-cols-2">
           {stepData.map((step) => (
             <Card step={step} />
           ))}

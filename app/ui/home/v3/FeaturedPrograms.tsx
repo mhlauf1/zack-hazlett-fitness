@@ -22,7 +22,7 @@ export default async function FeaturedPrograms() {
   }
 
   return (
-    <section className="mx-0 mb-16 mt-16 flex h-auto  flex-col  items-center rounded-xl  bg-[#f3f1ed] px-4 pb-8 pt-20 md:mt-0 md:pb-8 md:pt-24  lg:mb-20 lg:px-8 lg:pb-12 lg:pt-32">
+    <section className="mx-0 mb-16 mt-16 flex h-auto  flex-col  items-center rounded-xl  bg-[#f3f1ed] px-4 pb-8 pt-8 md:mt-0 md:pb-8 md:pt-24  lg:mb-20 lg:px-8 lg:pb-12 lg:pt-32">
       <h2 className="mt-8 text-center  lg:mt-12">
         Precision-Crafted Programs: <br />{' '}
         <span className="text-2xl text-neutral-500 lg:text-4xl">Your Blueprint for Healt1h</span>{' '}
@@ -34,7 +34,7 @@ export default async function FeaturedPrograms() {
           View all programs here.
         </Link>
       </p>
-      <div className="mb-16 w-full">
+      <div className="mb-8 w-full lg:mb-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-4 lg:grid-cols-3">
           {featuredPrograms.length === 0
             ? null
