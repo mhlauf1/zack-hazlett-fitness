@@ -4,13 +4,25 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export async function AllProductsList({ programs }: { programs: any }) {
+  function getCardDescription(program: any) {
+    const cardDescription = program.metafields?.find(
+      (metafield: any) => metafield.key === 'card_description'
+    )?.value;
+
+    return (
+      <p className="text-body" key={cardDescription}>
+        {cardDescription}
+      </p>
+    );
+  }
+
   return (
     <>
       {programs &&
         programs.map((program: any) => (
-          <div className="flex h-auto w-full flex-1 flex-col items-start justify-between rounded-xl border  bg-white pb-6 drop-shadow-md duration-300 hover:opacity-90 hover:drop-shadow-xl ">
+          <div className="flex h-auto w-full flex-1 flex-col items-start justify-between rounded-xl border  bg-white pb-4 drop-shadow-md duration-300 hover:opacity-90 hover:drop-shadow-xl ">
             <Link href={`/program/${program.handle}`} className="w-full">
-              <div className="relative flex h-[250px] w-full flex-col items-center lg:h-[300px] ">
+              <div className="relative flex h-[350px] w-full flex-col items-center lg:h-[400px] ">
                 <Image
                   src={program.featuredImage?.url}
                   objectFit="cover"
@@ -33,19 +45,10 @@ export async function AllProductsList({ programs }: { programs: any }) {
                 />
               </div>
               <div className="mt-1 px-6 ">
-                <ul className="mb-6 grid grid-cols-1 gap-2">
-                  {program.metafields?.map((metafield: { value: any }) => {
-                    const cardDescription = metafield.value;
-                    return (
-                      <li style={{ fontSize: '1rem' }} className="text-body" key={cardDescription}>
-                        {cardDescription}
-                      </li>
-                    );
-                  })}
-                </ul>
+                <div className="my-4 w-full">{getCardDescription(program)}</div>
               </div>
             </Link>
-            <div className="mt-4 w-full px-6">
+            <div className="w-full px-6">
               <div className="z-20 flex w-full flex-col gap-4">
                 <AddToCart
                   large

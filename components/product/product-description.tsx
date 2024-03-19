@@ -7,9 +7,16 @@ import { WhatIsIncluded } from './what-is-included';
 
 export function ProductDescription({ program }: { program: Program }) {
   return (
-    <div className="realtive mx-2 mb-16 flex h-full flex-col justify-between md:mb-0 lg:mx-0">
+    <div className="realtive mx-2 mb-8 flex h-full flex-col justify-between md:mb-0 lg:mx-0">
       <div className="mb-4">
         <div className="mb-4 mt-6 flex flex-col border-b pb-4">
+          <div className="bg-linear mb-8 mt-4 block lg:hidden">
+            <AddToCart
+              large
+              variants={program.variants}
+              availableForSale={program.availableForSale}
+            />
+          </div>
           <div className="flex items-end justify-between">
             <div>
               <h2 className="font-inter mb-4 text-3xl font-medium lg:text-4xl">{program.title}</h2>
@@ -28,7 +35,7 @@ export function ProductDescription({ program }: { program: Program }) {
                 <MdStarRate className="text-orange-400" />
                 <MdStarRate className="text-orange-400" />
               </div>
-              <span className="text-body font-semibold">(24) 5-Star Reviews</span>
+              <span className="text-body-small font-semibold">(24) 5-Star Reviews</span>
             </div>
           </div>
 
@@ -42,9 +49,6 @@ export function ProductDescription({ program }: { program: Program }) {
         </div>
       </div>
       <div className="hidden lg:block">
-        <AddToCart large variants={program.variants} availableForSale={program.availableForSale} />
-      </div>
-      <div className="bg-linear fixed bottom-0 left-0 right-0 z-20  block bg-neutral-50 p-6 lg:mb-8 lg:hidden">
         <AddToCart large variants={program.variants} availableForSale={program.availableForSale} />
       </div>
     </div>

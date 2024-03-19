@@ -14,8 +14,8 @@ export const WhatIsIncluded: FunctionComponent<WhatIsIncludedProps> = ({ program
 
   return (
     <div>
-      <h4 className="mb-4 text-xl">What&#39;s Included:</h4>
-      <ul className="mx-8 grid grid-cols-1 gap-4 md:grid-cols-1">
+      <h4 className="mb-4 text-lg lg:text-xl">What&#39;s Included:</h4>
+      <ul className="mx-4 grid grid-cols-1 gap-4 md:grid-cols-1 lg:mx-8">
         {includedItems?.map((item: any, index: any) => (
           <li key={index} className="flex items-start gap-2">
             <IoMdArrowForward className="mt-2" />

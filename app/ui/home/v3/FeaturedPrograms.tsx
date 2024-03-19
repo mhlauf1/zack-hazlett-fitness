@@ -78,7 +78,7 @@ export default async function FeaturedPrograms() {
                   </div>
                 </div>
               ))}
-          <div className="flex items-center justify-center rounded-xl border bg-white">
+          <div className="flex h-[400px] items-center justify-center rounded-xl border bg-white lg:h-auto">
             <h3 className="text-center text-xl">More Programs Coming Soon</h3>
           </div>
         </div>
