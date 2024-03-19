@@ -25,7 +25,7 @@ export default async function FeaturedPrograms() {
     <section className="mx-0 mb-16 mt-16 flex h-auto  flex-col  items-center rounded-xl  bg-[#f3f1ed] px-4 pb-8 pt-8 md:mt-0 md:pb-8 md:pt-24  lg:mb-20 lg:px-8 lg:pb-12 lg:pt-32">
       <h2 className="mt-8 text-center  lg:mt-12">
         Precision-Crafted Programs: <br />{' '}
-        <span className="text-2xl text-neutral-500 lg:text-4xl">Your Blueprint for Healt1h</span>{' '}
+        <span className="text-2xl text-neutral-500 lg:text-4xl">Your Blueprint for Health</span>{' '}
       </h2>
       <p className="text-body mb-16 mt-8 w-11/12 text-center md:w-3/4 lg:w-5/12">
         Browse esour programs: From dynamic workouts to calming mindfulness, experience well-rounded
