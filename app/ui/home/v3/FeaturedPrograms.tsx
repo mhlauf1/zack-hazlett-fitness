@@ -60,7 +60,7 @@ export default async function FeaturedPrograms() {
                       <Price
                         amount={program.priceRange.maxVariantPrice.amount}
                         currencyCode={program.priceRange.maxVariantPrice.currencyCode}
-                        className="text-body-small"
+                        className="text-body"
                       />
                     </div>
                     <div className="mt-1 px-6 ">

@@ -1,6 +1,7 @@
 import {
   About,
   Banner,
+  Featured,
   FeaturedPrograms,
   Hero,
   HowItWorks,
@@ -26,6 +27,7 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
+      <Featured />
       <Banner />
       <HowItWorks />
       <FeaturedPrograms />

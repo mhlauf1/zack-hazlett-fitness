@@ -44,7 +44,7 @@ export default function HowItWorks() {
   return (
     <section className="mx-2 mb-8 flex flex-col gap-8 text-[#232323] md:mx-4 md:mt-0 lg:mx-6 lg:mb-20 lg:flex-row lg:gap-2">
       <div className="flex w-full rounded-xl border border-neutral-200 lg:w-2/6">
-        <div className="relative hidden h-auto w-[100vw] flex-1 justify-center lg:flex lg:w-[50vw] lg:justify-end">
+        <div className="relative hidden h-auto w-full flex-1 justify-center lg:flex lg:justify-end">
           <Image
             className="rounded-xl"
             src="/hazlett-hero-2.png"
@@ -64,9 +64,9 @@ export default function HowItWorks() {
           />
         </div>
       </div>
-      <div className="flex  w-full flex-col items-start justify-end rounded-xl border border-neutral-200  bg-neutral-100 px-6 py-12 lg:px-16 lg:py-12">
+      <div className="flex  w-full flex-col items-start justify-end rounded-xl border border-neutral-200  bg-neutral-100 px-4 py-6 lg:px-16 lg:py-12">
         <SectionHeader text="How It Works" />
-        <h2 className="mb-12 mt-8 w-full text-[#232323] lg:mt-16 lg:w-[24ch]">
+        <h2 className="mb-12 mt-0 w-full text-[#232323] lg:mt-8 lg:w-[24ch]">
           4 Easy Steps To Start Your Health and Fitness Journey
         </h2>
         <div className="mb-16 grid grid-cols-1 gap-4 lg:grid-cols-2">
