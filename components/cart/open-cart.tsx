@@ -11,7 +11,7 @@ export default function OpenCart({
   return (
     <div
       style={{ borderRadius: 10 }}
-      className="relative flex h-11 w-11 items-center justify-center border border-neutral-200 bg-blue-500 text-white transition-colors "
+      className="relative flex h-11 w-11 items-center justify-center bg-blue-500 text-white transition-colors "
     >
       <ShoppingCartIcon
         className={clsx('h-4 transition-all ease-in-out hover:scale-110 ', className)}

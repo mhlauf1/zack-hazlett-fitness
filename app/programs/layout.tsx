@@ -1,4 +1,4 @@
-import { PersonalTraining } from 'app/ui/home/v3';
+import { PersonalTraining } from 'app/ui/home';
 import Collections from 'components/layout/search/collections';
 import FilterList from 'components/layout/search/filter';
 import { SubPageHeader } from 'components/subpage-header';

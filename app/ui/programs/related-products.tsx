@@ -26,7 +26,7 @@ export async function RelatedProducts({ id }: { id: string }) {
       <ul className="flex flex-col gap-8 lg:flex-row">
         {relatedPrograms.map((program) => (
           <div className="w-full lg:w-[500px]">
-            <li className="flex h-auto w-full flex-1 flex-col items-start justify-between rounded-xl border  bg-white pb-4 drop-shadow-md duration-300 hover:opacity-90 hover:drop-shadow-xl ">
+            <li className="flex h-auto w-full flex-1 flex-col items-start justify-between  border  bg-white pb-4 drop-shadow-md duration-300 hover:opacity-90 hover:drop-shadow-xl ">
               <Link href={`/program/${program.handle}`} className="w-full">
                 <div className="relative flex h-[350px] w-full flex-col items-center lg:h-[400px] ">
                   <Image
@@ -34,7 +34,7 @@ export async function RelatedProducts({ id }: { id: string }) {
                     objectFit="cover"
                     alt={program.title}
                     fill
-                    className="flex flex-1 rounded-t-xl"
+                    className="flex flex-1"
                   />
                 </div>
                 <div className="mt-6 flex  w-full items-start justify-between px-6">

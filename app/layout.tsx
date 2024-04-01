@@ -3,7 +3,7 @@ import Navbar from 'components/layout/navbar';
 import { ensureStartsWith } from 'lib/utils';
 import { DM_Sans, Inter } from 'next/font/google';
 import localFont from 'next/font/local';
-import { ReactNode, Suspense } from 'react';
+import { ReactNode } from 'react';
 import './globals.css';
 
 const { TWITTER_CREATOR, TWITTER_SITE, SITE_NAME } = process.env;
@@ -50,11 +50,9 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       lang="en"
       className={`${customGrotesque.className} ${nohemi.className} ${dmSans.className}  ${inter.variable}`}
     >
-      <body className="flex min-h-[100vh] flex-col justify-between bg-white text-black">
+      <body className="flex min-h-[100vh] flex-col  bg-white text-black">
         <Navbar />
-        <Suspense>
-          <main>{children}</main>
-        </Suspense>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

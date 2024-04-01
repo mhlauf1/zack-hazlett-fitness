@@ -1,6 +1,5 @@
 import Cart from 'components/cart';
 import OpenCart from 'components/cart/open-cart';
-import LogoSquare from 'components/logo-square';
 import { getMenu } from 'lib/shopify';
 import { Menu } from 'lib/shopify/types';
 import Link from 'next/link';
@@ -18,23 +17,27 @@ export default async function Navbar() {
         <MobileMenu menu={mobileMenu} />
       </div>
       <div className="flex w-full items-center justify-between">
-        <div className="flex w-full">
+        <div className="flex">
           <Link
             href="/"
             className="mr-2 flex w-full items-center justify-center text-[#232323] md:mr-6 md:w-auto lg:mr-12"
           >
-            <LogoSquare />
-            <div className="ml-2 flex-none text-sm font-medium uppercase md:hidden lg:ml-4 lg:block">
+            <div
+              style={{ letterSpacing: 3 }}
+              className="ml-2 hidden flex-none text-sm font-medium  uppercase md:block lg:ml-4"
+            >
               {SITE_NAME}
             </div>
           </Link>
+        </div>
+        <div className="flex gap-8">
           {menu.length ? (
             <ul className="hidden gap-6 text-sm md:flex md:items-center">
               {menu.map((item: Menu) => (
                 <li key={item.title}>
                   <Link
                     href={item.path}
-                    className="nav-link underline-offset-4 duration-300 ease-in-out hover:text-neutral-800"
+                    className="nav-link  underline-offset-4 duration-300 ease-in-out"
                   >
                     {item.title}
                   </Link>
@@ -42,13 +45,9 @@ export default async function Navbar() {
               ))}
             </ul>
           ) : null}
-        </div>
-        <div className="flex">
-          <div className="flex justify-end">
-            <Suspense fallback={<OpenCart />}>
-              <Cart />
-            </Suspense>
-          </div>
+          <Suspense fallback={<OpenCart />}>
+            <Cart />
+          </Suspense>
         </div>
       </div>
     </nav>

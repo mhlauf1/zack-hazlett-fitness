@@ -20,7 +20,7 @@ export async function AllProductsList({ programs }: { programs: any }) {
     <>
       {programs &&
         programs.map((program: any) => (
-          <div className="flex h-auto w-full flex-1 flex-col items-start justify-between rounded-xl border  bg-white pb-4 drop-shadow-md duration-300 hover:opacity-90 hover:drop-shadow-xl ">
+          <div className="flex h-auto w-full flex-1 flex-col items-start justify-between border  bg-white pb-4 drop-shadow-md duration-300 hover:opacity-90 hover:drop-shadow-xl ">
             <Link href={`/program/${program.handle}`} className="w-full">
               <div className="relative flex h-[350px] w-full flex-col items-center lg:h-[400px] ">
                 <Image
@@ -28,7 +28,7 @@ export async function AllProductsList({ programs }: { programs: any }) {
                   objectFit="cover"
                   alt={program.title}
                   fill
-                  className="flex flex-1 rounded-t-xl"
+                  className="flex flex-1 "
                 />
               </div>
               <div className="mt-6 flex  w-full items-start justify-between px-6">

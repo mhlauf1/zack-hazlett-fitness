@@ -22,7 +22,7 @@ export default async function FeaturedPrograms() {
   }
 
   return (
-    <section className="mx-0 mb-16 mt-16 flex h-auto  flex-col  items-center rounded-xl  bg-[#f3f1ed] px-4 pb-8 pt-8 md:mt-0 md:pb-8 md:pt-24  lg:mb-20 lg:px-8 lg:pb-12 lg:pt-32">
+    <section className="mx-0 mb-16 flex h-auto  flex-col items-center bg-[#f3f1ed] px-4 pb-8 pt-8 md:mt-0 md:pb-8  lg:mb-20 lg:px-8 lg:pb-12 lg:pt-12">
       <h2 className="mt-8 text-center  lg:mt-12">
         Precision-Crafted Programs: <br />{' '}
         <span className="text-2xl text-neutral-500 lg:text-4xl">Your Blueprint for Health</span>{' '}
@@ -39,7 +39,7 @@ export default async function FeaturedPrograms() {
           {featuredPrograms.length === 0
             ? null
             : featuredPrograms.map((program) => (
-                <div className="flex h-auto w-full flex-1 flex-col items-start justify-between rounded-xl border  bg-white pb-4 drop-shadow-md duration-300 hover:opacity-90 hover:drop-shadow-xl ">
+                <div className="flex h-auto w-full flex-1 flex-col items-start justify-between  border  bg-white pb-4 drop-shadow-md duration-300 hover:opacity-90 hover:drop-shadow-xl ">
                   <Link href={`/program/${program.handle}`} className="w-full">
                     <div className="relative flex h-[350px] w-full flex-col items-center lg:h-[400px] ">
                       <Image
@@ -47,7 +47,7 @@ export default async function FeaturedPrograms() {
                         objectFit="cover"
                         alt={program.title}
                         fill
-                        className="flex flex-1 rounded-t-xl"
+                        className="flex flex-1"
                       />
                     </div>
                     <div className="mt-6 flex  w-full items-start justify-between px-6">
@@ -78,9 +78,9 @@ export default async function FeaturedPrograms() {
                   </div>
                 </div>
               ))}
-          <div className="flex h-[400px] items-center justify-center rounded-xl border bg-white lg:h-auto">
+          {/* <div className="flex h-[400px] items-center justify-center rounded-xl border bg-white lg:h-auto">
             <h3 className="text-center text-xl">More Programs Coming Soon</h3>
-          </div>
+          </div> */}
         </div>
       </div>
       <Link href="/programs">

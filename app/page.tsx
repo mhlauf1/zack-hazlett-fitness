@@ -1,20 +1,5 @@
-import {
-  About,
-  Banner,
-  Featured,
-  FeaturedPrograms,
-  Hero,
-  HowItWorks,
-  PersonalTraining,
-  Testimonials
-} from './ui/home/v3';
-
+import { About, Featured, Hero, HowItWorks, PersonalTraining, Testimonials } from './ui/home';
 export const runtime = 'edge';
-
-function Loading() {
-  return <p>Loading Data...</p>;
-}
-
 export const metadata = {
   description:
     'High-performance ecommerce store by Zack Hazlett. Fitness and Nutrition programs available for purchase.',
@@ -25,15 +10,13 @@ export const metadata = {
 
 export default async function HomePage() {
   return (
-    <>
+    <div>
       <Hero />
       <Featured />
-      <Banner />
       <HowItWorks />
-      <FeaturedPrograms />
       <About />
-      <PersonalTraining />
       <Testimonials />
-    </>
+      <PersonalTraining />
+    </div>
   );
 }

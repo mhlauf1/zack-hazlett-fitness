@@ -121,4 +121,39 @@ const ProgramButton = ({
   );
 };
 
-export { Button, DarkButton, ProgramButton };
+const Btn = ({
+  children,
+  href,
+  dark,
+  white
+}: {
+  children: ReactNode;
+  href: string;
+  dark?: boolean;
+  white?: boolean;
+}) => {
+  const isLight =
+    'font-inter rounded-full bg-blue-600/10  px-8 py-3 text-sm font-semibold leading-6 text-blue-600 ring-1 ring-inset ring-blue-600/10 focus-visible:outline-blue-600 lg:px-16 lg:py-4';
+  const isDark =
+    'font-inter rounded-full bg-blue-600  px-8 py-3   text-sm font-semibold leading-6 text-blue-50 ring-1 ring-inset ring-blue-600/10 focus-visible:outline-blue-600 lg:px-16 lg:py-4';
+
+  const isWhite =
+    'font-inter rounded-full bg-white  px-8 py-3  text-sm font-semibold leading-6 text-blue-700 ring-1 ring-inset ring-blue-600/10 focus-visible:outline-blue-600 lg:px-16 lg:py-4';
+
+  const handleBg = () => {
+    if (dark) {
+      return isDark;
+    }
+    if (white) {
+      return isWhite;
+    }
+    return isLight;
+  };
+  return (
+    <Link href={href}>
+      <button className={handleBg()}>{children}</button>
+    </Link>
+  );
+};
+
+export { Btn, Button, DarkButton, ProgramButton };

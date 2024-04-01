@@ -80,14 +80,14 @@ export default async function ProductPage({ params }: { params: { handle: string
       />
       <div className="mx-auto px-2 pt-28 lg:px-4 lg:py-20 lg:pt-28">
         <div className="mb-8 flex flex-col lg:mb-0 lg:flex-row lg:gap-8">
-          <div className="relative flex h-full flex-1 rounded-xl">
+          <div className="relative flex h-full flex-1">
             <div className="flex h-[350px] w-full flex-col items-center lg:h-[700px]">
               <Image
                 src={program.featuredImage?.url}
                 objectFit="cover"
                 alt={program.title}
                 fill
-                className="flex flex-1 rounded-xl"
+                className="flex flex-1"
               />
             </div>
           </div>

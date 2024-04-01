@@ -1,6 +1,4 @@
 import { getMenu } from 'lib/shopify';
-import { Menu } from 'lib/shopify/types';
-import Link from 'next/link';
 const { COMPANY_NAME, SITE_NAME } = process.env;
 
 export default async function Footer() {
@@ -11,28 +9,38 @@ export default async function Footer() {
   const copyrightName = COMPANY_NAME || SITE_NAME || '';
 
   return (
-    <footer className="mx-6 mb-4 py-4 text-sm text-neutral-500 lg:py-0 ">
-      <div className="text-sm">
-        <div className="mx-auto flex flex-col items-center justify-between md:flex-row">
-          <p style={{ lineHeight: '145%' }} className="text-footer">
-            &copy; {copyrightDate} {copyrightName}
-            {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All Rights Reserved.
-          </p>
-          <ul className="flex items-center gap-3 lg:items-start">
-            {menu.map((item: Menu) => (
-              <li key={item.title}>
-                <Link href={item.path} className="text-footer">
-                  {item.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="flex">
-            <p className="text-footer">Powered by MLP</p>
-            <hr className="mx-4 inline-block h-4 w-[1px] border-l border-neutral-300" />
-            <p className="text-footer">Designed in Chicago</p>
+    <footer className="bg-white">
+      <div className="mx-auto max-w-7xl overflow-hidden px-6 pb-4 pt-16 sm:pb-8 sm:pt-24 lg:px-8">
+        <nav
+          className="-mb-6 sm:flex sm:justify-center sm:space-x-12 md:columns-2"
+          aria-label="Footer"
+        >
+          <div className="pb-6">
+            <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+              Home
+            </a>
           </div>
-        </div>
+          {menu.map((item) => (
+            <div key={item.title} className="pb-6">
+              <a href={item.path} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                {item.title}
+              </a>
+            </div>
+          ))}
+        </nav>
+        {/* <div className="mt-10 flex justify-center space-x-10">
+            {menu.map((item) => (
+              <a key={item.title} href={item.path} className="text-gray-400 hover:text-gray-500">
+                <span className="sr-only">{item.title}</span>
+                <item.icon className="h-6 w-6" aria-hidden="true" />
+              </a>
+            ))}
+          </div> */}
+        <p className="mt-10 text-center text-xs leading-5 text-gray-400">
+          &copy; {copyrightDate} {copyrightName}
+          {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All Rights Reserved.
+          Powered by Lauf.
+        </p>
       </div>
     </footer>
   );
