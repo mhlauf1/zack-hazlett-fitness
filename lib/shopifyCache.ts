@@ -16,10 +16,7 @@ interface Program {
   };
   variants: any[]; // You might want to define a more specific type for variants
   availableForSale: boolean;
-  metafields: Array<{
-    key: string;
-    value: string;
-  }>;
+  metafields?: Array<{ key: string; value: string }> | undefined;
 }
 // Define the cache object with types
 let cache: {
