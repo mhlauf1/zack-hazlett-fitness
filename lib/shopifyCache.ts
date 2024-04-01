@@ -40,7 +40,6 @@ export async function getCachedFeaturedPrograms(): Promise<Program[]> {
 
   // Fetch new data, as cache is empty or expired
   const data: Program[] = await getCollectionProducts({ collection: FEATURED_PROGRAMS });
-
   // Update cache
   cache.featuredProgram = data;
   cache.lastFetch = now;
