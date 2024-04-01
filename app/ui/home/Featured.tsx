@@ -2,10 +2,10 @@ import { AddToCart } from 'components/cart/add-to-cart';
 import Price from 'components/price';
 import { FEATURED_PROGRAMS } from 'lib/constants';
 import { getCollectionProducts } from 'lib/shopify';
+import Image from 'next/image';
 
 export default async function Featured() {
   const featuredProgram = await getCollectionProducts({ collection: FEATURED_PROGRAMS });
-  const program = featuredProgram[1];
 
   function getCardDescription(program: any) {
     const cardDescription = program.metafields?.find(
@@ -42,11 +42,14 @@ export default async function Featured() {
             ? featuredProgram.map((program) => (
                 <div key={program.id} className="group relative">
                   <div className="relative">
-                    <div className="sm:aspect-h-3 sm:aspect-w-2 h-auto  w-full overflow-hidden rounded-lg group-hover:opacity-75">
-                      <img
+                    <div className="h-auto w-auto">
+                      <Image
                         src={program.featuredImage?.url}
                         alt={program.title}
-                        className="h-full w-full object-cover object-center"
+                        layout="responsive"
+                        width={100}
+                        height={100}
+                        objectFit="cover"
                       />
                     </div>
                     <div className="sticky bottom-0 z-20 flex justify-between border-b bg-white pb-4  pt-6 duration-150">
