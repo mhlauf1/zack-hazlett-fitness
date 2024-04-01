@@ -3,12 +3,24 @@ import { getCollectionProducts } from './shopify';
 
 // Define the Program type according to your data structure
 interface Program {
-  // Define properties of a program, e.g.:
   id: string;
   title: string;
-  // Add other necessary properties based on your data
+  featuredImage: {
+    url: string;
+  };
+  priceRange: {
+    maxVariantPrice: {
+      amount: string;
+      currencyCode: string;
+    };
+  };
+  variants: any[]; // You might want to define a more specific type for variants
+  availableForSale: boolean;
+  metafields: Array<{
+    key: string;
+    value: string;
+  }>;
 }
-
 // Define the cache object with types
 let cache: {
   featuredProgram: Program[] | null; // Allow for null or an array of Program objects
