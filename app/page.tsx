@@ -1,5 +1,6 @@
 import { About, Featured, Hero, HowItWorks, PersonalTraining, Testimonials } from './ui/home';
 export const runtime = 'edge';
+export const dynamic = 'force-dynamic';
 export const metadata = {
   description:
     'High-performance ecommerce store by Zack Hazlett. Fitness and Nutrition programs available for purchase.',
