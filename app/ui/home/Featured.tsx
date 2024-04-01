@@ -1,9 +1,12 @@
+'use client';
 import { AddToCart } from 'components/cart/add-to-cart';
 import Price from 'components/price';
 import { getCachedFeaturedPrograms } from 'lib/shopifyCache';
 import Image from 'next/image';
 
 export default async function Featured() {
+  const dynamic = 'force-dynamic';
+
   const featuredProgram = await getCachedFeaturedPrograms();
 
   function getCardDescription(program: any) {
