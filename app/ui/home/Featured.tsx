@@ -29,7 +29,7 @@ export default async function Featured() {
         </h2>
         <h2
           style={{ letterSpacing: '-1px', lineHeight: '120%' }}
-          className="font-inter mt-2 text-2xl font-bold text-gray-900 sm:text-4xl md:text-4xl lg:w-[42ch]"
+          className="font-inter mt-2 text-2xl font-bold text-gray-900 sm:text-4xl md:text-xl lg:w-[42ch]"
         >
           Embark on a journey to peak fitness with Zack Hazlett Fitness. From intensive weight
           training to nourishing wellness practices. Find your strength and vitality for everyday
