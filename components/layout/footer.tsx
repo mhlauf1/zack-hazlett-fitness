@@ -36,9 +36,11 @@ export default async function Footer() {
               </a>
             ))}
           </div> */}
-        <p className="mt-10 text-center text-xs leading-5 text-gray-400">
+        <p className="mt-10 px-8 text-center text-xs leading-5 text-gray-400 md:px-0">
           &copy; {copyrightDate} {copyrightName}
           {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All Rights Reserved.
+        </p>
+        <p className="mt-1 px-8 text-center text-xs leading-5 text-gray-400 md:px-0">
           Powered by Lauf.
         </p>
       </div>

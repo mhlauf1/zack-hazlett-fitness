@@ -42,7 +42,7 @@ export default function About() {
               >
                 Learn about Zack
               </h2>
-              <p className="font-inter mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              <p className="font-inter mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl md:text-4xl">
                 Experience the difference
               </p>
               <p className="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
@@ -50,7 +50,7 @@ export default function About() {
                 immediate download. Each program is crafted from his wealth of knowledge as a
                 seasoned personal trainer.
               </p>
-              <div className="mt-4 flex items-center gap-x-4">
+              <div className="mt-8 flex items-center gap-x-4 md:mt-4">
                 <Btn href="/about">About Zack</Btn>
               </div>
             </div>

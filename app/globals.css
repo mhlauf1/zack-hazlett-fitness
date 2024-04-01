@@ -249,4 +249,8 @@ button {
     font-family: var(--font-inter);
     letter-spacing: 3px;
   }
+
+  .new-to-programs-header {
+    font-size: 1.75rem;
+  }
 }

@@ -52,7 +52,7 @@ export default async function Featured() {
                         objectFit="cover"
                       />
                     </div>
-                    <div className="sticky bottom-0 z-20 flex justify-between border-b bg-white pb-4  pt-6 duration-150">
+                    <div className="sticky bottom-0 z-20 flex flex-col justify-between border-b bg-white pb-4 pt-6  duration-150 md:flex-row">
                       <div className="flex flex-col">
                         <h2 className=" text-3xl font-semibold text-stone-800">{program.title}</h2>
                         <Price
@@ -61,7 +61,7 @@ export default async function Featured() {
                           className="text-body"
                         />
                       </div>
-                      <div className="z-20 flex w-[200px] flex-col gap-4 md:w-[300px]">
+                      <div className="z-20 mt-4 flex flex-col gap-4 md:mt-0 md:w-[300px]">
                         <AddToCart
                           large
                           variants={program.variants}

@@ -62,6 +62,25 @@ const stepData = [
   }
 ];
 
+const Step = ({ data }: { data: any }) => (
+  <div className="mt-12 max-w-xl space-y-8 text-base leading-7 text-gray-300 lg:max-w-none">
+    {data.map((step: any) => (
+      <>
+        <div
+          key={step.title}
+          className="relative flex gap-1 rounded-xl py-3 pl-9 duration-300 ease-in-out hover:bg-gray-800"
+        >
+          <step.icon className="absolute left-1 top-5 h-5 w-5 text-blue-500" aria-hidden="true" />
+          <div>
+            <h3 className="inline text-2xl font-semibold text-white">{step.title}</h3>
+            <p className="font-inter block">{step.description}</p>
+          </div>
+        </div>
+      </>
+    ))}
+  </div>
+);
+
 export default function HowItWorks() {
   return (
     <section>
@@ -80,24 +99,7 @@ export default function HowItWorks() {
                   <span className="text-blue-300">4 Easy Steps</span> To Start Your Health and
                   Fitness Journey
                 </p>
-
-                <dl className="mt-12 max-w-xl space-y-8 text-base leading-7 text-gray-300 lg:max-w-none">
-                  {stepData.map((step) => (
-                    <div
-                      key={step.title}
-                      className="relative rounded-xl py-3 pl-9 duration-300 ease-in-out hover:bg-gray-800"
-                    >
-                      <dt className="inline text-2xl font-semibold text-white">
-                        <step.icon
-                          className="absolute left-1 top-5 h-5 w-5 text-blue-500"
-                          aria-hidden="true"
-                        />
-                        {step.title}
-                      </dt>{' '}
-                      <dd className="font-inter block">{step.description}</dd>
-                    </div>
-                  ))}
-                </dl>
+                <Step data={stepData} />
               </div>
             </div>
             <img
@@ -111,18 +113,18 @@ export default function HowItWorks() {
         </div>
       </div>
       <div className="bg-white py-24 sm:py-64">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto flex max-w-4xl flex-col items-center sm:text-center">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="mx-auto flex flex-col md:max-w-4xl md:items-center md:text-center">
             <h2
               style={{ letterSpacing: 0.5 }}
-              className="text-lg font-semibold leading-8 tracking-tight text-blue-600"
+              className="text-start text-lg font-semibold leading-8 tracking-tight text-blue-600"
             >
               Everything You Need
             </h2>
-            <p className="mt-2 text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <p className="new-to-programs-header mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl md:text-center">
               New to workout programs? <span className="block underline">No problem.</span>
             </p>
-            <p className="mt-8 text-center text-lg leading-7 text-gray-600 md:w-4/5">
+            <p className="mt-8 text-lg leading-7 text-gray-600 md:w-4/5 md:text-center">
               Our straightforward guides in a downloadable format make tracking your progress a
               breeze. Just enter your achievements and watch yourself grow.
             </p>
@@ -151,7 +153,7 @@ export default function HowItWorks() {
               >
                 <dt className="block text-2xl font-semibold text-gray-900">
                   <feature.icon
-                    className="absolute left-1 top-3 h-6 w-6 text-blue-600"
+                    className="absolute left-1 top-4 h-6 w-6 text-blue-600"
                     aria-hidden="true"
                   />
                   {feature.name}
