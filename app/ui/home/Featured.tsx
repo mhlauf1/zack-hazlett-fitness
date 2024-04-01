@@ -53,7 +53,7 @@ export default async function Featured() {
                     </div>
                     <div className="sticky bottom-0 z-20 flex flex-col justify-between border-b bg-white pb-4 pt-6  duration-150 md:flex-row">
                       <div className="flex flex-col">
-                        <h2 className=" text-3xl font-semibold text-stone-800">{program.title}</h2>
+                        <h2 className=" text-3xl font-normal text-stone-800">{program.title}</h2>
                         <Price
                           amount={program.priceRange.maxVariantPrice.amount}
                           currencyCode={program.priceRange.maxVariantPrice.currencyCode}
