@@ -1,11 +1,10 @@
 import { AddToCart } from 'components/cart/add-to-cart';
 import Price from 'components/price';
-import { FEATURED_PROGRAMS } from 'lib/constants';
-import { getCollectionProducts } from 'lib/shopify';
+import { getCachedFeaturedPrograms } from 'lib/shopifyCache';
 import Image from 'next/image';
 
 export default async function Featured() {
-  const featuredProgram = await getCollectionProducts({ collection: FEATURED_PROGRAMS });
+  const featuredProgram = await getCachedFeaturedPrograms();
 
   function getCardDescription(program: any) {
     const cardDescription = program.metafields?.find(
