@@ -16,7 +16,7 @@ export default async function Footer() {
           aria-label="Footer"
         >
           <div className="pb-2 md:pb-6">
-            <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+            <a href="/" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
               Home
             </a>
           </div>

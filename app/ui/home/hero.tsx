@@ -28,7 +28,7 @@ export default function Hero() {
         />
       </svg>
       <div className="mx-auto justify-around px-6 pb-24 pt-16 sm:pb-32 lg:flex lg:px-8 lg:py-32">
-        <div className="mx-auto flex flex-1 flex-col  justify-between lg:mx-0 lg:max-w-4xl lg:flex-shrink-0 lg:pt-8">
+        <div className="mx-auto flex flex-1 flex-col  justify-between lg:mx-0 lg:max-w-4xl lg:flex-shrink-0">
           <div>
             <div className="mt-12 lg:mt-16">
               <span className="font-inter rounded-full bg-blue-600/10 px-4 py-2 text-sm font-semibold leading-6 text-blue-600 ring-1 ring-inset ring-blue-600/10">
@@ -52,13 +52,13 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="mt-12 max-w-3xl flex-none sm:max-w-5xl lg:mt-0 lg:max-w-none">
+        <div className="mt-12 h-[700px]  max-w-3xl flex-none sm:max-w-5xl lg:mt-0 lg:w-[40vw]">
           <Image
             src="/zh-asset.webp"
             alt="Zack Hazlett Fitness"
             width={500}
             height={700}
-            className="w-full rounded-xl object-cover shadow-2xl ring-1 ring-gray-900/10 lg:max-w-[40vw]"
+            className="w-full rounded-xl object-cover shadow-2xl ring-1 ring-gray-900/10 lg:min-w-[40vw]"
           />
         </div>
       </div>
