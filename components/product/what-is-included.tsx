@@ -1,5 +1,4 @@
 import type { FunctionComponent } from 'react';
-import { IoMdArrowForward } from 'react-icons/io';
 
 type WhatIsIncludedProps = {
   program: any;
@@ -14,17 +13,15 @@ export const WhatIsIncluded: FunctionComponent<WhatIsIncludedProps> = ({ program
 
   return (
     <div>
-      <h4 className="font-inter mb-4 text-lg lg:text-xl">What&#39;s Included:</h4>
-      <ul className="mx-4 grid grid-cols-1 gap-4 md:grid-cols-1 lg:mx-8">
-        {includedItems?.map((item: any, index: any) => (
-          <li key={index} className="flex items-start gap-2">
-            <IoMdArrowForward className="mt-2" />
-            <p style={{ fontSize: 18 }} className="text-body">
+      <div className="prose prose-sm mt-4 text-gray-500">
+        <ul role="list">
+          {includedItems?.map((item: any, index: any) => (
+            <li className="font-inter" key={item}>
               {item}
-            </p>
-          </li>
-        ))}
-      </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

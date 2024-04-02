@@ -1,13 +1,8 @@
-import { RelatedProducts } from 'app/ui/programs/related-products';
-import Image from 'next/image';
-
-import { ProductDescription } from 'components/product/product-description';
+import ProgramDetails from 'app/ui/program/program-details';
 import { HIDDEN_PRODUCT_TAG } from 'lib/constants';
 import { getProduct } from 'lib/shopify';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { Suspense } from 'react';
-
 export const runtime = 'edge';
 
 export async function generateMetadata({
@@ -78,27 +73,7 @@ export default async function ProductPage({ params }: { params: { handle: string
           __html: JSON.stringify(programJsonLd)
         }}
       />
-      <div className="mx-auto px-2 pt-28 lg:px-4 lg:py-20 lg:pt-28">
-        <div className="mb-8 flex flex-col lg:mb-0 lg:flex-row lg:gap-8">
-          <div className="relative flex h-full flex-1">
-            <div className="flex h-[350px] w-full flex-col items-center lg:h-[700px]">
-              <Image
-                src={program.featuredImage?.url}
-                objectFit="cover"
-                alt={program.title}
-                fill
-                className="flex flex-1"
-              />
-            </div>
-          </div>
-          <div className="flex flex-1">
-            <ProductDescription program={program} />
-          </div>
-        </div>
-        <Suspense>
-          <RelatedProducts id={program.id} />
-        </Suspense>
-      </div>
+      <ProgramDetails program={program} />
     </>
   );
 }

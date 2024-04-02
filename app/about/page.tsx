@@ -57,13 +57,16 @@ export default async function AboutPage() {
             fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
           />
         </svg>
-        <div className="py-24 sm:py-32 lg:pb-40">
+        <div className="py-24  lg:pb-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-lg font-semibold leading-8 tracking-tight text-blue-600">
+              <h2
+                style={{ letterSpacing: 0.5 }}
+                className="text-lg font-semibold leading-8 tracking-tight text-blue-600"
+              >
                 Fitness Professional
               </h2>
-              <h1 className="mt-8 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              <h1 className="mt-8 text-4xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
                 About Zack Hazlett
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
