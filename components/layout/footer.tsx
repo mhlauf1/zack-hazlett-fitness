@@ -41,7 +41,7 @@ export default async function Footer() {
           {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All Rights Reserved.
         </p>
         <p className="mt-1 px-8 text-center text-xs leading-5 text-gray-400 md:px-0">
-          Powered by Lauf.
+          Powered by Michael Laufersweiler.
         </p>
       </div>
     </footer>
