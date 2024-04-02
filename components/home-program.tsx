@@ -62,7 +62,9 @@ const HomeProgram = ({ featuredProgram }: Props) => {
           </div>
         </div>
         <Link href={`/program/${featuredProgram.handle}`}>
-          <div className="tex-sm mt-2 w-full md:w-1/2">{getCardDescription(featuredProgram)}</div>
+          <div className="tex-sm mt-2 w-full md:w-[35ch]">
+            {getCardDescription(featuredProgram)}
+          </div>
         </Link>
       </div>
     </div>
