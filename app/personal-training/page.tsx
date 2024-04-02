@@ -37,7 +37,7 @@ export default async function PersonalTrainingPage() {
     <div>
       <div className="relative isolate pt-14">
         <svg
-          className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+          className="absolute inset-0 -z-10 hidden h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] md:block"
           aria-hidden="true"
         >
           <defs>
@@ -59,7 +59,7 @@ export default async function PersonalTrainingPage() {
             fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
           />
         </svg>
-        <div className="py-24 lg:pb-40">
+        <div className="py-12 md:py-24 lg:pb-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h2

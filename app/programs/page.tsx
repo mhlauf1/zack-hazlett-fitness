@@ -47,7 +47,7 @@ export default async function ProgramsPage({
 
   return (
     <div className="bg-white pt-8">
-      <div className="relative py-24">
+      <div className="relative py-16 md:py-24">
         <div className="mx-auto flex flex-col items-start px-4 sm:px-6 lg:px-20">
           <p className="font-inter rounded-full bg-blue-600/10 px-4 py-2 text-sm font-semibold leading-6 text-blue-600 ring-1 ring-inset ring-blue-600/10">
             Explore Programs
@@ -78,8 +78,8 @@ export default async function ProgramsPage({
                         >
                           {program.tags}
                         </p>
-                        <div className="flex w-full justify-between">
-                          <h2 className="mb-4 text-3xl font-normal text-stone-100">
+                        <div className="flex w-full flex-col justify-between md:flex-row">
+                          <h2 className="mb-2 text-3xl font-normal text-stone-100 md:mb-4">
                             {program.title}
                           </h2>
                           <Price
@@ -88,7 +88,9 @@ export default async function ProgramsPage({
                             className="text-2xl text-stone-100"
                           />
                         </div>
-                        <div className="w-full   md:w-2/3">{getCardDescription(program)}</div>
+                        <div className="mt-4 w-full md:mt-0  md:w-2/3">
+                          {getCardDescription(program)}
+                        </div>
                         <div className="prose prose-sm mt-4 text-gray-100">
                           <ul role="list">
                             <GetIncludedInfo program={program} />

@@ -15,13 +15,13 @@ export default async function Footer() {
           className="-mb-6 sm:flex sm:justify-center sm:space-x-12 md:columns-2"
           aria-label="Footer"
         >
-          <div className="pb-6">
+          <div className="pb-2 md:pb-6">
             <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
               Home
             </a>
           </div>
           {menu.map((item) => (
-            <div key={item.title} className="pb-6">
+            <div key={item.title} className="pb-2 md:pb-6">
               <a href={item.path} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                 {item.title}
               </a>
@@ -36,7 +36,7 @@ export default async function Footer() {
               </a>
             ))}
           </div> */}
-        <p className="mt-10 px-8 text-center text-xs leading-5 text-gray-400 md:px-0">
+        <p className="mt-12 px-8 text-center text-xs leading-5 text-gray-400 md:px-0">
           &copy; {copyrightDate} {copyrightName}
           {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All Rights Reserved.
         </p>
