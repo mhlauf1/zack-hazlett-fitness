@@ -2,7 +2,6 @@ import { AddToCart } from 'components/cart/add-to-cart';
 import Price from 'components/price';
 import { defaultSort, sorting } from 'lib/constants';
 import { getProducts } from 'lib/shopify';
-import Image from 'next/image';
 import Link from 'next/link';
 export const runtime = 'edge';
 
@@ -27,7 +26,7 @@ export default async function ProgramsPage({
     )?.value;
 
     return (
-      <p className="text-body" key={cardDescription}>
+      <p className="text-lg text-stone-100" key={cardDescription}>
         {cardDescription}
       </p>
     );
@@ -64,57 +63,46 @@ export default async function ProgramsPage({
         <div className="mx-auto">
           <div className="mx-auto max-w-2xl text-center"></div>
           <div className="mx-auto  px-4 sm:px-6 lg:px-20">
-            <div className="mt-12 flex flex-col gap-8">
+            <div className="mt-12 flex flex-col gap-8 md:flex-row">
               {programs.map((program) => (
-                <div className="flex w-full flex-col justify-between gap-8 border bg-neutral-50 p-4 md:flex-row md:p-8">
-                  <div>
-                    <div key={program.id}>
-                      <div className="flex flex-col  pb-4  duration-150 md:flex-row">
-                        <div className="flex flex-col items-stretch">
-                          <Link className="mb-12" href={`/program/${program.handle}`}>
-                            <p className="mb-4">{program.tags}</p>
-                            <div className="flex w-full justify-between">
-                              <h2 className="mb-4 text-3xl font-normal text-stone-800">
-                                {program.title}
-                              </h2>
-                              <Price
-                                amount={program.priceRange.maxVariantPrice.amount}
-                                currencyCode={program.priceRange.maxVariantPrice.currencyCode}
-                                className="text-body-large"
-                              />
-                            </div>
-                            <div className="tex-sm  w-full">{getCardDescription(program)}</div>
-                            <div className="prose prose-sm mt-4 text-gray-500">
-                              <ul role="list">
-                                <GetIncludedInfo program={program} />
-                              </ul>
-                            </div>
-                          </Link>
-                          <div className="z-20 flex flex-col gap-4 md:mt-0">
-                            <AddToCart
-                              large
-                              variants={program.variants}
-                              availableForSale={program.availableForSale}
-                            />
-                          </div>
+                <div
+                  key={program.id}
+                  className="flex w-auto flex-col gap-8 border border-neutral-50 bg-neutral-700 p-8 duration-300 hover:border  hover:border-neutral-200 hover:bg-blue-700 focus:bg-blue-700  active:bg-blue-700  md:p-8"
+                >
+                  <div className="flex h-full   flex-col justify-between duration-150">
+                    <div>
+                      <Link className="mb-12" href={`/program/${program.handle}`}>
+                        <p
+                          style={{ letterSpacing: 3 }}
+                          className="mb-6 text-sm uppercase text-neutral-100"
+                        >
+                          {program.tags}
+                        </p>
+                        <div className="flex w-full justify-between">
+                          <h2 className="mb-4 text-3xl font-normal text-stone-100">
+                            {program.title}
+                          </h2>
+                          <Price
+                            amount={program.priceRange.maxVariantPrice.amount}
+                            currencyCode={program.priceRange.maxVariantPrice.currencyCode}
+                            className="text-2xl text-stone-100"
+                          />
                         </div>
-                      </div>
+                        <div className="w-full   md:w-2/3">{getCardDescription(program)}</div>
+                        <div className="prose prose-sm mt-4 text-gray-100">
+                          <ul role="list">
+                            <GetIncludedInfo program={program} />
+                          </ul>
+                        </div>
+                      </Link>
                     </div>
-                  </div>
-                  <div className="">
-                    <Link
-                      className=" duration-300 group-hover:opacity-75"
-                      href={`/program/${program.handle}`}
-                    >
-                      <div className="relative flex h-[80vh] w-full flex-1 md:w-[40vw]">
-                        <Image
-                          src={program.featuredImage?.url}
-                          alt={program.title}
-                          fill
-                          objectFit="cover"
-                        />
-                      </div>
-                    </Link>
+                    <div className="z-20 mt-6 flex flex-col gap-4">
+                      <AddToCart
+                        large
+                        variants={program.variants}
+                        availableForSale={program.availableForSale}
+                      />
+                    </div>
                   </div>
                 </div>
               ))}

@@ -19,7 +19,7 @@ function SubmitButton({
 }) {
   const { pending } = useFormStatus();
   let buttonClasses =
-    'relative flex w-full items-center justify-center rounded-full  border border-blue-400 bg-blue-500 text-white py-3';
+    'relative flex w-full items-center justify-center rounded-full   border-blue-400 bg-blue-500 text-white py-3';
   if (large) {
     buttonClasses = buttonClasses + ' py-4';
   }
@@ -40,7 +40,7 @@ function SubmitButton({
         aria-disabled
         className={clsx(buttonClasses, disabledClasses)}
       >
-        <div className="absolute left-0 ml-4">
+        <div className="absolute  left-0 ml-4">
           <PlusIcon className="h-5" />
         </div>
         Add To Cart
@@ -60,7 +60,7 @@ function SubmitButton({
         disabledClasses: pending
       })}
     >
-      <div className="absolute left-0 ml-4">
+      <div className="absolute  left-0 ml-4">
         {pending ? <LoadingDots className="mb-3 bg-white" /> : <PlusIcon className="h-5" />}
       </div>
       Add To Cart

@@ -44,7 +44,7 @@ const HomeProgram = ({ featuredProgram }: Props) => {
         <div className="sticky bottom-0 z-20 flex flex-col justify-between border-b bg-white pb-4 pt-6  duration-150 md:flex-row">
           <Link href={`/program/${featuredProgram.handle}`}>
             <div className="flex flex-col">
-              <h2 className=" text-3xl font-normal text-stone-800">{featuredProgram.title}</h2>
+              <h2 className="text-2xl font-normal text-stone-800">{featuredProgram.title}</h2>
               <Price
                 amount={featuredProgram.priceRange.maxVariantPrice.amount}
                 currencyCode={featuredProgram.priceRange.maxVariantPrice.currencyCode}

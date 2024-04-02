@@ -151,7 +151,7 @@ export default function HowItWorks() {
                 key={feature.name}
                 className="relative rounded-xl py-3 pl-9 duration-300 ease-in-out hover:bg-blue-50"
               >
-                <dt className="block text-2xl font-semibold text-gray-900">
+                <dt className="font-inter block text-2xl font-semibold text-gray-900">
                   <feature.icon
                     className="absolute left-1 top-4 h-6 w-6 text-blue-600"
                     aria-hidden="true"

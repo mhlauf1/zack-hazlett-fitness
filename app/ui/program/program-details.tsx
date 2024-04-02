@@ -1,4 +1,5 @@
 import { StarIcon } from '@heroicons/react/20/solid';
+import { AddToCart } from 'components/cart/add-to-cart';
 import Price from 'components/price';
 import Prose from 'components/prose';
 
@@ -119,7 +120,7 @@ export default function ProgramDetails({ program }: { program: any }) {
           <div className="mx-auto mt-14 max-w-2xl sm:mt-16 lg:col-span-3 lg:row-span-2 lg:row-end-2 lg:mt-0 lg:max-w-none">
             <div className="flex flex-col-reverse">
               <div className="mt-4">
-                <h1 className="text-2xl font-semibold tracking-tight text-gray-900 sm:text-3xl">
+                <h1 className="text-2xl font-normal tracking-tight text-gray-900 sm:text-3xl">
                   {program.title}
                 </h1>
 
@@ -149,20 +150,19 @@ export default function ProgramDetails({ program }: { program: any }) {
                 <p className="sr-only">{reviews.average} out of 5 stars</p>
               </div>
             </div>
-
-            <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
-              <button
-                type="button"
-                className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
-              >
-                Buy Now -{' '}
-                <Price
-                  amount={program.priceRange.maxVariantPrice.amount}
-                  currencyCode={program.priceRange.maxVariantPrice.currencyCode}
-                  className="text-white"
-                />
-              </button>
+            <div className="my-4">
+              <Price
+                amount={program.priceRange.maxVariantPrice.amount}
+                currencyCode={program.priceRange.maxVariantPrice.currencyCode}
+                className="text-body-large"
+              />
             </div>
+
+            <AddToCart
+              large
+              variants={program.variants}
+              availableForSale={program.availableForSale}
+            />
             {program.descriptionHtml ? (
               <Prose
                 className="text-body my-6 text-sm leading-tight"
