@@ -27,15 +27,15 @@ export default function Hero() {
           fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
         />
       </svg>
-      <div className="mx-auto justify-around px-6 pb-24 pt-16 sm:pb-32 lg:flex lg:px-8 lg:py-32">
-        <div className="mx-auto flex flex-1 flex-col  justify-between lg:mx-0 lg:max-w-4xl lg:flex-shrink-0">
+      <div className="mx-auto items-center justify-between gap-8 px-6 pb-24 pt-16 sm:pb-32 lg:flex lg:px-8 lg:py-32">
+        <div className="mx-auto flex flex-1 flex-col md:pl-8 ">
           <div>
-            <div className="mt-12 lg:mt-16">
+            <div className="mt-12 md:mt-0">
               <span className="font-inter rounded-full bg-blue-600/10 px-4 py-2 text-sm font-semibold leading-6 text-blue-600 ring-1 ring-inset ring-blue-600/10">
                 Personal Training Available
               </span>
             </div>
-            <h1 className="font-nohemi mt-10 text-4xl font-semibold capitalize tracking-tight text-gray-900 md:text-5xl lg:text-7xl">
+            <h1 className="font-nohemi mt-10 text-4xl font-semibold capitalize tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
               Download your ultimate fitness blueprint today.
             </h1>
             <p className="lg mt-6 w-full text-xl leading-8 text-gray-600 sm:w-4/5  lg:w-2/3">
@@ -44,7 +44,7 @@ export default function Hero() {
             </p>
           </div>
           <div>
-            <div className="mt-8 flex items-center gap-x-4">
+            <div className="mt-12 flex items-center gap-x-4">
               <Btn href="/programs">Get Started Now</Btn>
               <Btn dark href="/personal-training">
                 Book A Consultation
@@ -52,13 +52,13 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="mt-12 h-[700px]  max-w-3xl flex-none sm:max-w-5xl lg:mt-0 lg:w-[40vw]">
+        <div className="mt-12  flex max-w-3xl flex-1 sm:max-w-5xl md:p-8 lg:mt-0 lg:h-[70vh] ">
           <Image
             src="/zh-asset.webp"
             alt="Zack Hazlett Fitness"
             width={500}
             height={700}
-            className="w-full rounded-xl object-cover shadow-2xl ring-1 ring-gray-900/10 lg:min-w-[40vw]"
+            className="w-full rounded-xl object-cover shadow-2xl ring-1 ring-gray-900/10 "
           />
         </div>
       </div>
