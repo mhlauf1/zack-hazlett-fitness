@@ -35,12 +35,12 @@ export default function Hero() {
                 Personal Training Available
               </span>
             </div>
-            <h1 className="font-nohemi mt-10 text-4xl font-semibold capitalize tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
+            <h1 className="font-nohemi mt-10 text-4xl font-semibold capitalize tracking-tight text-gray-900 md:w-[20ch] md:text-5xl lg:text-6xl">
               Download your ultimate fitness blueprint today.
             </h1>
             <p className="lg mt-6 w-full text-xl leading-8 text-gray-600 sm:w-4/5  lg:w-2/3">
-              Get access to exclusive fitness regimes and nutritional guides, all under the guidance
-              of our seasoned instructor.
+              Get access to exclusive fitness programs and nutritional guides, all under the
+              guidance of Zack Hazlett.
             </p>
           </div>
           <div>
