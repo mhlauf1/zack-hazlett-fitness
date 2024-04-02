@@ -13,8 +13,8 @@ export default function PersonalTraining() {
           >
             Join The Community
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-blue-50 sm:text-6xl">
-            Interested in One on One Personal Training?
+          <p className="mt-2 text-3xl font-bold tracking-tight  text-blue-50 md:text-5xl lg:text-6xl">
+            Interested In One On One Personal Training?
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Btn white href="/personal-training">

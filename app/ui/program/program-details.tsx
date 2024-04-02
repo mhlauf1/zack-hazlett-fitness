@@ -187,10 +187,7 @@ export default function ProgramDetails({ program }: { program: any }) {
               <h3 className="text-sm font-medium text-gray-900">License</h3>
               <p className="mt-4 text-sm text-gray-500">
                 {license.summary}{' '}
-                <a
-                  href={license.href}
-                  className="font-medium text-indigo-600 hover:text-indigo-500"
-                >
+                <a href={license.href} className="font-medium text-blue-600 hover:text-blue-500">
                   Read full license
                 </a>
               </p>

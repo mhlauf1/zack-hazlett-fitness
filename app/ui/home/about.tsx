@@ -42,8 +42,8 @@ export default function About() {
               >
                 Learn about Zack
               </h2>
-              <p className="font-inter mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl md:text-4xl">
-                Experience the difference
+              <p className="font-inter mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl md:text-5xl lg:text-6xl">
+                Experience The Difference
               </p>
               <p className="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
                 Unlock your fitness potential with Zack's expertly designed courses, available for

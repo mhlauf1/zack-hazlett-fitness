@@ -1,4 +1,12 @@
-import { About, Featured, Hero, HowItWorks, PersonalTraining, Testimonials } from './ui/home';
+import {
+  About,
+  ComingSoon,
+  Featured,
+  Hero,
+  HowItWorks,
+  PersonalTraining,
+  Testimonials
+} from './ui/home';
 export const runtime = 'edge';
 export const dynamic = 'force-dynamic';
 export const metadata = {
@@ -18,6 +26,7 @@ export default async function HomePage() {
       <About />
       <Testimonials />
       <PersonalTraining />
+      <ComingSoon />
     </div>
   );
 }

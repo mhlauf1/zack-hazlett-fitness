@@ -1,35 +1,23 @@
 import {
-  CloudArrowUpIcon,
-  Cog6ToothIcon,
-  DevicePhoneMobileIcon,
+  ArrowUpOnSquareIcon,
+  ClipboardIcon,
+  CreditCardIcon,
   FaceSmileIcon,
-  LockClosedIcon,
-  ServerIcon
+  MapIcon,
+  RocketLaunchIcon
 } from '@heroicons/react/20/solid';
 
 const features = [
   {
-    name: 'Customizable Plans',
-    description:
-      'Tailor your workout to fit your schedule and goals. Our flexible templates adapt to you.',
-    icon: Cog6ToothIcon
-  },
-  {
     name: 'Visual Progress Tracking',
     description: 'See your improvements with clear, visual graphs as you update your achievements.',
-    icon: DevicePhoneMobileIcon
+    icon: MapIcon
   },
   {
     name: 'Supportive Community',
     description:
       'Join fellow beginners in our community space for tips, motivation, and shared success stories.',
     icon: FaceSmileIcon
-  },
-  {
-    name: 'Customizable Plans',
-    description:
-      'Tailor your workout to fit your schedule and goals. Our flexible templates adapt to you.',
-    icon: Cog6ToothIcon
   }
 ];
 const stepData = [
@@ -38,27 +26,27 @@ const stepData = [
     number: '01',
     description:
       "Whether you're looking to shed pounds, build muscle, or enhance endurance, you'll find a program that aligns with your personal health ambitions.",
-    icon: CloudArrowUpIcon
+    icon: ClipboardIcon
   },
   {
     title: 'Make Your Purchase',
     number: '02',
     description:
       "Once you've found your ideal program, secure your copy with our secure purchasing process.",
-    icon: LockClosedIcon
+    icon: CreditCardIcon
   },
   {
     title: 'Download Your Program',
     number: '03',
     description: 'Immediately after purchase, your program becomes available for download.',
-    icon: ServerIcon
+    icon: ArrowUpOnSquareIcon
   },
   {
     title: 'Get To Work',
     number: '04',
     description:
       'This digital format ensures that you can start your fitness journey right away and revisit the program whenever you need.',
-    icon: CloudArrowUpIcon
+    icon: RocketLaunchIcon
   }
 ];
 
@@ -70,7 +58,7 @@ const Step = ({ data }: { data: any }) => (
           key={step.title}
           className="relative flex gap-1 rounded-xl py-3 pl-9 duration-300 ease-in-out hover:bg-gray-800"
         >
-          <step.icon className="absolute left-1 top-5 h-5 w-5 text-blue-500" aria-hidden="true" />
+          <step.icon className="absolute left-0 top-4 h-6 w-6 text-blue-500" aria-hidden="true" />
           <div>
             <h3 className="inline text-2xl font-semibold text-white">{step.title}</h3>
             <p className="font-inter block">{step.description}</p>
@@ -122,7 +110,7 @@ export default function HowItWorks() {
               Everything You Need
             </h2>
             <p className="new-to-programs-header mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl md:text-center">
-              New to workout programs? <span className="block underline">No problem.</span>
+              New To Workout Programs? <span className="block underline">No Problem.</span>
             </p>
             <p className="mt-8 text-lg leading-7 text-gray-600 md:w-4/5 md:text-center">
               Our straightforward guides in a downloadable format make tracking your progress a

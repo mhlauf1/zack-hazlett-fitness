@@ -104,7 +104,7 @@ export default function Testimonials() {
     return classes.filter(Boolean).join(' ');
   }
   return (
-    <div className="relative isolate bg-white pb-32 pt-24 sm:pt-32">
+    <div className="relative isolate bg-white pb-32 pt-24 sm:pt-32 md:pb-64">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2
@@ -114,7 +114,7 @@ export default function Testimonials() {
             Testimonials
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            We have worked with thousands of amazing people
+            What My Clients Have To Say
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
