@@ -27,7 +27,7 @@ export default function Hero() {
           fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
         />
       </svg>
-      <div className="mx-auto items-center justify-between gap-8 px-6 pb-24 pt-16 sm:pb-32 lg:flex lg:px-8 lg:py-32">
+      <div className="mx-auto items-center justify-between gap-4 px-6 pb-24 pt-16 sm:pb-32 lg:flex lg:px-8 lg:py-32">
         <div className="mx-auto flex flex-1 flex-col md:pl-4">
           <div>
             <div className="mt-12 md:mt-0">
