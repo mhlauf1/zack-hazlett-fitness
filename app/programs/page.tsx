@@ -67,7 +67,7 @@ export default async function ProgramsPage({
               {programs.map((program) => (
                 <div
                   key={program.id}
-                  className="flex w-auto flex-col gap-8 border border-neutral-50 bg-neutral-700 p-8 duration-300 hover:border  hover:border-neutral-200 hover:bg-blue-700 focus:bg-blue-700  active:bg-blue-700  md:p-8"
+                  className="flex w-auto flex-col gap-8 rounded-xl border border-neutral-50 bg-neutral-700 p-8 duration-300 hover:border  hover:border-neutral-200 hover:bg-blue-700 focus:bg-blue-700  active:bg-blue-700  md:p-8"
                 >
                   <div className="flex h-full   flex-col justify-between duration-150">
                     <div>
