@@ -1,4 +1,5 @@
 import { Btn } from 'components/buttons';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -52,9 +53,9 @@ export default function Hero() {
           </div>
         </div>
         <div className="mt-12 max-w-3xl flex-none sm:max-w-5xl lg:mt-0 lg:max-w-none">
-          <img
-            src="./zh-asset.webp"
-            alt="App screenshot"
+          <Image
+            src="/zh-asset.webp"
+            alt="Zack Hazlett Fitness"
             width={500}
             height={700}
             className="w-full rounded-xl object-cover shadow-2xl ring-1 ring-gray-900/10 lg:max-w-[40vw]"
