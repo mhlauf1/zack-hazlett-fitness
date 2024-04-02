@@ -393,6 +393,7 @@ export async function getPages(): Promise<Page[]> {
 export async function getProduct(handle: string): Promise<Program | undefined> {
   const res = await shopifyFetch<ShopifyProductOperation>({
     query: getProductQuery,
+    cache: 'no-store',
     tags: [TAGS.products],
     variables: {
       handle
@@ -426,6 +427,7 @@ export async function getProducts({
   const res = await shopifyFetch<ShopifyProductsOperation>({
     query: getProductsQuery,
     tags: [TAGS.products],
+    cache: 'no-store',
     variables: {
       query,
       reverse,
