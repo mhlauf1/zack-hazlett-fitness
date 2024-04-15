@@ -38,7 +38,7 @@ export default async function Footer() {
             </Link>
           </div>
         </nav>
-        <p className="mt-12 px-8 text-center text-xs leading-5 text-gray-400 md:px-0">
+        <p className="mt-12 text-center text-xs leading-5 text-gray-400 md:px-0 md:px-8">
           &copy; {copyrightDate} {copyrightName}
           {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All Rights Reserved.
         </p>
