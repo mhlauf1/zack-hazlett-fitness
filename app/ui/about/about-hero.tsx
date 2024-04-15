@@ -30,7 +30,7 @@ const AboutHero = (props: Props) => {
             fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
           />
         </svg>
-        <div className="relative flex h-auto flex-col gap-y-16 pb-24 pt-32 md:flex-row md:items-center md:py-24">
+        <div className="relative flex h-auto flex-col gap-y-16 pb-24 pt-28 md:flex-row md:items-center md:py-24">
           <div className="flex w-full flex-col items-start px-6 md:w-7/12 lg:px-20">
             <p className="font-inter rounded-full bg-white/10 px-4 py-2 text-sm font-semibold leading-6 text-white ring-1 ring-inset ring-gray-200">
               Fitness & Health Professional
