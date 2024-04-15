@@ -38,7 +38,7 @@ const AboutHero = (props: Props) => {
             <h1 className="mb-4 mt-10 w-full text-3xl font-semibold tracking-tight text-white md:text-5xl  lg:text-6xl">
               Unlock Your Full Potential with Zack Hazlett Fitness
             </h1>
-            <div className="flex w-10/12 flex-col">
+            <div className="flex flex-col md:w-10/12">
               <p className="mt-2 text-lg  text-gray-100">
                 Dedicated to transforming lives through personalized fitness and nutrition programs.
                 I believe in fitness as a lifestyle, not a quick fix.
