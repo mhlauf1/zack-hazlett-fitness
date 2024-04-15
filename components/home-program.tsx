@@ -3,6 +3,7 @@ import { AddToCart } from 'components/cart/add-to-cart';
 import Price from 'components/price';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Element } from 'react-scroll';
 
 type Props = {
   featuredProgram: any;
@@ -52,17 +53,19 @@ const HomeProgram = ({ featuredProgram }: Props) => {
               />
             </div>
           </Link>
-
-          <div className="z-20 mt-4 flex flex-col gap-4 md:mt-0 md:w-[300px]">
+          <Element
+            name="featuredProgram"
+            className="z-20 mt-4 flex flex-col gap-4 md:mt-0 md:w-[300px]"
+          >
             <AddToCart
               large
               variants={featuredProgram.variants}
               availableForSale={featuredProgram.availableForSale}
             />
-          </div>
+          </Element>
         </div>
         <Link href={`/program/${featuredProgram.handle}`}>
-          <div className="tex-sm mt-2 w-full md:w-[35ch]">
+          <div className="tex-sm mt-2 w-full md:w-[40ch]">
             {getCardDescription(featuredProgram)}
           </div>
         </Link>

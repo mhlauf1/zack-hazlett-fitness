@@ -1,14 +1,5 @@
 import { Btn } from 'components/buttons';
 
-const benefits = [
-  'Competitive salaries',
-  'Flexible work hours',
-  '30 days of paid vacation',
-  'Annual team retreats',
-  'Benefits for you and your family',
-  'A great work environment'
-];
-
 export default function ComingSoon() {
   return (
     <div className="bg-gray-900 py-24 sm:py-32">

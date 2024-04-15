@@ -1,5 +1,6 @@
-import { Btn } from 'components/buttons';
+'use client';
 import Image from 'next/image';
+import { Link } from 'react-scroll';
 
 export default function Hero() {
   return (
@@ -30,9 +31,9 @@ export default function Hero() {
       <div className="mx-auto items-center justify-between gap-4 px-6 pb-24 pt-16 sm:pb-32 lg:flex lg:px-8 lg:py-32">
         <div className="mx-auto flex flex-1 flex-col md:pl-4">
           <div>
-            <div className="mt-12 md:mt-0">
+            <div className="mt-16 md:mt-0">
               <span className="font-inter rounded-full bg-blue-600/10 px-4 py-2 text-sm font-semibold leading-6 text-blue-600 ring-1 ring-inset ring-blue-600/10">
-                Personal Training Available
+                Personal Training Coming Soon
               </span>
             </div>
             <h1 className="font-nohemi mt-10 text-4xl font-semibold capitalize tracking-tight text-gray-900 md:w-[20ch] md:text-5xl lg:text-6xl">
@@ -44,11 +45,15 @@ export default function Hero() {
             </p>
           </div>
           <div>
-            <div className="mt-12 flex items-center gap-x-4">
-              <Btn href="/programs">Get Started Now</Btn>
-              <Btn dark href="/personal-training">
-                Book A Consultation
-              </Btn>
+            <div className="mt-12 flex cursor-pointer items-center gap-x-4">
+              <Link
+                smooth={true}
+                duration={500}
+                className="font-inter rounded-full bg-blue-600  px-4 py-3   text-sm font-semibold leading-6 text-blue-50 ring-1 ring-inset ring-blue-600/10 focus-visible:outline-blue-600 lg:px-16 lg:py-4"
+                to="featuredProgram"
+              >
+                Get Started Now
+              </Link>
             </div>
           </div>
         </div>

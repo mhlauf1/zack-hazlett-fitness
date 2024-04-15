@@ -55,7 +55,7 @@ export default async function ProgramsPage({
           <h1 className="mt-8  text-3xl  font-semibold tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
             Fitness and Nutrition Programs
           </h1>
-          <p className="mt-4 max-w-xl text-sm text-gray-700">
+          <p className="mt-4 max-w-xl text-lg text-gray-700">
             Our thoughtfully designed workspace objects are crafted in limited runs. Improve your
             productivity and organization with these sale items before we run out.
           </p>

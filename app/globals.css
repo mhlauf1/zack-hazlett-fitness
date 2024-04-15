@@ -9,11 +9,8 @@
   --lightGrey: rgba(35, 35, 35, 0.3);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 @supports (font: -apple-system-body) and (-webkit-appearance: none) {

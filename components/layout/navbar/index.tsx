@@ -8,8 +8,11 @@ import MobileMenu from './mobile-menu';
 const { SITE_NAME } = process.env;
 
 export default async function Navbar() {
-  const menu = await getMenu('next-js-frontend-header-menu');
-  const mobileMenu = await getMenu('next-js-frontend-header-mobile-menu');
+  let menu = await getMenu('next-js-frontend-header-menu');
+  let mobileMenu = await getMenu('next-js-frontend-header-mobile-menu');
+
+  menu = menu.filter((item) => item.path !== '/personal-training');
+  mobileMenu = mobileMenu.filter((item) => item.path !== '/personal-training');
 
   return (
     <nav className="fixed top-0 z-50 flex h-[10vh] w-full items-center justify-between bg-white p-4 lg:px-6">
