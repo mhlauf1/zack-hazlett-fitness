@@ -1,4 +1,3 @@
-import { StarIcon } from '@heroicons/react/20/solid';
 import { AddToCart } from 'components/cart/add-to-cart';
 import Price from 'components/price';
 import Prose from 'components/prose';
@@ -127,13 +126,13 @@ export default function ProgramDetails({ program }: { program: any }) {
                 <h2 id="information-heading" className="sr-only">
                   Product information
                 </h2>
-                <p className="mt-2 text-sm text-gray-500">
+                {/* <p className="mt-2 text-sm text-gray-500">
                   Version {product.version.name} (Updated{' '}
                   <time dateTime={product.version.datetime}>{product.version.date}</time>)
-                </p>
+                </p> */}
               </div>
 
-              <div>
+              {/* <div>
                 <h3 className="sr-only">Reviews</h3>
                 <div className="flex items-center">
                   {[0, 1, 2, 3, 4].map((rating) => (
@@ -148,7 +147,7 @@ export default function ProgramDetails({ program }: { program: any }) {
                   ))}
                 </div>
                 <p className="sr-only">{reviews.average} out of 5 stars</p>
-              </div>
+              </div> */}
             </div>
             <div className="my-4">
               <Price
