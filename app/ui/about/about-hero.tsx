@@ -41,7 +41,7 @@ const AboutHero = (props: Props) => {
             <div className="flex flex-col md:w-10/12">
               <p className="mt-2 text-lg  text-gray-100">
                 Dedicated to transforming lives through personalized fitness and nutrition programs.
-                I believe in fitness as a lifestyle, not a quick fix.
+                Here, we believe in fitness as a lifestyle, not a quick fix.
               </p>
             </div>
           </div>

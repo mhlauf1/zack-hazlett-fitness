@@ -36,13 +36,17 @@ const Info = (props: Props) => {
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-20">
         <div className="mx-auto flex flex-col items-center lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-600">Train with Purpose</h2>
+          <h2 className="text-base font-semibold leading-7 text-blue-600">
+            Train and Recover with Purpose
+          </h2>
           <p className="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             About Zack
           </p>
           <p className="mt-4 text-center leading-8 text-gray-600 md:w-4/5 md:text-lg">
-            Zack Hazlett, a professional fitness coach from Columbus, Ohio, specializes in a blend
-            of dynamic training techniques and personalized nutrition strategies.
+            Reversed Autoimmune Disease. Zack is extremely passionate about nutrition after dealing
+            with ulcerative colitis for 5 years before reversing it. Having a strong focus on whole
+            foods from sustainable and healthy sources has transformed his quality of life, and he
+            wants to help others do the same.
           </p>
         </div>
         <div className="mx-auto mt-16  sm:mt-20 lg:mt-24 ">
