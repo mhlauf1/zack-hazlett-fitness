@@ -12,7 +12,7 @@ export default async function Footer() {
   menu = menu.filter((item) => item.path !== '/personal-training');
   return (
     <footer className="bg-white">
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 pb-4 pt-16 sm:pb-8 sm:pt-24 lg:px-8">
+      <div className="mx-auto max-w-7xl overflow-hidden px-6 pb-4 pt-16 sm:pb-8 lg:px-8">
         <nav
           className="-mb-6 sm:flex sm:justify-center sm:space-x-12 md:columns-2"
           aria-label="Footer"
@@ -38,7 +38,7 @@ export default async function Footer() {
             </Link>
           </div>
         </nav>
-        <p className="mt-12 text-center text-xs leading-5 text-gray-400 md:px-0 md:px-8">
+        <p className="mt-12 text-center text-xs leading-5 text-gray-400 md:px-8">
           &copy; {copyrightDate} {copyrightName}
           {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All Rights Reserved.
         </p>

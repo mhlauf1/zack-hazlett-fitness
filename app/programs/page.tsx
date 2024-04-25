@@ -47,7 +47,7 @@ export default async function ProgramsPage({
 
   return (
     <div className="bg-white pt-8">
-      <div className="relative py-16 md:py-24">
+      <div className="relative pt-16 md:pt-24">
         <div className="mx-auto flex flex-col items-start px-4 sm:px-6 lg:px-20">
           <p className="font-inter rounded-full bg-blue-600/10 px-4 py-2 text-sm font-semibold leading-6 text-blue-600 ring-1 ring-inset ring-blue-600/10">
             Explore Programs
@@ -61,13 +61,12 @@ export default async function ProgramsPage({
           </p>
         </div>
         <div className="mx-auto">
-          <div className="mx-auto max-w-2xl text-center"></div>
-          <div className="mx-auto  px-4 sm:px-6 lg:px-20">
+          <div className="mx-auto px-4 sm:px-6 lg:px-20">
             <div className="mt-12 flex flex-col gap-8 md:flex-row">
               {programs.map((program) => (
                 <div
                   key={program.id}
-                  className="flex w-auto flex-col gap-8 rounded-xl border border-neutral-50 bg-neutral-700 p-8 duration-300 hover:border  hover:border-neutral-200 hover:bg-blue-700 focus:bg-blue-700  active:bg-blue-700  md:p-8"
+                  className="flex w-auto flex-col gap-8 rounded-xl border border-neutral-50 bg-neutral-700 p-8 duration-500 hover:border  hover:border-neutral-200 hover:bg-blue-700 focus:bg-blue-700  active:bg-blue-700  md:p-8"
                 >
                   <div className="flex h-full   flex-col justify-between duration-150">
                     <div>

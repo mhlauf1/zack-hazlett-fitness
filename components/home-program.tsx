@@ -28,7 +28,7 @@ const HomeProgram = ({ featuredProgram }: Props) => {
     <div key={featuredProgram.id} className="group relative">
       <div className="group relative">
         <Link
-          className="duration-300 group-hover:opacity-75"
+          className="duration-500 group-hover:opacity-75"
           href={`/program/${featuredProgram.handle}`}
         >
           <div className="h-auto w-auto">

@@ -56,7 +56,7 @@ const Step = ({ data }: { data: any }) => (
       <>
         <div
           key={step.title}
-          className="relative flex gap-1 rounded-xl py-3 pl-9 duration-300 ease-in-out hover:bg-gray-800"
+          className="relative flex gap-1 rounded-xl py-3 pl-9 duration-500 ease-in-out hover:bg-gray-800"
         >
           <step.icon className="absolute left-0 top-4 h-6 w-6 text-blue-500" aria-hidden="true" />
           <div>
@@ -137,7 +137,7 @@ export default function HowItWorks() {
             {features.map((feature) => (
               <div
                 key={feature.name}
-                className="relative rounded-xl py-3 pl-9 duration-300 ease-in-out hover:bg-blue-50"
+                className="relative rounded-xl py-3 pl-9 duration-500 ease-in-out hover:bg-blue-50"
               >
                 <dt className="font-inter block text-2xl font-semibold text-gray-900">
                   <feature.icon

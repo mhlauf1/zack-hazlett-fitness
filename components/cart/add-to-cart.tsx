@@ -19,7 +19,7 @@ function SubmitButton({
 }) {
   const { pending } = useFormStatus();
   let buttonClasses =
-    'relative flex w-full items-center justify-center rounded-full   border-blue-400 bg-blue-500 text-white py-3';
+    'relative flex w-full items-center justify-center rounded-full duration-500  border-blue-400 bg-blue-500 text-white py-3';
   if (large) {
     buttonClasses = buttonClasses + ' py-4';
   }

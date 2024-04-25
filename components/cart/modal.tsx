@@ -46,10 +46,10 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
         <Dialog onClose={closeCart} className="relative z-50">
           <Transition.Child
             as={Fragment}
-            enter="transition-all ease-in-out duration-300"
+            enter="transition-all ease-in-out duration-500"
             enterFrom="opacity-0 backdrop-blur-none"
             enterTo="opacity-100 backdrop-blur-[.5px]"
-            leave="transition-all ease-in-out duration-200"
+            leave="transition-all ease-in-out duration-400"
             leaveFrom="opacity-100 backdrop-blur-[.5px]"
             leaveTo="opacity-0 backdrop-blur-none"
           >
@@ -57,10 +57,10 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
           </Transition.Child>
           <Transition.Child
             as={Fragment}
-            enter="transition-all ease-in-out duration-300"
+            enter="transition-all ease-in-out duration-500"
             enterFrom="translate-x-full"
             enterTo="translate-x-0"
-            leave="transition-all ease-in-out duration-200"
+            leave="transition-all ease-in-out duration-400"
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
           >
