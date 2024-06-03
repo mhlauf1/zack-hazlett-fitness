@@ -23,7 +23,7 @@ const ABOUT_PHOTOS_GRAPHQL_FIELDS = `
   }
 `;
 
-async function fetchGraphQL(query: string, preview = false) {
+async function fetchGraphQL(query: any, preview = false) {
   const response = await fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
     {
@@ -36,18 +36,11 @@ async function fetchGraphQL(query: string, preview = false) {
             : process.env.CONTENTFUL_ACCESS_TOKEN
         }`
       },
-      body: JSON.stringify({ query })
+      body: JSON.stringify({ query }),
+      next: { tags: ['heroSection', 'aboutPhotos'] }
     }
   );
-
   const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(
-      `Error fetching data: ${data.errors.map((err: any) => err.message).join(', ')}`
-    );
-  }
-
   return data;
 }
 
@@ -62,7 +55,7 @@ function extractAboutPhotosEntries(fetchResponse: any) {
 export async function getHeroSection(isDraftMode = false) {
   const heroSection = await fetchGraphQL(
     `query {
-      heroSectionCollection(limit: 1, preview: ${isDraftMode}) {
+      heroSectionCollection(limit: 1, preview: ${isDraftMode ? 'true' : 'false'}) {
         items {
           ${HERO_GRAPHQL_FIELDS}
         }
@@ -70,31 +63,19 @@ export async function getHeroSection(isDraftMode = false) {
     }`,
     isDraftMode
   );
-
-  const heroEntries = extractHeroEntries(heroSection);
-  if (heroEntries.length === 0) {
-    console.warn('No hero section data found');
-  }
-
-  return heroEntries[0] || null;
+  return extractHeroEntries(heroSection)[0] || null;
 }
 
 export async function getAboutPhotos(isDraftMode = false) {
   const aboutPhotos = await fetchGraphQL(
     `query {
-      aboutPhotosCollection(limit: 1, preview: ${isDraftMode}) {
-        items {
-          ${ABOUT_PHOTOS_GRAPHQL_FIELDS}
-        }
+    aboutPhotosCollection(limit: 1, preview: ${isDraftMode ? 'true' : 'false'}) {
+      items {
+        ${ABOUT_PHOTOS_GRAPHQL_FIELDS}
       }
-    }`,
+    }
+  }`,
     isDraftMode
   );
-
-  const aboutPhotoEntries = extractAboutPhotosEntries(aboutPhotos);
-  if (aboutPhotoEntries.length === 0) {
-    console.warn('No about photos data found');
-  }
-
-  return aboutPhotoEntries[0] || null;
+  return extractAboutPhotosEntries(aboutPhotos)[0] || null;
 }
