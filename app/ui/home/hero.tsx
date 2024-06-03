@@ -1,8 +1,14 @@
-'use client';
+import { getHeroSection } from 'lib/contentful';
 import Image from 'next/image';
-import { Link } from 'react-scroll';
+import HeroButton from './hero-button';
 
-export default function Hero() {
+export default async function Hero() {
+  const heroSection = await getHeroSection();
+
+  if (!heroSection) {
+    return <div>No hero section data available</div>;
+  }
+
   return (
     <div className="relative isolate overflow-hidden bg-white">
       <svg
@@ -37,29 +43,17 @@ export default function Hero() {
               </span>
             </div>
             <h1 className="font-nohemi mt-10 text-4xl font-semibold capitalize tracking-tight text-gray-900 md:w-[20ch] md:text-5xl lg:text-6xl">
-              Download your ultimate fitness blueprint today.
+              {heroSection.heading}
             </h1>
             <p className="lg mt-6 w-full text-xl leading-8 text-gray-600 sm:w-4/5  lg:w-2/3">
-              Get access to exclusive fitness programs and nutritional guides, all under the
-              guidance of Zack Hazlett.
+              {heroSection.subHeading}
             </p>
           </div>
-          <div>
-            <div className="mt-12 flex cursor-pointer items-center gap-x-4">
-              <Link
-                smooth={true}
-                duration={500}
-                className="font-inter rounded-full bg-blue-600 px-4  py-3 text-sm  font-semibold leading-6 text-blue-50 ring-1 ring-inset ring-blue-600/10 duration-500 hover:opacity-90 focus-visible:outline-blue-600 lg:px-16 lg:py-4"
-                to="featuredProgram"
-              >
-                Get Started Now
-              </Link>
-            </div>
-          </div>
+          <HeroButton text={heroSection.actionButtonText} />
         </div>
         <div className="mt-12  flex max-w-3xl flex-1 sm:max-w-5xl md:p-4 lg:mt-0 lg:h-[75vh] ">
           <Image
-            src="/zh-asset.webp"
+            src={heroSection.image.url}
             alt="Zack Hazlett Fitness"
             width={500}
             height={700}

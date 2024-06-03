@@ -11,8 +11,15 @@ module.exports = {
         protocol: 'https',
         hostname: 'cdn.shopify.com',
         pathname: '/s/files/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.ctfassets.net',
+        port: '',
+        pathname: '/**'
       }
-    ]
+    ],
+    domains: ['res.cloudinary.com']
   },
   async redirects() {
     return [

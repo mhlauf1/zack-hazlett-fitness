@@ -25,3 +25,16 @@ function findError<T extends object>(error: T): boolean {
 
   return prototype === null ? false : findError(prototype);
 }
+
+export interface HeroSectionFields {
+  heroHeading: string;
+  heroSubtext: string;
+  actionButtonText: string;
+  heroImage: {
+    fields: {
+      file: {
+        url: string;
+      };
+    };
+  };
+}
