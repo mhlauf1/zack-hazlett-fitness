@@ -21,7 +21,7 @@ export default async function About() {
   const aboutPhotos = await getAboutPhotos();
   // Add a null check for aboutPhotos and its properties
   if (!aboutPhotos || !aboutPhotos.aboutImagesCollection) {
-    return <div>Loading Images</div>;
+    return <div>Loading About Images</div>;
   }
 
   const photos = aboutPhotos.aboutImagesCollection.items;
