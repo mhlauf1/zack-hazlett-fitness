@@ -19,13 +19,8 @@ const AboutImage = ({ url, alt }: AboutImageProps) => (
 
 export default async function About() {
   const aboutPhotos = await getAboutPhotos();
-
   // Add a null check for aboutPhotos and its properties
-  if (
-    !aboutPhotos ||
-    !aboutPhotos.aboutImagesCollection ||
-    !aboutPhotos.aboutImagesCollection.items
-  ) {
+  if (!aboutPhotos || !aboutPhotos.aboutImagesCollection) {
     return <div>Loading Images</div>;
   }
 
@@ -86,15 +81,15 @@ export default async function About() {
             </div>
             <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
               <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
-                <AboutImage url={photos[0].fields.imageUrl} alt={photos[0].fields.description} />
+                <AboutImage url={photos[0].url} alt={photos[0].description} />
               </div>
               <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
-                <AboutImage url={photos[1].fields.imageUrl} alt={photos[1].fields.description} />
-                <AboutImage url={photos[2].fields.imageUrl} alt={photos[2].fields.description} />
+                <AboutImage url={photos[1].url} alt={photos[1].description} />
+                <AboutImage url={photos[2].url} alt={photos[2].description} />
               </div>
               <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
-                <AboutImage url={photos[3].fields.imageUrl} alt={photos[3].fields.description} />
-                <AboutImage url={photos[4].fields.imageUrl} alt={photos[4].fields.description} />
+                <AboutImage url={photos[3].url} alt={photos[3].description} />
+                <AboutImage url={photos[4].url} alt={photos[4].description} />
               </div>
             </div>
           </div>
