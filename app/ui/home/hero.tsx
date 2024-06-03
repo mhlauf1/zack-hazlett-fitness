@@ -1,5 +1,6 @@
 import { getHeroSection } from 'lib/contentful';
 import Image from 'next/image';
+import GetAlertButton from './get-alert-button';
 import HeroButton from './hero-button';
 
 export default async function Hero() {
@@ -38,7 +39,7 @@ export default async function Hero() {
         <div className="mx-auto flex flex-1 flex-col md:pl-4">
           <div>
             <div className="mt-16 md:mt-0">
-              <span className="font-inter rounded-full bg-blue-600/10 px-4 py-2 text-sm font-semibold leading-6 text-blue-600 ring-1 ring-inset ring-blue-600/10">
+              <span className="font-inter rounded-full bg-blue-600/10 px-4 py-3 text-sm font-semibold leading-6 text-blue-600 ring-1 ring-inset ring-blue-600/10">
                 Personal Training Coming Soon
               </span>
             </div>
@@ -49,7 +50,10 @@ export default async function Hero() {
               {heroSection.subHeading}
             </p>
           </div>
-          <HeroButton text={heroSection.actionButtonText} />
+          <div className="mt-12 flex w-full flex-col items-start gap-x-8 gap-y-6 lg:flex-row lg:items-center ">
+            <HeroButton text={heroSection.actionButtonText} />
+            <GetAlertButton text="Sign up for new program alerts" />
+          </div>
         </div>
         <div className="mt-12  flex max-w-3xl flex-1 sm:max-w-5xl md:p-4 lg:mt-0 lg:h-[75vh] ">
           <Image

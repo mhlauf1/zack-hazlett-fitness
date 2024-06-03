@@ -7,16 +7,11 @@ type Props = {
 
 const HeroButton = ({ text }: Props) => {
   return (
-    <div className="mt-12 flex cursor-pointer items-center gap-x-4">
-      <Link
-        smooth={true}
-        duration={500}
-        className="font-inter rounded-full bg-blue-600 px-4  py-3 text-sm  font-semibold leading-6 text-blue-50 ring-1 ring-inset ring-blue-600/10 duration-500 hover:opacity-90 focus-visible:outline-blue-600 lg:px-16 lg:py-4"
-        to="featuredProgram"
-      >
+    <Link smooth={true} duration={500} to="featuredProgram">
+      <div className="font-inter cursor-pointer rounded-full bg-blue-500 px-10 py-4 text-white duration-300 hover:bg-blue-400">
         {text}
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
 

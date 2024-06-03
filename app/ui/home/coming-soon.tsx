@@ -1,4 +1,5 @@
-import { Btn } from 'components/buttons';
+'use client';
+import { Element } from 'react-scroll';
 
 export default function ComingSoon() {
   return (
@@ -15,15 +16,36 @@ export default function ComingSoon() {
               <h2 className="font-inter text-3xl font-semibold tracking-tight text-white sm:text-4xl">
                 New Programs Coming Soon
               </h2>
-              <p className="mt-4 text-lg leading-8 text-gray-300">
+              <p className="mt-4 text-lg leading-7 text-gray-300">
                 Sign up to get notified when new fitness and nutrition courses are added to the
                 collection.
               </p>
-              <div className="mt-6">
-                <Btn white href="/personal-training">
-                  Sign Up Now <span aria-hidden="true">&rarr;</span>
-                </Btn>
-              </div>
+              <Element name="getAlertSignUp">
+                <div className="mt-6">
+                  <form className="mt-6 sm:flex sm:max-w-md">
+                    <label htmlFor="email-address" className="sr-only">
+                      Email address
+                    </label>
+                    <input
+                      type="email"
+                      name="email-address"
+                      id="email-address"
+                      autoComplete="email"
+                      required
+                      className="tex-sm font-inter w-full rounded-full px-6 py-3"
+                      placeholder="Enter your email"
+                    />
+                    <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
+                      <button
+                        type="submit"
+                        className="flex w-full items-center justify-center rounded-full bg-blue-500 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+                      >
+                        Subscribe
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </Element>
             </div>
           </div>
         </div>
