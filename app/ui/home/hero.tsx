@@ -6,7 +6,7 @@ export default async function Hero() {
   const heroSection = await getHeroSection();
 
   if (!heroSection) {
-    return <div>No hero section data available</div>;
+    return <div>No hero section data available here</div>;
   }
 
   return (
