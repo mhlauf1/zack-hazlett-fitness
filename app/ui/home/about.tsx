@@ -22,6 +22,10 @@ export default async function About() {
 
   const photos = aboutPhotos.aboutImagesCollection.items;
 
+  if (!photos) {
+    return <div>Loading Images</div>;
+  }
+
   return (
     <div className="relative isolate">
       <svg
