@@ -133,7 +133,7 @@ const Btn = ({
   white?: boolean;
 }) => {
   const isLight =
-    'font-inter rounded-full bg-blue-600/10  px-4 py-3 text-sm font-semibold leading-6 text-blue-600 ring-1 ring-inset ring-blue-600/10 focus-visible:outline-blue-600 lg:px-16 lg:py-4';
+    'font-inter rounded-full bg-blue-600/10 hover:bg-blue-600/20 duration-300  px-4 py-3 text-sm font-semibold leading-6 text-blue-600 ring-1 ring-inset ring-blue-600/10 focus-visible:outline-blue-600 lg:px-16 lg:py-4';
   const isDark =
     'font-inter rounded-full bg-blue-600  px-4 py-3   text-sm font-semibold leading-6 text-blue-50 ring-1 ring-inset ring-blue-600/10 focus-visible:outline-blue-600 lg:px-16 lg:py-4';
 

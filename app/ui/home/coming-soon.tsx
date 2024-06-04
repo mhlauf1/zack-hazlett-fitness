@@ -1,7 +1,34 @@
 'use client';
+import { FormEvent, useState } from 'react';
 import { Element } from 'react-scroll';
 
 export default function ComingSoon() {
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    console.log(email, 'email');
+    const res = await fetch('/api/subscribe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email })
+    });
+
+    const data = await res.json();
+
+    if (res.status !== 201) {
+      setMessage(data.error);
+    } else {
+      setMessage(data.message);
+    }
+
+    setEmail('');
+  };
+
   return (
     <div className="bg-gray-900 py-24 sm:py-32">
       <div className="relative isolate">
@@ -22,7 +49,7 @@ export default function ComingSoon() {
               </p>
               <Element name="getAlertSignUp">
                 <div className="mt-6">
-                  <form className="mt-6 sm:flex sm:max-w-md">
+                  <form className="mt-6 sm:flex sm:max-w-md" onSubmit={handleSubmit}>
                     <label htmlFor="email-address" className="sr-only">
                       Email address
                     </label>
@@ -34,16 +61,19 @@ export default function ComingSoon() {
                       required
                       className="tex-sm font-inter w-full rounded-full px-6 py-3"
                       placeholder="Enter your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                     <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
                       <button
                         type="submit"
-                        className="flex w-full items-center justify-center rounded-full bg-blue-500 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+                        className="flex w-full items-center justify-center rounded-full bg-blue-500 px-4 py-3 text-sm font-semibold text-white shadow-sm duration-300 hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
                       >
                         Subscribe
                       </button>
                     </div>
                   </form>
+                  {message && <p className="mt-4 text-sm text-gray-300">{message}</p>}
                 </div>
               </Element>
             </div>

@@ -56,7 +56,7 @@ function SubmitButton({
       aria-label="Add to cart"
       aria-disabled={pending}
       className={clsx(buttonClasses, {
-        'hover:opacity-90': true,
+        'hover:bg-blue-400': true,
         disabledClasses: pending
       })}
     >
