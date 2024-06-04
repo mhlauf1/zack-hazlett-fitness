@@ -27,7 +27,14 @@ export async function POST(req: Request) {
       { message: 'Successfully subscribed to updates from Zack Hazlett Fitness!' },
       { status: 201 }
     );
-  } catch (error) {
+  } catch (error: any) {
+    if (error.code === 11000) {
+      // Duplicate key error code
+      return NextResponse.json(
+        { error: 'This email is already subscribed to updates from Zack Hazlett Fitness.' },
+        { status: 400 }
+      );
+    }
     return NextResponse.json(
       { error: 'Error subscribing to updates from Zack Hazlett Fitness.' },
       { status: 500 }

@@ -2,8 +2,11 @@ import mongoose from 'mongoose';
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
-if (!MONGODB_URI) {
-  throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
+function getMongoDbUri(): string {
+  if (!MONGODB_URI) {
+    throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
+  }
+  return MONGODB_URI;
 }
 
 interface MongooseCache {
@@ -20,20 +23,16 @@ declare global {
 global.mongoose = global.mongoose || { conn: null, promise: null };
 
 async function connectToDatabase() {
+  const uri = getMongoDbUri();
+
   if (global.mongoose.conn) {
     return global.mongoose.conn;
   }
 
   if (!global.mongoose.promise) {
-    //@ts-ignore
-    global.mongoose.promise = mongoose
-      .connect(MONGODB_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-      })
-      .then((mongoose) => {
-        return mongoose;
-      });
+    global.mongoose.promise = mongoose.connect(uri).then((mongoose) => {
+      return mongoose;
+    });
   }
 
   global.mongoose.conn = await global.mongoose.promise;
